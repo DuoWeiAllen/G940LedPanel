@@ -5,9 +5,8 @@
 > Independent LED control panel for the 8 backlit buttons on the Logitech G940 throttle base.
 > Windows desktop app, .NET Framework 4.8, x64. HID access written from scratch — no third-party native library.
 
-<!-- 界面截图：等实机截图后取消注释
+<!-- 界面截图 -->
 ![界面](docs/screenshot.png)
--->
 
 灯的读写是自研 HID 直写，**不依赖任何第三方原生库**；按钮读取走系统 DirectInput。
 
