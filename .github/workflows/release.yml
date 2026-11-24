@@ -19,7 +19,10 @@ jobs:
     name: 构建并发布
     runs-on: windows-latest
     steps:
+      # fetch-depth: 0 才能读到 tag 注释——Release 说明就是从那里取的
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-dotnet@v4
         with:
@@ -44,9 +47,6 @@ jobs:
 
           Copy-Item README.md, LICENSE "stage/$name" -Force
 
-          $notes = "release-notes/notes-$ver.txt"
-          if (Test-Path $notes) { Copy-Item $notes "stage/$name/" -Force }
-
           Compress-Archive -Path "stage/$name" -DestinationPath "$name.zip" -CompressionLevel Optimal
 
           Write-Host "== 包内文件 =="
@@ -66,15 +66,18 @@ jobs:
           $tag  = "${{ github.ref_name }}"
           $ver  = $tag -replace '^v', ''
           $name = "G940LedPanel-$ver-win-x64"
-          $notes = "release-notes/notes-$ver.txt"
+
+          # 说明写在 tag 注释里，这里原样搬到 Release 页面；tag 没写注释才回落到自动生成
+          $body = ((git tag -l --format='%(contents)' $tag) -join "`n").Trim()
 
           # 重跑时 Release 可能已存在，那就覆盖附件，不要报错中断
           gh release view $tag *> $null
           if ($LASTEXITCODE -eq 0) {
             gh release upload $tag "$name.zip" --clobber
+            if ($body) { gh release edit $tag --notes $body }
           }
-          elseif (Test-Path $notes) {
-            gh release create $tag "$name.zip" --title "G940LED面板 $ver" --notes-file $notes
+          elseif ($body) {
+            gh release create $tag "$name.zip" --title "G940LED面板 $ver" --notes $body
           }
           else {
             gh release create $tag "$name.zip" --title "G940LED面板 $ver" --generate-notes
