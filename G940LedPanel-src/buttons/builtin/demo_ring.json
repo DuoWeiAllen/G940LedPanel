@@ -1,0 +1,93 @@
+{
+  "kind": "g940.button",
+  "version": 1,
+  "name": "Demo Ring",
+  "app": "",
+  "bindings": [
+    {
+      "enabled": true,
+      "button": 4,
+      "buttonName": "P1",
+      "trigger": "toggle",
+      "effect": "ring_fwd",
+      "color": 1,
+      "speed": 1,
+      "targetLed": -1
+    },
+    {
+      "enabled": true,
+      "button": 5,
+      "buttonName": "P2",
+      "trigger": "toggle",
+      "effect": "ring_rev",
+      "color": 1,
+      "speed": 1,
+      "targetLed": -1
+    },
+    {
+      "enabled": true,
+      "button": 6,
+      "buttonName": "P3",
+      "trigger": "toggle",
+      "effect": "chase2",
+      "color": 1,
+      "speed": 1,
+      "targetLed": -1
+    },
+    {
+      "enabled": true,
+      "button": 7,
+      "buttonName": "P4",
+      "trigger": "toggle",
+      "effect": "chase3",
+      "color": 1,
+      "speed": 1,
+      "targetLed": -1
+    },
+    {
+      "enabled": true,
+      "button": 8,
+      "buttonName": "P5",
+      "trigger": "toggle",
+      "effect": "twin",
+      "color": 1,
+      "speed": 1,
+      "targetLed": -1
+    },
+    {
+      "enabled": true,
+      "button": 9,
+      "buttonName": "P6",
+      "trigger": "toggle",
+      "effect": "sweep",
+      "color": 2,
+      "speed": 1,
+      "targetLed": -1
+    },
+    {
+      "enabled": true,
+      "button": 10,
+      "buttonName": "P7",
+      "trigger": "toggle",
+      "effect": "expand",
+      "color": 2,
+      "speed": 1,
+      "targetLed": -1
+    },
+    {
+      "enabled": true,
+      "button": 11,
+      "buttonName": "P8",
+      "trigger": "toggle",
+      "effect": "collapse",
+      "color": 2,
+      "speed": 1,
+      "targetLed": -1
+    }
+  ],
+  "background": {
+    "effect": "off",
+    "color": 1,
+    "speed": 1
+  }
+}

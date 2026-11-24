@@ -1,0 +1,20 @@
+{
+  "kind": "g940.alert",
+  "version": 1,
+  "name": "Twin Piston",
+  "app": "",
+  "ledMap": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    -1,
+    -1
+  ],
+  "ruleOverrides": {},
+  "customRules": []
+}

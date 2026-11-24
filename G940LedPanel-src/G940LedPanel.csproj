@@ -1,0 +1,136 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <PlatformTarget>x64</PlatformTarget>
+    <AssemblyName>G940LedPanel</AssemblyName>
+    <RootNamespace>G940LedPanel</RootNamespace>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Deterministic>true</Deterministic>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <ApplicationIcon></ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <!--
+      版本号只有一个真源：下面那行 <Version>。
+      AssemblyVersion（窗口标题、托盘提示，见 Core/AppInfo.cs）与
+      FileVersion（资源管理器「属性 → 详细信息」）都从它派生，不许另写死。
+      出过事故：AssemblyVersion 改了、FileVersion 留着旧值，
+      根源就是这三行各自独立而注释写「只改一处」。派生 + DocLint 双保险。
+
+      约束：<Version> 必须是三段数字（主.次.修订）。派生时补 ".0" 成四段，
+      所以写成四段版本（1.3.45.1）会得到 1.3.45.1.0，不合规。
+
+      版本号规则（1.3.24 起）：
+        第 1 位  1        代际号，整体重写才动（2.0.0），需负责人同意
+        第 2 位  3        里程碑，等于旧体系的主版本号，升级里程碑需负责人同意
+        第 3 位          日常递增。每出一版 +1，不用问，只改这一位
+      例：末位 +1（1.3.45 → 1.3.46）；里程碑则 1.3.50 → 1.4.0。
+    -->
+    <NeutralLanguage>zh-CN</NeutralLanguage>
+    <Version>1.3.72</Version>
+    <AssemblyVersion>$(Version).0</AssemblyVersion>
+    <FileVersion>$(Version).0</FileVersion>
+    <Product>G940LED面板</Product>
+    <Description>Logitech G940 油门面板 LED 控制台（按钮配置 / 炫酷效果 / SimConnect 预留接口）</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="All" />
+    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+
+  <!--
+    让 VS 解决方案资源管理器里 .Designer.cs 嵌套在窗体下面，
+    并且双击窗体文件直接进设计视图（而不是代码视图）。
+    纯手写 UI 的窗体（历史遗留）没有 Designer 文件，这里只登记有设计器的几个。
+  -->
+  <ItemGroup>
+    <Compile Update="UI\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UI\LedAssignForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\LedAssignForm.Designer.cs">
+      <DependentUpon>LedAssignForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UI\DiagForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\DiagForm.Designer.cs">
+      <DependentUpon>DiagForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UI\PickDeviceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\PickDeviceForm.Designer.cs">
+      <DependentUpon>PickDeviceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UI\CondEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\CondEditorForm.Designer.cs">
+      <DependentUpon>CondEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UI\SimDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\SimDataForm.Designer.cs">
+      <DependentUpon>SimDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UI\CondProbePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UI\CondProbePanel.Designer.cs">
+      <DependentUpon>CondProbePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UI\NameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\NameForm.Designer.cs">
+      <DependentUpon>NameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UI\NewRuleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\NewRuleForm.Designer.cs">
+      <DependentUpon>NewRuleForm.cs</DependentUpon>
+    </Compile>
+    <!-- 1.3.67 补：原先漏登记，VS 里该窗体不嵌套、双击 .cs 进代码而非设计视图。 -->
+    <Compile Update="UI\RuleAuditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\RuleAuditForm.Designer.cs">
+      <DependentUpon>RuleAuditForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!--
+    预置配置是普通文件（1.3.48 起），要跟着 exe 一起进输出目录：
+    bin\Release\net48\alerts\builtin\*.json。打包脚本再从源码树复制一份到交付包的
+    「可执行文件」目录下，两处路径保持一致（都相对 exe）。
+  -->
+  <ItemGroup>
+    <Content Include="alerts\builtin\*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="buttons\builtin\*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

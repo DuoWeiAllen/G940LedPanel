@@ -1,0 +1,93 @@
+{
+  "kind": "g940.button",
+  "version": 1,
+  "name": "Demo Rhythm",
+  "app": "",
+  "bindings": [
+    {
+      "enabled": true,
+      "button": 4,
+      "buttonName": "P1",
+      "trigger": "toggle",
+      "effect": "blink",
+      "color": 1,
+      "speed": 1,
+      "targetLed": 0
+    },
+    {
+      "enabled": true,
+      "button": 5,
+      "buttonName": "P2",
+      "trigger": "toggle",
+      "effect": "double",
+      "color": 1,
+      "speed": 1,
+      "targetLed": 1
+    },
+    {
+      "enabled": true,
+      "button": 6,
+      "buttonName": "P3",
+      "trigger": "toggle",
+      "effect": "longshort",
+      "color": 2,
+      "speed": 1,
+      "targetLed": 2
+    },
+    {
+      "enabled": true,
+      "button": 7,
+      "buttonName": "P4",
+      "trigger": "toggle",
+      "effect": "flash",
+      "color": 3,
+      "speed": 1,
+      "targetLed": 3
+    },
+    {
+      "enabled": true,
+      "button": 8,
+      "buttonName": "P5",
+      "trigger": "toggle",
+      "effect": "heartbeat",
+      "color": 2,
+      "speed": 1,
+      "targetLed": 4
+    },
+    {
+      "enabled": true,
+      "button": 9,
+      "buttonName": "P6",
+      "trigger": "toggle",
+      "effect": "solid",
+      "color": 1,
+      "speed": 1,
+      "targetLed": 5
+    },
+    {
+      "enabled": true,
+      "button": 10,
+      "buttonName": "P7",
+      "trigger": "toggle",
+      "effect": "solid",
+      "color": 0,
+      "speed": 1,
+      "targetLed": 6
+    },
+    {
+      "enabled": true,
+      "button": 11,
+      "buttonName": "P8",
+      "trigger": "toggle",
+      "effect": "solid",
+      "color": 3,
+      "speed": 1,
+      "targetLed": 7
+    }
+  ],
+  "background": {
+    "effect": "off",
+    "color": 1,
+    "speed": 1
+  }
+}

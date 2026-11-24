@@ -1,0 +1,63 @@
+{
+  "kind": "g940.button",
+  "version": 1,
+  "name": "Demo Decor",
+  "app": "",
+  "bindings": [
+    {
+      "enabled": true,
+      "button": 4,
+      "buttonName": "P1",
+      "trigger": "toggle",
+      "effect": "cycle",
+      "color": 1,
+      "speed": 1,
+      "targetLed": -1
+    },
+    {
+      "enabled": true,
+      "button": 5,
+      "buttonName": "P2",
+      "trigger": "toggle",
+      "effect": "random",
+      "color": 1,
+      "speed": 1,
+      "targetLed": -1
+    },
+    {
+      "enabled": true,
+      "button": 6,
+      "buttonName": "P3",
+      "trigger": "toggle",
+      "effect": "binary",
+      "color": 1,
+      "speed": 1,
+      "targetLed": -1
+    },
+    {
+      "enabled": true,
+      "button": 7,
+      "buttonName": "P4",
+      "trigger": "toggle",
+      "effect": "fill",
+      "color": 1,
+      "speed": 1,
+      "targetLed": -1
+    },
+    {
+      "enabled": true,
+      "button": 8,
+      "buttonName": "P5",
+      "trigger": "toggle",
+      "effect": "alternate",
+      "color": 2,
+      "speed": 1,
+      "targetLed": -1
+    }
+  ],
+  "background": {
+    "effect": "off",
+    "color": 1,
+    "speed": 1
+  }
+}

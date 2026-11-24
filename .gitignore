@@ -1,0 +1,51 @@
+# ---- 编译产物 ----
+bin/
+obj/
+publish/
+publish-x86/
+
+# ---- IDE 与用户级配置 ----
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.swp
+
+# ---- 运行时产物：本机状态、日志、导出的诊断报告 ----
+config.json
+*.log
+diag/
+
+# ---- 发布包与归档（交付物不进版本库）----
+*.zip
+releases/
+archive/
+
+# ---- 调试产物 ----
+*.pdb
+TestResults/
+*.trx
+
+# ---- Python ----
+__pycache__/
+*.pyc
+
+# ---- 工具缓存 ----
+.codebuddy/
+
+# ---- 不随仓库发布的部分（本地文件保留，只是 git 不跟踪）----
+# 仓库定位：只放「能编译的源码 + 使用者说明」。
+# 下面这些是内部工作资料：验证逻辑的断言、体检脚本、出包脚本、开发过程文档。
+#
+# 如需把自动化检查公开（让 CI 跑 646 条断言与两项体检）：
+#   1. 删掉 tools/ 与 tests/ 两行
+#   2. 恢复 .github/workflows/ci.yml 里的 checks 任务
+tools/
+tests/
+release-notes/
+package.sh
+G940LedPanel-src/历史.md
+G940LedPanel-src/规格.md
+G940LedPanel-src/开发.md
+G940LedPanel-src/待办.md

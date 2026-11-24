@@ -1,0 +1,2400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    中性语言资源（= 简体中文）。运行时语言为 zh-CN 时直接读这一份，
+    见 csproj 的 <NeutralLanguage>zh-CN</NeutralLanguage>。
+
+    为什么中性放中文而不是英文：这个程序的母版是中文界面，
+    Designer 里写的中文就是「设计时预览值」，两边必须逐字一致（DocLint 会查）。
+    英文放 Strings.en-US.resx，编译成 en-US\G940LedPanel.resources.dll。
+
+    key 命名：区域.对象.用途。区域取 main / bind / alert / cond / diag / tray 等界面块名，
+    不用控件名——控件改名不该导致文案 key 失效。
+  -->
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="main.tab.buttons" xml:space="preserve">
+    <value>按键模式（按钮 → 灯光）</value>
+    <comment>页签。保持「按钮 → 灯光」这个箭头，它说明数据流向。</comment>
+  </data>
+  <data name="main.tab.alert" xml:space="preserve">
+    <value>告警模式（{0} 系统状态 → 灯光）</value>
+    <comment>{0} 是数据源名（MSFS2024 / DCS 等产品名，不译）。</comment>
+  </data>
+  <data name="bind.foot.capture" xml:space="preserve">
+    <value>选中一行后可编辑；「油门按钮#」列填 0 起的编号。</value>
+    <comment>页脚最长的一句之一，英文会明显更长。引号内容对应列头 bind.header.btn。</comment>
+  </data>
+  <data name="bind.foot.bg" xml:space="preserve">
+    <value>无触发时持续显示 · 只在按键模式生效 · 载入配置会连带设置底灯</value>
+    <comment>页脚最长的一句之一。三个短语用中点分隔，英文沿用同一分隔符。</comment>
+  </data>
+  <data name="main.btn.diag" xml:space="preserve">
+    <value>设备诊断</value>
+  </data>
+  <data name="main.btn.simdata" xml:space="preserve">
+    <value>实时数据…</value>
+    <comment>带省略号 = 会打开窗口。</comment>
+  </data>
+  <data name="bind.header.btn" xml:space="preserve">
+    <value>油门按钮#</value>
+    <comment>这一列存的是原始按键编号（0 起），不是面板丝印 P1..P8。英文保留 # 后缀。</comment>
+  </data>
+  <data name="bind.header.name" xml:space="preserve">
+    <value>按钮名</value>
+    <comment>默认值按面板丝印给（按键 4..11 = P1..P8），用户可自行改。</comment>
+  </data>
+  <data name="bind.header.trigger" xml:space="preserve">
+    <value>触发</value>
+    <comment>取值是「按下持续」「按下切换」，英文用 Hold / Toggle。</comment>
+  </data>
+  <data name="main.chk.master" xml:space="preserve">
+    <value>全部效果总开关</value>
+  </data>
+  <data name="main.chk.sim" xml:space="preserve">
+    <value>启用 SimConnect 联动</value>
+    <comment>SimConnect 是微软的接口名，不译。</comment>
+  </data>
+  <data name="tray.menu.show" xml:space="preserve">
+    <value>显示主界面</value>
+  </data>
+  <data name="tray.menu.exit" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="main.lbl.language" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="effect.off" xml:space="preserve">
+    <value>关灯</value>
+    <comment>效果名。下面 20 条的顺序必须与 EffectFactory.Ids 完全一致——表格、下拉、右键菜单都靠下标对位。</comment>
+  </data>
+  <data name="effect.solid" xml:space="preserve">
+    <value>常亮</value>
+  </data>
+  <data name="effect.blink" xml:space="preserve">
+    <value>慢闪</value>
+  </data>
+  <data name="effect.double" xml:space="preserve">
+    <value>双闪</value>
+  </data>
+  <data name="effect.longshort" xml:space="preserve">
+    <value>一长一短</value>
+  </data>
+  <data name="effect.flash" xml:space="preserve">
+    <value>快闪</value>
+  </data>
+  <data name="effect.heartbeat" xml:space="preserve">
+    <value>心跳</value>
+  </data>
+  <data name="effect.ring_fwd" xml:space="preserve">
+    <value>环行·顺时针</value>
+    <comment>CW / CCW 是航电与机械面板的通用缩写，比 clockwise 更省位置。</comment>
+  </data>
+  <data name="effect.ring_rev" xml:space="preserve">
+    <value>环行·逆时针</value>
+  </data>
+  <data name="effect.chase2" xml:space="preserve">
+    <value>双灯追</value>
+  </data>
+  <data name="effect.chase3" xml:space="preserve">
+    <value>三灯追</value>
+  </data>
+  <data name="effect.expand" xml:space="preserve">
+    <value>中心扩散</value>
+  </data>
+  <data name="effect.collapse" xml:space="preserve">
+    <value>边缘收拢</value>
+  </data>
+  <data name="effect.sweep" xml:space="preserve">
+    <value>两点对扫</value>
+  </data>
+  <data name="effect.twin" xml:space="preserve">
+    <value>双子·对称转</value>
+  </data>
+  <data name="effect.cycle" xml:space="preserve">
+    <value>颜色循环</value>
+  </data>
+  <data name="effect.random" xml:space="preserve">
+    <value>随机彩灯</value>
+  </data>
+  <data name="effect.binary" xml:space="preserve">
+    <value>二进制计数</value>
+  </data>
+  <data name="effect.fill" xml:space="preserve">
+    <value>绕环填充</value>
+  </data>
+  <data name="effect.alternate" xml:space="preserve">
+    <value>奇偶跳</value>
+  </data>
+  <data name="effect.suffix.default" xml:space="preserve">
+    <value>（默认）</value>
+    <comment>底灯下拉第 0 项的尾巴。英文带前导空格，直接接在效果名后面；中文用全角括号不需要空格。</comment>
+  </data>
+  <data name="effect.suffix.decor" xml:space="preserve">
+    <value>（装饰）</value>
+    <comment>「装饰」= 底灯层，区别于按键触发的那一层。</comment>
+  </data>
+  <data name="color.0" xml:space="preserve">
+    <value>关</value>
+    <comment>颜色名，下标 = 规则里的 Color 值。</comment>
+  </data>
+  <data name="color.1" xml:space="preserve">
+    <value>绿</value>
+  </data>
+  <data name="color.2" xml:space="preserve">
+    <value>琥珀</value>
+    <comment>航电里 amber 就是「注意」这一档，不要翻成 yellow。</comment>
+  </data>
+  <data name="color.3" xml:space="preserve">
+    <value>红</value>
+  </data>
+  <data name="bind.trigger.hold" xml:space="preserve">
+    <value>按下持续</value>
+    <comment>hold = 按住期间生效，松手就停。</comment>
+  </data>
+  <data name="bind.trigger.toggle" xml:space="preserve">
+    <value>按下切换</value>
+    <comment>toggle = 按一下开、再按一下关。</comment>
+  </data>
+  <data name="bind.target.all" xml:space="preserve">
+    <value>全部</value>
+    <comment>目标灯下拉的第 0 项。后面 P1..P8 不译：那是面板丝印，翻了和实物对不上。</comment>
+  </data>
+  <data name="main.card.led" xml:space="preserve">
+    <value>LED 面板预览（两排 4+4 方形灯）</value>
+  </data>
+  <data name="main.card.settings" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="common.profile" xml:space="preserve">
+    <value>配置</value>
+    <comment>两页各有一个「配置」小标题，共用一条。</comment>
+  </data>
+  <data name="common.manage" xml:space="preserve">
+    <value>管理 ▾</value>
+    <comment>尾部三角是下拉指示，保留。</comment>
+  </data>
+  <data name="header.color" xml:space="preserve">
+    <value>颜色</value>
+    <comment>颜色 / 效果 / 速度 / 启用 四个列头两页共用，所以不带 bind/alert 前缀。</comment>
+  </data>
+  <data name="header.speed" xml:space="preserve">
+    <value>速度</value>
+  </data>
+  <data name="header.enabled" xml:space="preserve">
+    <value>启用</value>
+    <comment>列头。On 比 Enabled 短，列宽紧。</comment>
+  </data>
+  <data name="header.effect" xml:space="preserve">
+    <value>效果</value>
+  </data>
+  <data name="bind.lbl.bg" xml:space="preserve">
+    <value>底灯：</value>
+    <comment>冒号随语言走：中文用全角，英文用半角。</comment>
+  </data>
+  <data name="bind.foot.hint" xml:space="preserve">
+    <value>右键表格可操作 · 双击可编辑</value>
+  </data>
+  <data name="bind.menu.capture" xml:space="preserve">
+    <value>捕获油门按键</value>
+  </data>
+  <data name="bind.menu.add" xml:space="preserve">
+    <value>新增按键绑定</value>
+  </data>
+  <data name="bind.menu.del" xml:space="preserve">
+    <value>删除本条绑定</value>
+  </data>
+  <data name="bind.header.target" xml:space="preserve">
+    <value>目标</value>
+  </data>
+  <data name="main.chk.ledlabel" xml:space="preserve">
+    <value>显示灯位文字</value>
+  </data>
+  <data name="main.chk.ledlabel.tip" xml:space="preserve">
+    <value>两种模式都生效：按键模式显示 P1..P8，告警模式显示系统名</value>
+    <comment>复选框的悬停说明。</comment>
+  </data>
+  <data name="main.chk.tray" xml:space="preserve">
+    <value>最小化到托盘</value>
+  </data>
+  <data name="main.chk.tray.tip" xml:space="preserve">
+    <value>关闭或最小化时收到系统托盘继续运行；取消勾选则关闭即退出</value>
+    <comment>复选框的悬停说明。</comment>
+  </data>
+  <data name="main.chk.scenelog" xml:space="preserve">
+    <value>记录场景状态（写到 diag 文件夹）</value>
+    <comment>diag 是目录名，不译。</comment>
+  </data>
+  <data name="dev.name.g940" xml:space="preserve">
+    <value>G940 油门</value>
+    <comment>G940 是罗技的产品名，不译。</comment>
+  </data>
+  <data name="dev.btn.disconnect" xml:space="preserve">
+    <value>断开</value>
+    <comment>按钮文字随连接状态在「连接 / 断开」之间切，两条 key 分开。</comment>
+  </data>
+  <data name="dev.hint.saved" xml:space="preserve">
+    <value>改动已自动保存</value>
+  </data>
+  <data name="main.btn.simapply" xml:space="preserve">
+    <value>应用并连接</value>
+  </data>
+  <data name="main.btn.simcheck" xml:space="preserve">
+    <value>SDK 检测</value>
+    <comment>SDK 是 SimConnect SDK，不译。</comment>
+  </data>
+  <data name="alert.foot.hint" xml:space="preserve">
+    <value>勾选即生效 · 双击「触发条件」可改条件</value>
+    <comment>引号内容对应列头 alert.header.cond。</comment>
+  </data>
+  <data name="alert.menu.audit" xml:space="preserve">
+    <value>检查列表规则…</value>
+  </data>
+  <data name="alert.menu.editcond" xml:space="preserve">
+    <value>编辑本条规则的条件…</value>
+  </data>
+  <data name="alert.menu.add" xml:space="preserve">
+    <value>新增规则…</value>
+  </data>
+  <data name="alert.menu.del" xml:space="preserve">
+    <value>删除本条规则</value>
+  </data>
+  <data name="alert.header.led" xml:space="preserve">
+    <value>灯位</value>
+  </data>
+  <data name="alert.header.rule" xml:space="preserve">
+    <value>系统 · 规则</value>
+  </data>
+  <data name="alert.header.cond" xml:space="preserve">
+    <value>触发条件</value>
+    <comment>列头，短。双击这一列改条件。</comment>
+  </data>
+  <data name="alert.header.raw" xml:space="preserve">
+    <value>原始值</value>
+  </data>
+  <data name="alert.legend" xml:space="preserve">
+    <value>颜色 绿=正常　琥珀=需留意　红=立即处置　｜　效果 常亮=已发生　闪烁=进行中　双闪/一长一短=提醒　｜　同一颗灯只显示优先级最高的一条</value>
+    <comment>全角空格分隔的图例。英文最长的一条，宽度核算会盯它。</comment>
+  </data>
+  <data name="alert.legend.ok" xml:space="preserve">
+    <value>● 正常</value>
+  </data>
+  <data name="alert.legend.warn" xml:space="preserve">
+    <value>● 留意</value>
+  </data>
+  <data name="alert.legend.err" xml:space="preserve">
+    <value>● 处置</value>
+  </data>
+  <data name="main.lbl.mode" xml:space="preserve">
+    <value>当前模式：{0}</value>
+    <comment>{0} 是页签文案（按键模式 / 告警模式），复用 main.tab.*。</comment>
+  </data>
+  <data name="main.master.running" xml:space="preserve">
+    <value>运行中</value>
+    <comment>总开关旁的状态字。Designer 里曾经写「灯光引擎：运行中」，但运行时一直只写「运行中」，预览值和实际不一致，这里对齐成短的。</comment>
+  </data>
+  <data name="main.master.off" xml:space="preserve">
+    <value>已关闭</value>
+  </data>
+  <data name="dev.btn.connect" xml:space="preserve">
+    <value>连接</value>
+    <comment>和 dev.btn.disconnect 成对，由连接状态切换。</comment>
+  </data>
+  <data name="dev.hint.unsaved" xml:space="preserve">
+    <value>⚠ 配置存不下，退出后会丢失</value>
+    <comment>感叹号图标是文字的一部分，别去掉。</comment>
+  </data>
+  <data name="main.pressed.detached" xml:space="preserve">
+    <value>当前按下: -（设备已拔出）</value>
+  </data>
+  <data name="main.pressed.disconnected" xml:space="preserve">
+    <value>当前按下: -（设备已断开）</value>
+  </data>
+  <data name="main.pressed.btn" xml:space="preserve">
+    <value>当前按下: 按钮#{0}（{1}）</value>
+    <comment>{0} 是 0 起的按钮编号，{1} 是原始输入通道名。</comment>
+  </data>
+  <data name="main.pressed.sim" xml:space="preserve">
+    <value>当前按下: 按钮#{0}（预览模拟）</value>
+  </data>
+  <data name="main.pressed.channel" xml:space="preserve">
+    <value>当前按下: -（{0}）</value>
+  </data>
+  <data name="main.pressed.pollerr" xml:space="preserve">
+    <value>轮询异常：{0}</value>
+  </data>
+  <data name="main.pressed.readerr" xml:space="preserve">
+    <value>状态读取异常：{0}</value>
+  </data>
+  <data name="sim.idle.hint" xml:space="preserve">
+    <value>联动已关闭。
+勾选「{0}」后这里显示空速/高度/发动机等状态。</value>
+    <comment>{0} 是复选框自己的文字（main.chk.sim），不另写一份，否则改一处忘一处。</comment>
+  </data>
+  <data name="dev.channel.raw" xml:space="preserve">
+    <value>原始输入</value>
+    <comment>读按钮的两条通道之一，另一个是 DirectInput（API 名，不译）。这个字符串会进状态行，必须跟着语言走。</comment>
+  </data>
+
+  <!-- 1.3.57 系统名与规则名。key = sys.<SystemKey> / rule.<规则 id>，
+       由 UI/TextNames.SysName / RuleName 现取。用户自建的规则不在语言包里，
+       查不到时回落到用户自己起的名字（L.Tor）。 -->
+  <data name="sys.Power" xml:space="preserve">
+    <value>电源</value>
+  </data>
+  <data name="sys.Engine" xml:space="preserve">
+    <value>发动机</value>
+  </data>
+  <data name="sys.Gear" xml:space="preserve">
+    <value>起落架</value>
+  </data>
+  <data name="sys.Flaps" xml:space="preserve">
+    <value>襟翼</value>
+  </data>
+  <data name="sys.Lights" xml:space="preserve">
+    <value>外部灯光</value>
+  </data>
+  <data name="sys.Autopilot" xml:space="preserve">
+    <value>自动驾驶</value>
+  </data>
+  <data name="sys.MasterCaution" xml:space="preserve">
+    <value>告警总灯</value>
+  </data>
+  <data name="sys.Fuel" xml:space="preserve">
+    <value>燃油</value>
+  </data>
+  <data name="sys.Special" xml:space="preserve">
+    <value>特种装置</value>
+  </data>
+  <data name="sys.Custom" xml:space="preserve">
+    <value>自定义</value>
+  </data>
+  <data name="rule.pwr_bat_only" xml:space="preserve">
+    <value>电瓶开 · 航电关</value>
+  </data>
+  <data name="rule.pwr_avionics_on" xml:space="preserve">
+    <value>航电已开</value>
+  </data>
+  <data name="rule.pwr_avionics_no_bat" xml:space="preserve">
+    <value>航电开但电瓶关</value>
+  </data>
+  <data name="rule.eng_all_off" xml:space="preserve">
+    <value>全部关车</value>
+  </data>
+  <data name="rule.eng_all_run" xml:space="preserve">
+    <value>全部运转</value>
+  </data>
+  <data name="rule.eng_partial" xml:space="preserve">
+    <value>发动机失效</value>
+  </data>
+  <data name="rule.eng_fire" xml:space="preserve">
+    <value>发动机火警</value>
+  </data>
+  <data name="rule.gear_up_locked" xml:space="preserve">
+    <value>收起锁定</value>
+  </data>
+  <data name="rule.gear_transit" xml:space="preserve">
+    <value>收放中</value>
+  </data>
+  <data name="rule.gear_down_locked" xml:space="preserve">
+    <value>放下锁定</value>
+  </data>
+  <data name="rule.gear_disagree" xml:space="preserve">
+    <value>三腿不一致</value>
+  </data>
+  <data name="rule.adv_gear_retract" xml:space="preserve">
+    <value>起飞后收轮提醒</value>
+  </data>
+  <data name="rule.gear_overspeed" xml:space="preserve">
+    <value>起落架超速</value>
+  </data>
+  <data name="rule.adv_approach_cfg" xml:space="preserve">
+    <value>进近构型提醒</value>
+  </data>
+  <data name="rule.gear_low_alt" xml:space="preserve">
+    <value>低空未放起落架</value>
+  </data>
+  <data name="rule.gear_damaged" xml:space="preserve">
+    <value>起落架超速损坏</value>
+  </data>
+  <data name="rule.flap_up" xml:space="preserve">
+    <value>襟翼收上</value>
+  </data>
+  <data name="rule.flap_deployed" xml:space="preserve">
+    <value>襟翼已放出</value>
+  </data>
+  <data name="rule.flap_full" xml:space="preserve">
+    <value>襟翼全放</value>
+  </data>
+  <data name="rule.spoiler_armed" xml:space="preserve">
+    <value>扰流板预位</value>
+  </data>
+  <data name="rule.spoiler_deployed" xml:space="preserve">
+    <value>扰流板已放出（空中）</value>
+  </data>
+  <data name="rule.to_config_warn" xml:space="preserve">
+    <value>起飞构型警告</value>
+  </data>
+  <data name="rule.flap_overspeed" xml:space="preserve">
+    <value>襟翼超速</value>
+  </data>
+  <data name="rule.flap_damaged" xml:space="preserve">
+    <value>襟翼超速损坏</value>
+  </data>
+  <data name="rule.lights_all_off" xml:space="preserve">
+    <value>外部灯全关</value>
+  </data>
+  <data name="rule.lights_complete" xml:space="preserve">
+    <value>外部灯齐全</value>
+  </data>
+  <data name="rule.lights_land_taxi" xml:space="preserve">
+    <value>着陆 / 滑行灯已开</value>
+  </data>
+  <data name="rule.lights_incomplete" xml:space="preserve">
+    <value>灯不齐全</value>
+  </data>
+  <data name="rule.ap_off" xml:space="preserve">
+    <value>AP 关闭</value>
+  </data>
+  <data name="rule.ap_on" xml:space="preserve">
+    <value>AP 接通</value>
+  </data>
+  <data name="rule.ap_approach" xml:space="preserve">
+    <value>进近 / 背航道</value>
+  </data>
+  <data name="rule.ap_no_mode" xml:space="preserve">
+    <value>接通但无模式</value>
+  </data>
+  <data name="rule.adv_wind" xml:space="preserve">
+    <value>大风提示</value>
+  </data>
+  <data name="rule.adv_ice_risk" xml:space="preserve">
+    <value>低温结冰风险</value>
+  </data>
+  <data name="rule.ice_structural" xml:space="preserve">
+    <value>结构结冰</value>
+  </data>
+  <data name="rule.ice_no_deice" xml:space="preserve">
+    <value>结冰且未开除冰</value>
+  </data>
+  <data name="rule.ice_pitot" xml:space="preserve">
+    <value>皮托管结冰且未加热</value>
+  </data>
+  <data name="rule.ice_pitot_fail" xml:space="preserve">
+    <value>皮托管加热已开仍结冰</value>
+  </data>
+  <data name="rule.canopy_open" xml:space="preserve">
+    <value>座舱盖未关（空中）</value>
+  </data>
+  <data name="rule.brake_park_to" xml:space="preserve">
+    <value>起飞时驻车刹车未松</value>
+  </data>
+  <data name="rule.stall" xml:space="preserve">
+    <value>失速告警</value>
+  </data>
+  <data name="rule.overspeed" xml:space="preserve">
+    <value>超速告警</value>
+  </data>
+  <data name="rule.mc_clear" xml:space="preserve">
+    <value>无告警</value>
+  </data>
+  <data name="rule.fuel_na" xml:space="preserve">
+    <value>油量数据不可用</value>
+  </data>
+  <data name="rule.fuel_ok" xml:space="preserve">
+    <value>油量充足</value>
+  </data>
+  <data name="rule.fuel_low" xml:space="preserve">
+    <value>油量偏低</value>
+  </data>
+  <data name="rule.fuel_critical" xml:space="preserve">
+    <value>油量低</value>
+  </data>
+  <data name="rule.fuel_min" xml:space="preserve">
+    <value>油量极低</value>
+  </data>
+  <data name="rule.sp_parking" xml:space="preserve">
+    <value>已停入机位</value>
+  </data>
+  <data name="rule.sp_hook" xml:space="preserve">
+    <value>尾勾放下</value>
+  </data>
+  <data name="rule.sp_tailwheel" xml:space="preserve">
+    <value>尾轮放下</value>
+  </data>
+  <data name="rule.sp_tail_lock" xml:space="preserve">
+    <value>起飞时尾轮未锁（仅后三点）</value>
+  </data>
+  <data name="rule.sp_tow" xml:space="preserve">
+    <value>牵引连接</value>
+  </data>
+  <data name="rule.sp_slew" xml:space="preserve">
+    <value>拖动 / 推移模式</value>
+  </data>
+  <data name="rule.sp_redline" xml:space="preserve">
+    <value>超红线空速</value>
+  </data>
+  <data name="bind.led.noalert" xml:space="preserve">
+    <value>当前无告警</value>
+    <comment>灯气泡：这颗灯当前没有命中的规则。</comment>
+  </data>
+  <data name="bind.led.hit" xml:space="preserve">
+    <value>命中：{0}</value>
+  </data>
+  <data name="bind.led.hitrow" xml:space="preserve">
+    <value>第 {0} 行 · {1}</value>
+  </data>
+  <data name="alert.rule.sample" xml:space="preserve">
+    <value> ·样板</value>
+    <comment>样板规则后缀，接在规则名后面。英文带前导空格。</comment>
+  </data>
+  <data name="alert.rule.added" xml:space="preserve">
+    <value>已新增规则「{0}」。</value>
+  </data>
+  <data name="alert.rule.deleted" xml:space="preserve">
+    <value>已删除规则「{0}」。</value>
+  </data>
+  <data name="alert.rule.builtin.title" xml:space="preserve">
+    <value>内置规则</value>
+  </data>
+  <data name="alert.rule.builtin" xml:space="preserve">
+    <value>「{0}」是内置规则，不能删除。
+
+不想要它的效果，把这一行的勾去掉（停用）就行——这样以后程序升级改了它的条件，你仍然能得到修正。</value>
+  </data>
+  <data name="alert.rule.del.title" xml:space="preserve">
+    <value>删除规则</value>
+  </data>
+  <data name="alert.rule.del.select" xml:space="preserve">
+    <value>先在表里选中要删除的那条规则。</value>
+  </data>
+  <data name="alert.rule.del.confirm" xml:space="preserve">
+    <value>确定删除规则「{0}」？
+
+它的条件和灯效设置会一起删掉。</value>
+  </data>
+
+  <!-- 1.3.57 主界面运行时长句：模拟数据卡。整句带占位符，不做前后缀拼接。 -->
+  <data name="main.sim.nodata" xml:space="preserve">
+    <value>暂无数据 · 原因见下方的「变量应答」和状态栏
+点「实时数据…」可逐个看变量的取值与变化次数。</value>
+    <comment>模拟数据卡的占位文字。两行是分开的信息：结论 + 下一步怎么做。</comment>
+  </data>
+  <data name="main.sim.line1" xml:space="preserve">
+    <value>空速 {0} kn · 高度 {1} ft · 升降 {2}{3} fpm · {4} · G {5}</value>
+    <comment>{2} 是升降符号（+ 或空），{3} 是数值。英文用 IAS/Altitude/VS 这三个航空缩写，不写全称——放不下。</comment>
+  </data>
+  <data name="main.sim.line2" xml:space="preserve">
+    <value>发动机 {0} 台（{1} 运转）· 油门 {2}% · 转速 {3} rpm</value>
+  </data>
+  <data name="main.sim.line3" xml:space="preserve">
+    <value> · 襟翼 {0}% · 油量 {1}% · AP {2}</value>
+    <comment>整句带前导空格：它接在起落架那段后面，同一行。</comment>
+  </data>
+  <data name="main.sim.gear.fixed" xml:space="preserve">
+    <value>起落架 固定式（放下）</value>
+    <comment>固定式起落架没有收放状态，只说这一句。</comment>
+  </data>
+  <data name="main.sim.gear" xml:space="preserve">
+    <value>起落架 {0}（{1}%）</value>
+    <comment>{0} 是「放下 / 收起」。</comment>
+  </data>
+  <data name="main.sim.geardown" xml:space="preserve">
+    <value>放下</value>
+  </data>
+  <data name="main.sim.gearup" xml:space="preserve">
+    <value>收起</value>
+  </data>
+  <data name="main.sim.ground" xml:space="preserve">
+    <value>地面</value>
+  </data>
+  <data name="main.sim.air" xml:space="preserve">
+    <value>空中</value>
+  </data>
+  <data name="main.sim.on" xml:space="preserve">
+    <value>开</value>
+    <comment>开关类状态词，接在设备名后面。</comment>
+  </data>
+  <data name="main.sim.off" xml:space="preserve">
+    <value>关</value>
+  </data>
+  <data name="main.sim.stall" xml:space="preserve">
+    <value> · 失速告警</value>
+    <comment>只有真出现时才接在行尾，所以带前导空格。</comment>
+  </data>
+  <data name="main.sim.overspeed" xml:space="preserve">
+    <value> · 超速告警</value>
+  </data>
+  <data name="main.sim.replies" xml:space="preserve">
+    <value>变量应答 {0} / {1}（点「实时数据…」看明细）</value>
+  </data>
+
+  <!-- 1.3.57 设备状态词与气泡。状态由 DevState 枚举决定，文字只是它的投影。 -->
+  <data name="dev.st.detecting" xml:space="preserve">
+    <value>● 检测中…</value>
+  </data>
+  <data name="dev.st.connected" xml:space="preserve">
+    <value>● 已连接</value>
+  </data>
+  <data name="dev.st.connected.nobtn" xml:space="preserve">
+    <value>● 已连接 · 读不出按钮</value>
+  </data>
+  <data name="dev.st.initfail" xml:space="preserve">
+    <value>● 初始化失败</value>
+  </data>
+  <data name="dev.st.notfound" xml:space="preserve">
+    <value>● 未连接</value>
+  </data>
+  <data name="dev.st.unplugged" xml:space="preserve">
+    <value>● 设备已拔出</value>
+  </data>
+  <data name="dev.st.disconnected" xml:space="preserve">
+    <value>● 已断开</value>
+    <comment>设备状态词（1.3.57 起由 DevState 枚举生成，不靠中文反查）。前导的圆点是状态色块的定位标记，别删。</comment>
+  </data>
+  <data name="dev.tip.failtail" xml:space="preserve">
+    <value>完整原因与处置步骤：点下面的「设备诊断」。</value>
+  </data>
+  <data name="dev.tip.nobtn" xml:space="preserve">
+    <value>识别到设备，但读不出任何按钮——按键模式不会有反应。
+点「设备诊断」看按钮偏移与原始输入通道；两处都空说明按钮数据没上报，先拔插一次 G940 的 USB 线。</value>
+  </data>
+  <data name="dev.tip.connected" xml:space="preserve">
+    <value>已连接，读到 {0} 个按钮。</value>
+  </data>
+  <data name="dev.tip.rawinput" xml:space="preserve">
+    <value>原始输入通道未锁定设备，按钮只从 DirectInput 读。</value>
+  </data>
+  <data name="dev.tip.detecting" xml:space="preserve">
+    <value>正在枚举 USB 设备并尝试连接 G940 油门。</value>
+  </data>
+  <data name="dev.tip.unplugged" xml:space="preserve">
+    <value>USB 线已经断开，灯不再写硬件。
+插回后会自动重连；也可以点「连接」手动连一次。</value>
+  </data>
+  <data name="dev.tip.disconnected" xml:space="preserve">
+    <value>灯不再写硬件，预览和表格照常可用。
+点「连接」重新连上。</value>
+  </data>
+  <data name="dev.fail.none" xml:space="preserve">
+    <value>没有枚举到任何游戏控制器</value>
+  </data>
+  <data name="dev.fail.none.detail" xml:space="preserve">
+    <value>请确认：
+1) G940 已插入并通电；
+2) 设备管理器里能看到 G940（不是带感叹号的未知设备）；
+3) G940 的 USB 线已连接。</value>
+  </data>
+  <data name="dev.fail.nomatch" xml:space="preserve">
+    <value>没认出 G940 油门（枚举到 {0} 个设备）</value>
+  </data>
+  <data name="dev.fail.nomatch.detail" xml:space="preserve">
+    <value>点「连接」可以从列表里手动选一次。
+枚举到的设备：
+</value>
+    <comment>结尾的换行不能删：后面直接接设备清单。</comment>
+  </data>
+  <data name="dev.fail.nopick" xml:space="preserve">
+    <value>还没指定设备</value>
+  </data>
+  <data name="dev.fail.nopick.detail" xml:space="preserve">
+    <value>点「连接」可以重新从列表里选一次。</value>
+  </data>
+  <data name="dev.fail.enum" xml:space="preserve">
+    <value>设备枚举失败</value>
+  </data>
+  <data name="dev.fail.init" xml:space="preserve">
+    <value>设备初始化失败</value>
+  </data>
+  <data name="dev.fail.connect" xml:space="preserve">
+    <value>连接时出错</value>
+  </data>
+  <data name="dev.devicelist.unnamed" xml:space="preserve">
+    <value>(未命名设备)</value>
+  </data>
+
+  <!-- 1.3.57 保存状态 / 按键捕获 / 内置配置提示。 -->
+  <data name="main.save.tip" xml:space="preserve">
+    <value>勾选、改数值、改条件都是立刻写盘，没有「保存」按钮。
+配置文件位置：
+{0}</value>
+  </data>
+  <data name="main.save.errtip" xml:space="preserve">
+    <value>配置没能保存到磁盘（{0}）。
+
+位置：
+{1}
+
+常见原因：程序放在 Program Files 或只读 U 盘里，把整个程序目录挪到有写权限的地方（例如「文档」下面）即可。
+另：告警/按键配置写不进去时也会报在这里。</value>
+  </data>
+  <data name="main.cap.noconnect" xml:space="preserve">
+    <value>请先连接设备再捕获油门按键。</value>
+  </data>
+  <data name="main.cap.norow" xml:space="preserve">
+    <value>请先新增一条绑定，再捕获油门按键。</value>
+  </data>
+  <data name="main.cap.waiting" xml:space="preserve">
+    <value>等待按下油门按键…请在 10 秒内按住，直到识别。</value>
+  </data>
+  <data name="main.cap.timeout" xml:space="preserve">
+    <value>捕获超时，未检测到按钮。</value>
+  </data>
+  <data name="common.tip.title" xml:space="preserve">
+    <value>提示</value>
+  </data>
+  <data name="main.bind.hint.normal" xml:space="preserve">
+    <value>右键表格可操作 · 双击可编辑</value>
+  </data>
+  <data name="main.alert.hint.normal" xml:space="preserve">
+    <value>勾选即生效 · 双击「触发条件」可改条件</value>
+  </data>
+  <data name="common.builtin.only" xml:space="preserve">
+    <value>（内置）</value>
+  </data>
+  <data name="common.builtin.tag" xml:space="preserve">
+    <value>（内置）{0}</value>
+  </data>
+  <data name="main.builtin.touched" xml:space="preserve">
+    <value>改动未保存 · {0} 不可覆盖，请用「管理 → 另存为」</value>
+  </data>
+  <data name="main.builtin.readonly" xml:space="preserve">
+    <value>{0} · 只读，改动请用「管理 → 另存为」</value>
+  </data>
+
+  <!-- 1.3.57 配置管理（管理菜单、另存为、重命名、删除、导入导出）。 -->
+  <data name="main.prof.head" xml:space="preserve">
+    <value>当前：{0}</value>
+    <comment>管理菜单不可点的第一行，{0} 已含「（内置）」前缀。</comment>
+  </data>
+  <data name="main.prof.new" xml:space="preserve">
+    <value>新建（出厂默认）…</value>
+  </data>
+  <data name="main.prof.saveas" xml:space="preserve">
+    <value>另存为…</value>
+  </data>
+  <data name="main.prof.rename" xml:space="preserve">
+    <value>重命名…</value>
+  </data>
+  <data name="main.prof.del" xml:space="preserve">
+    <value>删除这套配置…</value>
+  </data>
+  <data name="main.prof.import" xml:space="preserve">
+    <value>导入…</value>
+  </data>
+  <data name="main.prof.export" xml:space="preserve">
+    <value>导出…</value>
+    <comment>也是导出相关弹框的标题。</comment>
+  </data>
+  <data name="main.prof.openfolder" xml:space="preserve">
+    <value>打开配置文件夹</value>
+  </data>
+  <data name="main.prof.dup" xml:space="preserve">
+    <value>已经有叫「{0}」的配置了，换个名字。</value>
+  </data>
+  <data name="main.prof.new.title.a" xml:space="preserve">
+    <value>新建告警配置</value>
+  </data>
+  <data name="main.prof.new.title.b" xml:space="preserve">
+    <value>新建按键配置</value>
+  </data>
+  <data name="main.prof.new.prompt" xml:space="preserve">
+    <value>新配置的名称（内容是出厂默认，之后随便改）：</value>
+  </data>
+  <data name="main.prof.new.def.a" xml:space="preserve">
+    <value>我的告警配置</value>
+  </data>
+  <data name="main.prof.new.def.b" xml:space="preserve">
+    <value>我的按键配置</value>
+  </data>
+  <data name="main.prof.newfail" xml:space="preserve">
+    <value>新建失败</value>
+  </data>
+  <data name="main.prof.created" xml:space="preserve">
+    <value>已新建配置「{0}」（出厂默认）。</value>
+  </data>
+  <data name="main.prof.saveas.title" xml:space="preserve">
+    <value>另存为</value>
+  </data>
+  <data name="main.prof.saveas.prompt" xml:space="preserve">
+    <value>把当前这套配置存成一个新名字（内容照抄当前）：</value>
+  </data>
+  <data name="main.prof.saveas.def" xml:space="preserve">
+    <value>{0} 副本</value>
+  </data>
+  <data name="main.prof.saveas.defempty" xml:space="preserve">
+    <value>配置</value>
+    <comment>默认名在「当前配置名」为空时的占位。</comment>
+  </data>
+  <data name="main.prof.saveasfail" xml:space="preserve">
+    <value>另存为失败</value>
+  </data>
+  <data name="main.prof.savedas" xml:space="preserve">
+    <value>已另存为「{0}」并切换过去。</value>
+  </data>
+  <data name="main.prof.rename.title" xml:space="preserve">
+    <value>重命名</value>
+  </data>
+  <data name="main.prof.rename.prompt" xml:space="preserve">
+    <value>把「{0}」改成：</value>
+  </data>
+  <data name="main.prof.renamefail" xml:space="preserve">
+    <value>重命名失败</value>
+  </data>
+  <data name="main.prof.renamed" xml:space="preserve">
+    <value>已重命名为「{0}」。</value>
+  </data>
+  <data name="main.prof.del.confirm" xml:space="preserve">
+    <value>确定删除配置「{0}」？
+
+文件会被删除（同目录的 .bak 一起删），删掉找不回来。</value>
+  </data>
+  <data name="main.prof.del.title" xml:space="preserve">
+    <value>删除配置</value>
+  </data>
+  <data name="main.prof.del.notfound" xml:space="preserve">
+    <value>找不到「{0}」对应的文件，可能已经被删掉了。</value>
+  </data>
+  <data name="main.prof.delfail" xml:space="preserve">
+    <value>删除失败</value>
+  </data>
+  <data name="main.prof.deleted" xml:space="preserve">
+    <value>已删除「{0}」，切回内置配置。</value>
+  </data>
+  <data name="main.prof.openfail" xml:space="preserve">
+    <value>打不开文件夹：{0}</value>
+  </data>
+  <data name="main.prof.openfail.title" xml:space="preserve">
+    <value>打开文件夹</value>
+  </data>
+  <data name="main.prof.export.title.a" xml:space="preserve">
+    <value>导出告警配置</value>
+  </data>
+  <data name="main.prof.export.title.b" xml:space="preserve">
+    <value>导出按键配置</value>
+  </data>
+  <data name="main.prof.filter.a" xml:space="preserve">
+    <value>告警配置 (*.json)|*.json|所有文件 (*.*)|*.*</value>
+    <comment>文件对话框过滤器，竖线分隔，别改格式。</comment>
+  </data>
+  <data name="main.prof.filter.b" xml:space="preserve">
+    <value>按键配置 (*.json)|*.json|所有文件 (*.*)|*.*</value>
+  </data>
+  <data name="main.prof.export.err" xml:space="preserve">
+    <value>导出失败：{0}</value>
+  </data>
+  <data name="main.prof.export.ok" xml:space="preserve">
+    <value>已导出到：
+{0}</value>
+  </data>
+  <data name="main.prof.import.title.a" xml:space="preserve">
+    <value>导入告警配置</value>
+  </data>
+  <data name="main.prof.import.title.b" xml:space="preserve">
+    <value>导入按键配置</value>
+  </data>
+  <data name="main.prof.importfail" xml:space="preserve">
+    <value>导入失败</value>
+  </data>
+  <data name="main.prof.import.bad" xml:space="preserve">
+    <value>这个文件没法导入：
+{0}</value>
+  </data>
+  <data name="main.prof.import.builtin.title" xml:space="preserve">
+    <value>内置配置</value>
+  </data>
+  <data name="main.prof.import.builtin" xml:space="preserve">
+    <value>「{0}」是内置配置，不能覆盖。
+将导入为「{1}」。</value>
+  </data>
+  <data name="main.prof.import.dup.title" xml:space="preserve">
+    <value>同名配置</value>
+  </data>
+  <data name="main.prof.import.dup" xml:space="preserve">
+    <value>已有同名配置「{0}」。
+
+是：覆盖它
+否：换个名字导入
+取消：什么都不做</value>
+    <comment>三个按钮的文字写进正文里，因为标准 MessageBox 的 Yes/No/Cancel 按钮文字跟着系统语言，改不了。</comment>
+  </data>
+  <data name="main.prof.import.ok" xml:space="preserve">
+    <value>已导入配置「{0}」。
+在配置下拉里选中它即可切换过去。</value>
+  </data>
+  <data name="main.prof.import.ok.title" xml:space="preserve">
+    <value>导入完成</value>
+  </data>
+
+  <!-- 1.3.57 右键菜单 / 页脚 / 表格提示 / 配置切换反馈。 -->
+  <data name="alert.menu.delrow" xml:space="preserve">
+    <value>删除本条规则（第 {0} 行）</value>
+  </data>
+  <data name="alert.menu.delrow.plain" xml:space="preserve">
+    <value>删除本条规则</value>
+  </data>
+  <data name="alert.menu.editcond.row" xml:space="preserve">
+    <value>编辑本条规则的条件…（第 {0} 行）</value>
+  </data>
+  <data name="alert.menu.editcond.plain" xml:space="preserve">
+    <value>编辑本条规则的条件…</value>
+  </data>
+  <data name="bind.menu.delrow" xml:space="preserve">
+    <value>删除本条绑定（第 {0} 行）</value>
+  </data>
+  <data name="bind.menu.delrow.plain" xml:space="preserve">
+    <value>删除本条绑定</value>
+  </data>
+  <data name="alert.foot.profile" xml:space="preserve">
+    <value>配置：{0}（{1} 条启用） · 勾选即生效 · 双击条件可改</value>
+  </data>
+  <data name="common.none" xml:space="preserve">
+    <value>（无）</value>
+  </data>
+  <data name="common.trunc" xml:space="preserve">
+    <value>…（其余 {0} 行省略）</value>
+  </data>
+  <data name="main.dup.tail" xml:space="preserve">
+    <value>重复绑定不会叠加效果。</value>
+  </data>
+  <data name="main.tip.confignotes" xml:space="preserve">
+    <value>配置提示：{0}</value>
+  </data>
+  <data name="main.tip.confignotes.more" xml:space="preserve">
+    <value>（另有 {0} 条，见告警页与设置卡片）</value>
+  </data>
+  <data name="main.prof.notfound" xml:space="preserve">
+    <value>找不到配置「{0}」</value>
+  </data>
+  <data name="main.prof.loadfail" xml:space="preserve">
+    <value>告警配置读取失败（{0}），已用内置「{1}」</value>
+  </data>
+  <data name="main.prof.loadfail.none" xml:space="preserve">
+    <value>告警配置读取失败（{0}），且没有可用的预置配置。</value>
+  </data>
+  <data name="main.prof.loadfail.b" xml:space="preserve">
+    <value>按键配置读取失败（{0}），已用内置「{1}」</value>
+  </data>
+  <data name="main.prof.loadfail.b.none" xml:space="preserve">
+    <value>按键配置读取失败（{0}），且没有可用的预置配置。</value>
+  </data>
+  <data name="main.prof.noalert" xml:space="preserve">
+    <value>没有告警配置。</value>
+  </data>
+  <data name="main.prof.nobutton" xml:space="preserve">
+    <value>没有按键配置。</value>
+  </data>
+  <data name="bind.led.nobind" xml:space="preserve">
+    <value>当前无绑定</value>
+  </data>
+  <data name="bind.led.bindrow" xml:space="preserve">
+    <value>命中：第 {0} 行 · #{1}</value>
+    <comment>后面还会接按钮名、触发、效果等，所以不带结尾标点。</comment>
+  </data>
+  <data name="bind.cap.done" xml:space="preserve">
+    <value>已捕获：油门按钮 #{0} → 第 {1} 行。</value>
+  </data>
+  <data name="main.preset.switched.btn" xml:space="preserve">
+    <value>已切换到「{0}」（{1} 条绑定）。</value>
+  </data>
+  <data name="main.preset.switched.alert" xml:space="preserve">
+    <value>已切换到告警配置「{0}」（{1} 条规则启用）。</value>
+  </data>
+  <data name="main.preset.chip" xml:space="preserve">
+    <value>我的 {0} 套｜内置 {1} 套</value>
+  </data>
+  <data name="main.bind.added" xml:space="preserve">
+    <value>已新增一条绑定并已存盘（右键可捕获油门按键，或直接填「油门按钮#」列）。</value>
+  </data>
+  <data name="main.bind.removed" xml:space="preserve">
+    <value>已删除第 {0} 行绑定并已存盘。</value>
+  </data>
+  <data name="main.bind.removedlast" xml:space="preserve">
+    <value>已删除最后一条绑定并已存盘。</value>
+  </data>
+  <data name="alert.grid.dropped" xml:space="preserve">
+    <value>（你改的这条条件不合法，已回落到内置条件）</value>
+  </data>
+  <data name="alert.grid.customized" xml:space="preserve">
+    <value>这条规则的条件已被改过（配置里只存差量）</value>
+  </data>
+  <data name="alert.grid.userrule" xml:space="preserve">
+    <value>用户新增的规则（可删除、可改条件）</value>
+  </data>
+  <data name="alert.grid.sample" xml:space="preserve">
+    <value>样板规则（默认停用）：条件由程序自算，不是 MSFS 判定，也不是真机上的灯。
+建议照着改成自己的条件。</value>
+  </data>
+
+  <!-- 1.3.57 重复行提示 / 场景记录 / 托盘 / 条件校验等零散反馈。 -->
+  <data name="main.dup.rowgroup" xml:space="preserve">
+    <value>第{0}行</value>
+  </data>
+  <data name="main.dup.found" xml:space="preserve">
+    <value>⚠ 检测到 {0} 行重复（同色为同一组）：{1}，{2}</value>
+    <comment>{1} 是「第1/2行、第5行」这类列表，{2} 是尾巴那句说明。</comment>
+  </data>
+  <data name="alert.rule.nopos" xml:space="preserve">
+    <value>没能算出插入位置（这个系统里没有可排的规则）。
+
+换一个系统，或先在该系统里加一条规则再试。</value>
+  </data>
+  <data name="alert.rule.nopos.title" xml:space="preserve">
+    <value>无法插入</value>
+  </data>
+  <data name="main.scene.on" xml:space="preserve">
+    <value>● 记录中：diag\g940-simstate.txt</value>
+  </data>
+  <data name="main.scene.off" xml:space="preserve">
+    <value>记录场景状态（写到 diag 文件夹）</value>
+  </data>
+  <data name="main.raw.nodata" xml:space="preserve">
+    <value> = 无数据（该机型未应答）</value>
+  </data>
+  <data name="main.tray.on" xml:space="preserve">
+    <value>关闭窗口将收到系统托盘，灯光继续运行</value>
+  </data>
+  <data name="main.tray.off" xml:space="preserve">
+    <value>关闭窗口将直接退出</value>
+  </data>
+  <data name="main.tray.balloon" xml:space="preserve">
+    <value>程序已最小化到托盘（灯光效果持续运行）。
+双击图标恢复主界面；右键菜单可退出。</value>
+  </data>
+  <data name="alert.audit.title.all" xml:space="preserve">
+    <value>检查我的规则（全部系统）</value>
+  </data>
+  <data name="alert.audit.title.sys" xml:space="preserve">
+    <value>检查我的规则 · {0}</value>
+  </data>
+  <data name="main.ver.unknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="main.cond.invalid" xml:space="preserve">
+    <value>条件没保存：
+· {0}</value>
+    <comment>{0} 是若干条校验失败原因，用「
+· 」分隔。</comment>
+  </data>
+  <data name="main.cond.invalid.title" xml:space="preserve">
+    <value>条件无效</value>
+  </data>
+  <data name="main.btn.tip.edit" xml:space="preserve">
+    <value>可直接输入按钮编号，或用右键「捕获油门按键」实测。</value>
+  </data>
+
+  <!-- 1.3.58 对话框：名称 / 选设备 / 灯位 / 实时数据，以及内置配置名。
+       「9 个对话框」里这一版只做不依赖 Core 中文串的那几个；
+       DiagForm 整窗不翻（内容框是日志、是数据），进 DocLint 白名单。 -->
+  <data name="common.ok" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="common.cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="common.close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="name.form" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="name.prompt" xml:space="preserve">
+    <value>配置名称</value>
+  </data>
+  <data name="name.hint" xml:space="preserve">
+    <value>名字会用作文件名，建议用能一眼看懂用途的词。</value>
+  </data>
+  <data name="pick.form" xml:space="preserve">
+    <value>选择 G940 油门</value>
+  </data>
+  <data name="pick.prompt" xml:space="preserve">
+    <value>程序没认出 G940 油门。下面是从系统里枚举到的控制器，
+请选名字里带 Throttle 的那一个：</value>
+    <comment>两行：第一行说结论，第二行说怎么做。</comment>
+  </data>
+  <data name="pick.hint" xml:space="preserve">
+    <value>这个选择会记住，以后启动不再问。</value>
+  </data>
+  <data name="led.form" xml:space="preserve">
+    <value>灯位配置</value>
+  </data>
+  <data name="led.title" xml:space="preserve">
+    <value>{0} · 当前：{1}</value>
+    <comment>{0} 是灯位名（P1…P8），{1} 是系统名或「（空）」。</comment>
+  </data>
+  <data name="led.hint" xml:space="preserve">
+    <value>标「现挂 Pn」的系统会从那颗灯换过来；
+选「（空）」让这颗灯空出来。</value>
+  </data>
+  <data name="led.opt.empty" xml:space="preserve">
+    <value>（空）</value>
+  </data>
+  <data name="led.opt.sysn" xml:space="preserve">
+    <value>系统 {0}</value>
+    <comment>系统表里没有的 key 才会走到这里，正常见不到。</comment>
+  </data>
+  <data name="led.tag.current" xml:space="preserve">
+    <value>当前</value>
+  </data>
+  <data name="led.tag.noled" xml:space="preserve">
+    <value>未上灯</value>
+  </data>
+  <data name="led.tag.other" xml:space="preserve">
+    <value>现挂 {0}</value>
+    <comment>{0} 是灯位名（P1…P8）。</comment>
+  </data>
+  <data name="sim.title" xml:space="preserve">
+    <value>实时数据 — MSFS2024（SimConnect）</value>
+    <comment>整句当标题用：界面上是窗体标题，导出的 txt 第一行也是它。</comment>
+  </data>
+  <data name="sim.onlyanswered" xml:space="preserve">
+    <value>只看已应答</value>
+  </data>
+  <data name="sim.onlychanged" xml:space="preserve">
+    <value>只看有变化</value>
+  </data>
+  <data name="sim.ontop" xml:space="preserve">
+    <value>总在最前</value>
+  </data>
+  <data name="sim.col.group" xml:space="preserve">
+    <value>分组</value>
+    <comment>变量分组名本身不翻（属数据），只有列头翻。</comment>
+  </data>
+  <data name="sim.col.var" xml:space="preserve">
+    <value>变量</value>
+  </data>
+  <data name="sim.col.unit" xml:space="preserve">
+    <value>单位</value>
+  </data>
+  <data name="sim.col.value" xml:space="preserve">
+    <value>当前值</value>
+  </data>
+  <data name="sim.col.answered" xml:space="preserve">
+    <value>应答</value>
+  </data>
+  <data name="sim.col.changes" xml:space="preserve">
+    <value>变化</value>
+  </data>
+  <data name="sim.col.age" xml:space="preserve">
+    <value>最近更新</value>
+  </data>
+  <data name="sim.copy" xml:space="preserve">
+    <value>复制</value>
+  </data>
+  <data name="sim.export" xml:space="preserve">
+    <value>导出 txt</value>
+  </data>
+  <data name="sim.nodata" xml:space="preserve">
+    <value>尚未收到数据</value>
+  </data>
+  <data name="sim.noanswer" xml:space="preserve">
+    <value>✗ 未应答</value>
+  </data>
+  <data name="sim.stat" xml:space="preserve">
+    <value>已应答 {0}/{1} · 从未应答 {2}</value>
+  </data>
+  <data name="sim.stat.noframe" xml:space="preserve">
+    <value> · 当前没有数据帧</value>
+    <comment>带前导空格：接在上一条后面，同一行。</comment>
+  </data>
+  <data name="sim.time" xml:space="preserve">
+    <value>时间：{0}</value>
+    <comment>只用于导出的 txt。</comment>
+  </data>
+  <data name="sim.copyfail" xml:space="preserve">
+    <value>复制失败：{0}</value>
+  </data>
+  <data name="sim.export.title" xml:space="preserve">
+    <value>导出实时数据</value>
+  </data>
+  <data name="sim.export.filter" xml:space="preserve">
+    <value>文本文件|*.txt</value>
+    <comment>文件对话框过滤器，竖线分隔，别改格式。</comment>
+  </data>
+  <data name="sim.export.filename" xml:space="preserve">
+    <value>G940实时数据_{0}.txt</value>
+    <comment>{0} 是 yyyyMMdd_HHmmss。</comment>
+  </data>
+  <data name="sim.export.ok" xml:space="preserve">
+    <value>已导出：{0}</value>
+  </data>
+  <data name="sim.export.err" xml:space="preserve">
+    <value>导出失败：{0}</value>
+  </data>
+  <data name="profile.twin_piston" xml:space="preserve">
+    <value>通用双发活塞</value>
+    <comment>key = profile.&lt;配置文件名&gt;，见 Core/AlertNames.cs。</comment>
+  </data>
+  <data name="profile.single_piston" xml:space="preserve">
+    <value>单发活塞</value>
+  </data>
+  <data name="profile.jet_regional" xml:space="preserve">
+    <value>喷气支线</value>
+  </data>
+  <data name="profile.demo_rhythm" xml:space="preserve">
+    <value>节奏</value>
+  </data>
+  <data name="profile.demo_ring" xml:space="preserve">
+    <value>环行动画</value>
+  </data>
+  <data name="profile.demo_decor" xml:space="preserve">
+    <value>装饰</value>
+  </data>
+  <data name="cond.err.empty" xml:space="preserve">
+    <value>条件为空</value>
+  </data>
+  <data name="cond.err.depth" xml:space="preserve">
+    <value>条件层数超过 {0} 层</value>
+  </data>
+  <data name="cond.err.emptygroup" xml:space="preserve">
+    <value>分组里没有任何条件</value>
+  </data>
+  <data name="cond.err.notcount" xml:space="preserve">
+    <value>“非”必须且只能包含一条条件</value>
+  </data>
+  <data name="cond.err.opmissing" xml:space="preserve">
+    <value>条件类型为空（应为 and / or / not / cmp）</value>
+  </data>
+  <data name="cond.err.opunknown" xml:space="preserve">
+    <value>未知的条件类型：{0}</value>
+  </data>
+  <data name="cond.err.varmissing" xml:space="preserve">
+    <value>比较条件缺少变量</value>
+  </data>
+  <data name="cond.err.varunknown" xml:space="preserve">
+    <value>未知变量：{0}</value>
+  </data>
+  <data name="cond.err.cmpunknown" xml:space="preserve">
+    <value>未知的比较符：{0}</value>
+  </data>
+  <data name="cond.err.cmpempty" xml:space="preserve">
+    <value>空</value>
+  </data>
+  <data name="cond.err.threshold" xml:space="preserve">
+    <value>阈值机制已移除（1.3.44）：条件里的「{0}」需要改成具体数值</value>
+  </data>
+  <data name="cond.right.threshold" xml:space="preserve">
+    <value>阈值已移除（{0}）</value>
+  </data>
+  <data name="cmp.bool" xml:space="preserve">
+    <value>为真</value>
+  </data>
+  <data name="cmp.nbool" xml:space="preserve">
+    <value>为假</value>
+  </data>
+  <data name="cmp.gt" xml:space="preserve">
+    <value>大于</value>
+  </data>
+  <data name="cmp.ge" xml:space="preserve">
+    <value>不小于</value>
+  </data>
+  <data name="cmp.lt" xml:space="preserve">
+    <value>小于</value>
+  </data>
+  <data name="cmp.le" xml:space="preserve">
+    <value>不大于</value>
+  </data>
+  <data name="cmp.eq" xml:space="preserve">
+    <value>等于</value>
+  </data>
+  <data name="cmp.ne" xml:space="preserve">
+    <value>不等于</value>
+  </data>
+  <data name="cmp.between" xml:space="preserve">
+    <value>在区间内</value>
+  </data>
+  <data name="cond.describe.empty" xml:space="preserve">
+    <value>（空）</value>
+  </data>
+  <data name="cond.describe.emptygroup" xml:space="preserve">
+    <value>（空分组）</value>
+  </data>
+  <data name="cond.describe.unknown" xml:space="preserve">
+    <value>（未知条件）</value>
+  </data>
+  <data name="cond.describe.and" xml:space="preserve">
+    <value> 且 </value>
+  </data>
+  <data name="cond.describe.or" xml:space="preserve">
+    <value> 或 </value>
+  </data>
+  <data name="cond.describe.not" xml:space="preserve">
+    <value>非</value>
+  </data>
+  <data name="tri.true" xml:space="preserve">
+    <value>成立</value>
+  </data>
+  <data name="tri.false" xml:space="preserve">
+    <value>不成立</value>
+  </data>
+  <data name="common.nodata" xml:space="preserve">
+    <value>无数据</value>
+  </data>
+  <data name="derived.gearTotal" xml:space="preserve">
+    <value>起落架总伸出 (%)</value>
+  </data>
+  <data name="derived.gearSpread" xml:space="preserve">
+    <value>三腿最大差 (%)</value>
+  </data>
+  <data name="derived.maxThrottle" xml:space="preserve">
+    <value>最大油门 (%)</value>
+  </data>
+  <data name="derived.engCount" xml:space="preserve">
+    <value>发动机台数</value>
+  </data>
+  <data name="derived.engBurning" xml:space="preserve">
+    <value>燃烧台数</value>
+  </data>
+  <data name="derived.fuelRatio" xml:space="preserve">
+    <value>油量比</value>
+  </data>
+  <data name="audit.level.error" xml:space="preserve">
+    <value>错</value>
+  </data>
+  <data name="audit.level.conflict" xml:space="preserve">
+    <value>冲突</value>
+  </data>
+  <data name="audit.level.redundant" xml:space="preserve">
+    <value>冗余</value>
+  </data>
+  <data name="audit.level.tip" xml:space="preserve">
+    <value>提示</value>
+  </data>
+  <data name="probe.col.cond" xml:space="preserve">
+    <value>条件</value>
+  </data>
+  <data name="probe.col.left" xml:space="preserve">
+    <value>当前值</value>
+  </data>
+  <data name="probe.col.cmp" xml:space="preserve">
+    <value>比较</value>
+  </data>
+  <data name="probe.col.right" xml:space="preserve">
+    <value>门槛</value>
+  </data>
+  <data name="probe.col.result" xml:space="preserve">
+    <value>结果</value>
+  </data>
+  <data name="probe.head.nodata" xml:space="preserve">
+    <value>试算：未接入数据时全部显示“无数据”。</value>
+  </data>
+  <data name="probe.empty.nocond" xml:space="preserve">
+    <value>试算：这条规则没有条件。</value>
+  </data>
+  <data name="probe.rows" xml:space="preserve">
+    <value>试算{0}：以下是逐条结果。</value>
+  </data>
+  <data name="probe.nodata" xml:space="preserve">
+    <value>试算{0}：这组数据里没有用到变量的值，相关条件一律算“无数据”，灯不会亮。</value>
+  </data>
+  <data name="probe.note" xml:space="preserve">
+    <value>（{0}）</value>
+  </data>
+  <data name="probe.total" xml:space="preserve">
+    <value>&#xD;&#xA;整条：{0}。</value>
+  </data>
+  <data name="probe.empty.noselect" xml:space="preserve">
+    <value>试算：请先在左侧选中一条条件。</value>
+  </data>
+  <data name="newrule.title" xml:space="preserve">
+    <value>新增告警规则</value>
+  </data>
+  <data name="newrule.sys" xml:space="preserve">
+    <value>所属系统</value>
+  </data>
+  <data name="newrule.name" xml:space="preserve">
+    <value>规则名称</value>
+  </data>
+  <data name="newrule.pos" xml:space="preserve">
+    <value>插入位置</value>
+  </data>
+  <data name="newrule.color" xml:space="preserve">
+    <value>灯色</value>
+  </data>
+  <data name="newrule.effect" xml:space="preserve">
+    <value>效果</value>
+  </data>
+  <data name="newrule.speed" xml:space="preserve">
+    <value>速度</value>
+  </data>
+  <data name="newrule.condtitle" xml:space="preserve">
+    <value>触发条件（必填）</value>
+  </data>
+  <data name="newrule.editcond" xml:space="preserve">
+    <value>编辑条件…</value>
+  </data>
+  <data name="newrule.defaultname" xml:space="preserve">
+    <value>新规则</value>
+  </data>
+  <data name="newrule.pos.first" xml:space="preserve">
+    <value>（排在最前，优先级最低，最不容易亮）</value>
+  </data>
+  <data name="newrule.pos.after" xml:space="preserve">
+    <value>排在「{0}」之后</value>
+  </data>
+  <data name="newrule.cond.none" xml:space="preserve">
+    <value>还没设置触发条件 —— 点右边「编辑条件…」设置（必填）。</value>
+  </data>
+  <data name="newrule.cond.prefix" xml:space="preserve">
+    <value>条件：{0}</value>
+  </data>
+  <data name="newrule.err.noname" xml:space="preserve">
+    <value>请填写规则名称。</value>
+  </data>
+  <data name="newrule.err.dupname" xml:space="preserve">
+    <value>「{0}」里已经有叫「{1}」的规则了，换个名字。</value>
+  </data>
+  <data name="newrule.err.nocond" xml:space="preserve">
+    <value>必须先设置触发条件：没有条件的规则永远不会亮。</value>
+  </data>
+  <data name="common.official" xml:space="preserve">
+    <value> ·官方</value>
+  </data>
+  <data name="common.paren" xml:space="preserve">
+    <value>{0}（{1}）</value>
+  </data>
+  <data name="cond.form" xml:space="preserve">
+    <value>条件编辑器</value>
+  </data>
+  <data name="cond.form.rule" xml:space="preserve">
+    <value>条件编辑器 — {0}</value>
+  </data>
+  <data name="cond.title" xml:space="preserve">
+    <value>触发条件</value>
+  </data>
+  <data name="cond.title.rule" xml:space="preserve">
+    <value>{0}　·　触发条件</value>
+  </data>
+  <data name="cond.tree.hint" xml:space="preserve">
+    <value>条件结构（选中一项后在右侧改）</value>
+  </data>
+  <data name="cond.btn.addleaf" xml:space="preserve">
+    <value>加条件</value>
+  </data>
+  <data name="cond.btn.addand" xml:space="preserve">
+    <value>加“且”组</value>
+  </data>
+  <data name="cond.btn.addor" xml:space="preserve">
+    <value>加“或”组</value>
+  </data>
+  <data name="cond.btn.addnot" xml:space="preserve">
+    <value>加“非”</value>
+  </data>
+  <data name="cond.btn.del" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="cond.btn.toggle" xml:space="preserve">
+    <value>且↔或</value>
+  </data>
+  <data name="cond.manual.group" xml:space="preserve">
+    <value>试算数据源（可以不用连模拟器）</value>
+  </data>
+  <data name="cond.src.sim" xml:space="preserve">
+    <value>模拟器实时</value>
+  </data>
+  <data name="cond.src.manual" xml:space="preserve">
+    <value>手动试算</value>
+  </data>
+  <data name="cond.btn.fill" xml:space="preserve">
+    <value>从模拟器快照填充</value>
+  </data>
+  <data name="cond.btn.zero" xml:space="preserve">
+    <value>全部置 0</value>
+  </data>
+  <data name="cond.btn.clear" xml:space="preserve">
+    <value>清空</value>
+  </data>
+  <data name="cond.manual.hint" xml:space="preserve">
+    <value>没填的变量按“无数据”算（不是按 0 算），这样三态和真机一致。</value>
+  </data>
+  <data name="cond.manual.hint2" xml:space="preserve">
+    <value>没填的变量按“无数据”算（不是按 0 算），这样三态和真机一致；双击“手动值”填数。</value>
+  </data>
+  <data name="cond.manual.offline" xml:space="preserve">
+    <value>模拟器未连接：变量能不能取到暂时无法判定（显示“—”），可直接用手动值试算。</value>
+  </data>
+  <data name="cond.col.var" xml:space="preserve">
+    <value>变量</value>
+  </data>
+  <data name="cond.col.unit" xml:space="preserve">
+    <value>单位</value>
+  </data>
+  <data name="cond.col.sim" xml:space="preserve">
+    <value>模拟器值</value>
+  </data>
+  <data name="cond.col.manual" xml:space="preserve">
+    <value>手动值</value>
+  </data>
+  <data name="cond.col.avail" xml:space="preserve">
+    <value>能取到</value>
+  </data>
+  <data name="cond.leaf.group" xml:space="preserve">
+    <value>选中项</value>
+  </data>
+  <data name="cond.leaf.var" xml:space="preserve">
+    <value>左值</value>
+  </data>
+  <data name="cond.leaf.cmp" xml:space="preserve">
+    <value>比较</value>
+  </data>
+  <data name="cond.leaf.right" xml:space="preserve">
+    <value>右值</value>
+  </data>
+  <data name="cond.leaf.to" xml:space="preserve">
+    <value>至</value>
+  </data>
+  <data name="cond.leaf.varcmp" xml:space="preserve">
+    <value>与另一个量比较：两边都有数据才判定。</value>
+  </data>
+  <data name="cond.leaf.cur" xml:space="preserve">
+    <value>当前值：{0}</value>
+  </data>
+  <data name="cond.btn.default" xml:space="preserve">
+    <value>还原初始条件</value>
+  </data>
+  <data name="cond.default.ask" xml:space="preserve">
+    <value>这条规则的触发条件将恢复成最初的条件。
+（内置规则＝内置默认；自定义规则＝新增时填写的条件）
+（你改过的内容不会保存）</value>
+  </data>
+  <data name="cond.node.empty" xml:space="preserve">
+    <value>（空）</value>
+  </data>
+  <data name="cond.node.and" xml:space="preserve">
+    <value>且　</value>
+  </data>
+  <data name="cond.node.or" xml:space="preserve">
+    <value>或　</value>
+  </data>
+  <data name="cond.node.not" xml:space="preserve">
+    <value>非</value>
+  </data>
+  <data name="cond.node.unknown" xml:space="preserve">
+    <value>（未知）</value>
+  </data>
+  <data name="cond.node.count" xml:space="preserve">
+    <value>（{0} 条）</value>
+  </data>
+  <data name="cond.sel.leaf" xml:space="preserve">
+    <value>这条比较</value>
+  </data>
+  <data name="cond.sel.none" xml:space="preserve">
+    <value>未选中</value>
+  </data>
+  <data name="cond.sel.group" xml:space="preserve">
+    <value>这个分组</value>
+  </data>
+  <data name="cond.rightkind.value" xml:space="preserve">
+    <value>固定数值</value>
+  </data>
+  <data name="cond.rightkind.var" xml:space="preserve">
+    <value>另一个量</value>
+  </data>
+  <data name="cond.var.item" xml:space="preserve">
+    <value>[{0}] {1}（{2}）{3}</value>
+  </data>
+  <data name="cond.derived.item" xml:space="preserve">
+    <value>[派生量] {0}（{1}）</value>
+  </data>
+  <data name="cond.avail.noconn" xml:space="preserve">
+    <value>未连接</value>
+  </data>
+  <data name="cond.avail.yes" xml:space="preserve">
+    <value>✓ 可取</value>
+  </data>
+  <data name="cond.avail.no" xml:space="preserve">
+    <value>✗ 取不到</value>
+  </data>
+  <data name="cond.err.summary" xml:space="preserve">
+    <value>⚠ 有 {0} 处问题：{1}</value>
+  </data>
+  <data name="cond.fill.empty" xml:space="preserve">
+    <value>现在没有模拟器数据可以抄。
+可以先切到“手动试算”自己填，或用“全部置 0”。</value>
+  </data>
+  <data name="cond.err.cannot" xml:space="preserve">
+    <value>这条条件还不能保存：
+· {0}</value>
+  </data>
+  <data name="cond.err.title" xml:space="preserve">
+    <value>条件有问题</value>
+  </data>
+  <data name="grp.flight" xml:space="preserve">
+    <value>飞行</value>
+  </data>
+  <data name="grp.engine" xml:space="preserve">
+    <value>发动机</value>
+  </data>
+  <data name="grp.system" xml:space="preserve">
+    <value>系统</value>
+  </data>
+  <data name="grp.gear" xml:space="preserve">
+    <value>起落架</value>
+  </data>
+  <data name="grp.flap" xml:space="preserve">
+    <value>襟翼</value>
+  </data>
+  <data name="grp.light" xml:space="preserve">
+    <value>灯光</value>
+  </data>
+  <data name="grp.ap" xml:space="preserve">
+    <value>自动驾驶</value>
+  </data>
+  <data name="grp.warn" xml:space="preserve">
+    <value>告警</value>
+  </data>
+  <data name="grp.fuel" xml:space="preserve">
+    <value>燃油</value>
+  </data>
+  <data name="grp.internal" xml:space="preserve">
+    <value>内部</value>
+  </data>
+  <data name="common.namecode" xml:space="preserve">
+    <value>{0}（{1}）</value>
+  </data>
+  <data name="cond.src.simoff" xml:space="preserve">
+    <value>实时（未连接）</value>
+  </data>
+  <data name="tri.none" xml:space="preserve">
+    <value>未判定</value>
+  </data>
+  <data name="cond.err.needboolcmp" xml:space="preserve">
+    <value>「{0}」是开关量，只能用「为真/为假」，不能用「{1}」</value>
+  </data>
+  <data name="cond.err.neednumcmp" xml:space="preserve">
+    <value>「{0}」是数值量，不能用「{1}」，请改成大小比较</value>
+  </data>
+  <data name="run.sim.generic" xml:space="preserve">
+    <value>模拟器</value>
+  </data>
+  <data name="run.card.generic" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="run.toggle.generic" xml:space="preserve">
+    <value>联动开关</value>
+  </data>
+  <data name="run.off.text" xml:space="preserve">
+    <value>● 数据源：联动未启用</value>
+  </data>
+  <data name="run.off.tip" xml:space="preserve">
+    <value>联动没打开，告警模式拿不到任何数据。&#xD;&#xA;在「{0}」面板勾选「{1}」，灯位就会按状态点灯。</value>
+  </data>
+  <data name="run.off.card" xml:space="preserve">
+    <value>○ 已关闭</value>
+  </data>
+  <data name="run.off.issue" xml:space="preserve">
+    <value>联动已关闭：告警模式拿不到数据，灯位会一直转圈提示</value>
+  </data>
+  <data name="run.standby.text" xml:space="preserve">
+    <value>● {0} 已连接 · 未进入飞行</value>
+  </data>
+  <data name="run.standby.tip" xml:space="preserve">
+    <value>模拟器此刻在菜单 / 加载画面 / 暂停状态（由它自己的就绪信号判定）。&#xD;&#xA;这时它仍会推送数值，但那些值不可信，已暂停按它点灯。&#xD;&#xA;灯位显示绿色反向三灯追 = 工作正常、正在等待进入飞行。</value>
+  </data>
+  <data name="run.standby.card" xml:space="preserve">
+    <value>● 已连接 · 等待进入飞行</value>
+  </data>
+  <data name="run.ok.text" xml:space="preserve">
+    <value>● {0} 已连接 · 数据正常</value>
+  </data>
+  <data name="run.ok.tip" xml:space="preserve">
+    <value>已连接 {0}，最近 3.5 秒内收到过数据。</value>
+  </data>
+  <data name="run.ok.card" xml:space="preserve">
+    <value>● 已连接 · 数据正常</value>
+  </data>
+  <data name="run.noframe.text" xml:space="preserve">
+    <value>● {0} 已连接 · 无数据</value>
+  </data>
+  <data name="run.noframe.tip" xml:space="preserve">
+    <value>已连上 {0}，但最近 3.5 秒没收到数据。&#xD;&#xA;多半是还停在模拟器设置界面没进飞行，或者数据流被暂停了。</value>
+  </data>
+  <data name="run.noframe.card" xml:space="preserve">
+    <value>● 已连接 · 无数据</value>
+  </data>
+  <data name="run.noframe.issue" xml:space="preserve">
+    <value>{0} 已连接但没收到数据（没进飞行/数据流停了），灯位在等待</value>
+  </data>
+  <data name="run.search.text" xml:space="preserve">
+    <value>● 正在查找 {0}…</value>
+  </data>
+  <data name="run.search.tip" xml:space="preserve">
+    <value>采集器在跑，还没连上 {0}。</value>
+  </data>
+  <data name="run.search.tip.err" xml:space="preserve">
+    <value>&#xD;&#xA;最近一次原因：{0}</value>
+  </data>
+  <data name="run.search.card" xml:space="preserve">
+    <value>● 已启用 · 查找中</value>
+  </data>
+  <data name="run.search.issue" xml:space="preserve">
+    <value>未连上 {0}，灯位在等待</value>
+  </data>
+  <data name="run.search.issue.err" xml:space="preserve">
+    <value>未连上 {0}（{1}），灯位在等待</value>
+  </data>
+  <data name="run.notstart.text" xml:space="preserve">
+    <value>● 采集未运行</value>
+  </data>
+  <data name="run.notstart.tip" xml:space="preserve">
+    <value>联动开着，但数据采集线程没跑起来。</value>
+  </data>
+  <data name="run.notstart.tip.hint" xml:space="preserve">
+    <value>&#xD;&#xA;通常是缺 SimConnect.dll（点“SDK 检测”看日志）。</value>
+  </data>
+  <data name="run.notstart.tip.err" xml:space="preserve">
+    <value>&#xD;&#xA;原因：{0}</value>
+  </data>
+  <data name="run.notstart.card" xml:space="preserve">
+    <value>● 已启用 · 未启动</value>
+  </data>
+  <data name="run.notstart.issue" xml:space="preserve">
+    <value>数据源采集没跑起来</value>
+  </data>
+  <data name="run.notstart.issue.err" xml:space="preserve">
+    <value>数据源采集没跑起来：{0}</value>
+  </data>
+  <data name="run.suffix.loop" xml:space="preserve">
+    <value> · 灯位循环提示</value>
+  </data>
+  <data name="run.suffix.loop.tip" xml:space="preserve">
+    <value>&#xD;&#xA;告警灯位正在循环转圈提示（只要不正常就会一直转）。</value>
+  </data>
+  <data name="run.suffix.masteroff" xml:space="preserve">
+    <value>（总开关已关闭）</value>
+  </data>
+  <data name="run.suffix.masteroff.tip" xml:space="preserve">
+    <value>&#xD;&#xA;注意：全部效果总开关是关着的，灯不输出——但这不代表状态正常。</value>
+  </data>
+  <data name="dev.fmt.unset" xml:space="preserve">
+    <value>未设置</value>
+  </data>
+  <data name="dev.fmt.standard" xml:space="preserve">
+    <value>标准</value>
+  </data>
+  <data name="dev.fmt.fallback" xml:space="preserve">
+    <value>兜底按钮</value>
+  </data>
+  <data name="dev.acq.got" xml:space="preserve">
+    <value>已获取</value>
+  </data>
+  <data name="dev.acq.notconnected" xml:space="preserve">
+    <value>未连接</value>
+  </data>
+  <data name="dev.acq.notgot" xml:space="preserve">
+    <value>未获取({0})</value>
+  </data>
+  <data name="dev.coop.bg.nonexcl" xml:space="preserve">
+    <value>后台非独占</value>
+  </data>
+  <data name="dev.coop.fg.nonexcl" xml:space="preserve">
+    <value>前台非独占</value>
+  </data>
+  <data name="dev.coop.fg.excl" xml:space="preserve">
+    <value>前台独占</value>
+  </data>
+  <data name="dev.err.info.null" xml:space="preserve">
+    <value>设备信息为空。</value>
+  </data>
+  <data name="dev.err.di.create" xml:space="preserve">
+    <value>创建 DirectInput 对象失败（{0}）。</value>
+  </data>
+  <data name="dev.err.dev.create" xml:space="preserve">
+    <value>CreateDevice 失败（{0}）。设备可能已被拔出，或重新枚举后 GUID 已变化，请重新扫描设备。</value>
+  </data>
+  <data name="dev.err.fmt.build" xml:space="preserve">
+    <value>无法构造 DirectInput 数据格式。</value>
+  </data>
+  <data name="dev.err.fmt.set" xml:space="preserve">
+    <value>SetDataFormat 失败（{0}）。</value>
+  </data>
+  <data name="dev.err.connect" xml:space="preserve">
+    <value>连接异常：{0}</value>
+  </data>
+  <data name="dev.warn.fallback" xml:space="preserve">
+    <value>（提示：已改用兜底按钮数据格式）</value>
+  </data>
+  <data name="dev.warn.coop.item" xml:space="preserve">
+    <value>（SetCooperativeLevel[{0}]={1}）</value>
+  </data>
+  <data name="dev.warn.coop.fail" xml:space="preserve">
+    <value>（提示：SetCooperativeLevel 未设置成功，可能影响读取）</value>
+  </data>
+  <data name="dev.warn.acquire" xml:space="preserve">
+    <value>（提示：设备获取未成功 {0}，按钮可能读不出来；灯走独立通道，不受影响）</value>
+  </data>
+  <data name="dev.caps.ok" xml:space="preserve">
+    <value>成功(dwSize={0}) 设备类型=0x{1:X} 轴数={2} 按钮数={3} POV={4}</value>
+  </data>
+  <data name="dev.caps.fail" xml:space="preserve">
+    <value>失败(dwSize=44, {0})</value>
+  </data>
+  <data name="dev.diag.notconn.dev" xml:space="preserve">
+    <value>未连接设备。</value>
+  </data>
+  <data name="dev.diag.caps" xml:space="preserve">
+    <value>GetCapabilities: {0}</value>
+  </data>
+  <data name="dev.diag.format" xml:space="preserve">
+    <value>当前数据格式: {0}（状态缓冲区 {1} 字节）</value>
+  </data>
+  <data name="dev.diag.stdhead" xml:space="preserve">
+    <value>标准布局读数（按钮区 48 起，位0x80=按下）：</value>
+  </data>
+  <data name="dev.diag.axes" xml:space="preserve">
+    <value>  轴 X/Y/Z/Rx/Ry/Rz = {0}/{1}/{2}/{3}/{4}/{5}</value>
+  </data>
+  <data name="dev.diag.sliders" xml:space="preserve">
+    <value>  滑杆 @24/28 = {0}/{1}</value>
+  </data>
+  <data name="dev.diag.pov" xml:space="preserve">
+    <value>  POV0-3 = {0} {1} {2} {3}</value>
+  </data>
+  <data name="dev.diag.stdbtn" xml:space="preserve">
+    <value>  标准按钮{0}位: {1}</value>
+  </data>
+  <data name="dev.diag.objlist" xml:space="preserve">
+    <value>设备原生对象清单（偏移=设备上报偏移，仅供参考）：</value>
+  </data>
+  <data name="dev.diag.objitem" xml:space="preserve">
+    <value>  {0} @{1}{2}</value>
+  </data>
+  <data name="dev.diag.tab.button" xml:space="preserve">
+    <value>（按钮）</value>
+  </data>
+  <data name="dev.diag.tab.axis" xml:space="preserve">
+    <value>（轴）</value>
+  </data>
+  <data name="dev.diag.tab.pov" xml:space="preserve">
+    <value>（POV）</value>
+  </data>
+  <data name="dev.diag.raw" xml:space="preserve">
+    <value>原始字节(前64):</value>
+  </data>
+  <data name="dev.diag.readfail" xml:space="preserve">
+    <value>状态读取失败: {0}  {1}</value>
+  </data>
+  <data name="dev.diag.poll" xml:space="preserve">
+    <value>最近 Poll={0}  GetDeviceState={1}  读取错误: {2}</value>
+  </data>
+  <data name="dev.diag.none" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="dev.diag.acq" xml:space="preserve">
+    <value>获取状态: {0}  协作级别: {1} (SetCooperativeLevel={2})</value>
+  </data>
+  <data name="dev.diag.events" xml:space="preserve">
+    <value>事件队列(GetDeviceData): {0}</value>
+  </data>
+  <data name="dev.diag.ex" xml:space="preserve">
+    <value>诊断异常：{0}</value>
+  </data>
+  <data name="dev.evt.item" xml:space="preserve">
+    <value>偏移{0}={1}; </value>
+  </data>
+  <data name="dev.evt.count" xml:space="preserve">
+    <value>(共{0}条)</value>
+  </data>
+  <data name="dev.evt.none" xml:space="preserve">
+    <value>无事件</value>
+  </data>
+  <data name="dev.evt.hr" xml:space="preserve">
+    <value>GetDeviceData={0}</value>
+  </data>
+  <data name="dev.evt.ex" xml:space="preserve">
+    <value>异常:{0}</value>
+  </data>
+  <data name="dev.st.prio" xml:space="preserve">
+    <value>设备被其它程序独占（请关闭游戏/FreePIE 后重连）</value>
+  </data>
+  <data name="dev.st.lost" xml:space="preserve">
+    <value>设备状态丢失（正在自动重新获取）</value>
+  </data>
+  <data name="dev.st.notacq" xml:space="preserve">
+    <value>设备未获取（正在自动获取）</value>
+  </data>
+  <data name="dev.st.fail" xml:space="preserve">
+    <value>读取状态失败（{0}）</value>
+  </data>
+  <data name="pf.err.nopath" xml:space="preserve">
+    <value>没有指定配置文件。</value>
+  </data>
+  <data name="pf.err.read" xml:space="preserve">
+    <value>读不到文件：{0}</value>
+  </data>
+  <data name="pf.err.empty" xml:space="preserve">
+    <value>文件内容为空。</value>
+  </data>
+  <data name="pf.err.blank" xml:space="preserve">
+    <value>文件是空的。</value>
+  </data>
+  <data name="pf.err.kind.button" xml:space="preserve">
+    <value>这不是按键配置（kind = {0}）。</value>
+  </data>
+  <data name="pf.err.kind.alert" xml:space="preserve">
+    <value>这不是告警配置（kind = {0}）。</value>
+  </data>
+  <data name="pf.err.version" xml:space="preserve">
+    <value>配置版本 {0} 比当前程序新，请升级程序后再打开。</value>
+  </data>
+  <data name="pf.err.json" xml:space="preserve">
+    <value>不是有效的配置文件（{0}）。</value>
+  </data>
+  <data name="pf.err.save.nothing" xml:space="preserve">
+    <value>没有要保存的配置。</value>
+  </data>
+  <data name="pf.err.save.builtin" xml:space="preserve">
+    <value>内置配置不能覆盖，请用「另存为」换个名字。</value>
+  </data>
+  <data name="pf.err.save.noname" xml:space="preserve">
+    <value>配置名不能为空。</value>
+  </data>
+  <data name="pf.err.save.badchar" xml:space="preserve">
+    <value>配置名里不能有「{0}」——Windows 文件名不允许 \ / : * ? " &lt; &gt; | 这些字符，请换一个名字。</value>
+  </data>
+  <data name="pf.err.save.badedge" xml:space="preserve">
+    <value>配置名不能以空格开头或结尾，也不能以点结尾。</value>
+  </data>
+  <data name="pf.err.write" xml:space="preserve">
+    <value>保存失败：{0}: {1}</value>
+  </data>
+  <data name="pf.err.del.nothing" xml:space="preserve">
+    <value>没有选中配置。</value>
+  </data>
+  <data name="pf.err.del.builtin" xml:space="preserve">
+    <value>内置配置不能删除。</value>
+  </data>
+  <data name="pf.err.del.nofile" xml:space="preserve">
+    <value>这个配置没有对应文件。</value>
+  </data>
+  <data name="pf.err.del" xml:space="preserve">
+    <value>删除失败：{0}</value>
+  </data>
+  <data name="pf.unnamed" xml:space="preserve">
+    <value>未命名</value>
+  </data>
+  <data name="pf.err.readonly" xml:space="preserve">
+    <value>程序目录不可写（{0}），配置无法保存。请把程序解压到有写权限的目录（例如 D:\G940LedPanel）再运行。</value>
+  </data>
+  <data name="gh.err.noiface" xml:space="preserve">
+    <value>系统里没有枚举到任何 HID 接口。&#xD;&#xA;1) 确认 G940 的 USB 线插好；&#xD;&#xA;2) 设备管理器里能看到这台设备，且没有带感叹号的条目。</value>
+  </data>
+  <data name="gh.err.nog940" xml:space="preserve">
+    <value>找到了 {0} 个 HID 接口，但没有一个是 G940 的灯接口（VID {1} / PID {2}）。&#xD;&#xA;1) 确认 G940 的 USB 线插好，设备管理器里没有带感叹号的条目；&#xD;&#xA;2) 若设备管理器里名称正常，可能是 PID 与预期不同，请用「设备诊断」里的 HID 探针确认。</value>
+  </data>
+  <data name="gh.err.write" xml:space="preserve">
+    <value>找到 {0} 个 G940 接口，但写入 Feature 报告 {1} 全部失败{2}。</value>
+  </data>
+  <data name="gh.err.write.lasterr" xml:space="preserve">
+    <value>（最后一次错误码 {0}：{1}）</value>
+  </data>
+  <data name="gh.err.write.path" xml:space="preserve">
+    <value>接口：{0}&#xD;&#xA;</value>
+  </data>
+  <data name="gh.err.write.hint" xml:space="preserve">
+    <value>&#xD;&#xA;{0}1) 错误 5（权限不足）多为普通用户身份被拒，试管理员身份运行；&#xD;&#xA;2) 错误 1（函数无效）说明报告 ID 或长度不对，先用「HID 探针」核对 Feature 报告列表；&#xD;&#xA;3) 其它错误可先拔插一次 USB，排除驱动状态异常。</value>
+  </data>
+  <data name="gh.err.c0" xml:space="preserve">
+    <value>成功</value>
+  </data>
+  <data name="gh.err.c1" xml:space="preserve">
+    <value>函数无效（报告 ID 或长度不对）</value>
+  </data>
+  <data name="gh.err.c2" xml:space="preserve">
+    <value>找不到设备（可能已拔出）</value>
+  </data>
+  <data name="gh.err.c5" xml:space="preserve">
+    <value>拒绝访问（权限不足）</value>
+  </data>
+  <data name="gh.err.c6" xml:space="preserve">
+    <value>句柄无效</value>
+  </data>
+  <data name="gh.err.c87" xml:space="preserve">
+    <value>参数错误（报告长度与设备要求不符）</value>
+  </data>
+  <data name="gh.err.c1167" xml:space="preserve">
+    <value>设备未连接</value>
+  </data>
+  <data name="gh.err.c32" xml:space="preserve">
+    <value>被占用（有程序独占打开了该接口）</value>
+  </data>
+  <data name="gh.err.unknown" xml:space="preserve">
+    <value>未知错误</value>
+  </data>
+  <data name="common.listsep" xml:space="preserve">
+    <value>、</value>
+  </data>
+  <data name="scs.headline.off" xml:space="preserve">
+    <value>● 未连接</value>
+  </data>
+  <data name="scs.headline.ok" xml:space="preserve">
+    <value>● 已连接 · {0}/{1} 项 · 1s</value>
+  </data>
+  <data name="scs.headline.err" xml:space="preserve">
+    <value>● 未连接：{0}</value>
+  </data>
+  <data name="scs.headline.connecting" xml:space="preserve">
+    <value>● 正在连接…</value>
+  </data>
+  <data name="scs.err.nodll" xml:space="preserve">
+    <value>未找到 SimConnect.dll / SimConnect_internal.dll</value>
+  </data>
+  <data name="scs.err.open.ex" xml:space="preserve">
+    <value>SimConnect_Open 异常：{0}</value>
+  </data>
+  <data name="scs.err.open.hr" xml:space="preserve">
+    <value>SimConnect_Open 返回 0x{0}（模拟器未运行或尚未加载完飞行）</value>
+  </data>
+  <data name="scs.err.dispatch" xml:space="preserve">
+    <value>CallDispatch 异常：{0}</value>
+  </data>
+  <data name="scs.err.code" xml:space="preserve">
+    <value>SimConnect 异常码 {0}</value>
+  </data>
+  <data name="scs.err.disconnected" xml:space="preserve">
+    <value>模拟器已退出或断线</value>
+  </data>
+  <data name="scs.phase.flying" xml:space="preserve">
+    <value>在飞</value>
+  </data>
+  <data name="scs.phase.waiting" xml:space="preserve">
+    <value>等待</value>
+  </data>
+  <data name="scs.log.connected" xml:space="preserve">
+    <value>已连接，等第一帧数据判定是否在飞（读 {0}）</value>
+  </data>
+  <data name="scs.log.effective" xml:space="preserve">
+    <value> | 生效={0}</value>
+  </data>
+  <data name="scs.log.settling" xml:space="preserve">
+    <value>（稳定中，等下一帧确认）</value>
+  </data>
+  <data name="scs.log.version" xml:space="preserve">
+    <value>模拟器版本 {0}</value>
+  </data>
+  <data name="sl.log.adopt" xml:space="preserve">
+    <value>✓ 采用：{0}（x64）</value>
+  </data>
+  <data name="sl.log.internal" xml:space="preserve">
+    <value>  说明：MSFS2024 自带的 SimConnect 已改名为 SimConnect_internal.dll，功能与 SDK 的 SimConnect.dll 相同，可直接使用。</value>
+  </data>
+  <data name="sl.log.wrongarch" xml:space="preserve">
+    <value>✗ 只找到 32 位 SimConnect.dll：{0}（本程序为 64 位，无法使用）</value>
+  </data>
+  <data name="sl.log.notfound" xml:space="preserve">
+    <value>✗ 未找到可用的 x64 SimConnect.dll / SimConnect_internal.dll。</value>
+  </data>
+  <data name="sl.log.notfound.hint" xml:space="preserve">
+    <value>  MSFS2024 安装目录里通常只有 SimConnect_internal.dll（这是正常的，就是它）。</value>
+  </data>
+  <data name="sl.log.notfound.env" xml:space="preserve">
+    <value>  可把它复制到程序目录，或设置环境变量 MSFS2024_PATH 指向 MSFS2024 安装目录（含 FlightSimulator2024.exe 的那一层）。</value>
+  </data>
+  <data name="sl.log.appdir" xml:space="preserve">
+    <value>· 程序目录：{0}</value>
+  </data>
+  <data name="sl.log.env" xml:space="preserve">
+    <value>· 环境变量 {0} = {1}</value>
+  </data>
+  <data name="sl.log.fixed" xml:space="preserve">
+    <value>· 固定路径：{0}</value>
+  </data>
+  <data name="sl.log.registry" xml:space="preserve">
+    <value>· 注册表：{0} → {1}</value>
+  </data>
+  <data name="sl.log.is32" xml:space="preserve">
+    <value>  × 32 位：{0}</value>
+  </data>
+  <data name="ap.custom.defaultname" xml:space="preserve">
+    <value>自定义告警</value>
+  </data>
+  <data name="ap.note.ledmap" xml:space="preserve">
+    <value>灯位映射不合法，已恢复默认（P1…P8 依次对应前 8 个系统，特种装置 / 自定义默认不上灯）</value>
+  </data>
+  <data name="ap.note.badcond" xml:space="preserve">
+    <value>{0} 条自定义条件无效，已还原为内置条件（{1}）</value>
+  </data>
+  <data name="ap.note.badrule" xml:space="preserve">
+    <value>{0} 条自定义规则无效，已丢弃（{1}）</value>
+  </data>
+  <data name="ap.note.duppri" xml:space="preserve">
+    <value>{0} 条自定义规则的优先级与其它规则重复，已重新分配</value>
+  </data>
+  <data name="ap.note.renumber" xml:space="preserve">
+    <value>系统「{0}」里有两条规则优先级相同，已按原次序重新编号</value>
+  </data>
+  <data name="ap.empty" xml:space="preserve">
+    <value>(空)</value>
+  </data>
+  <data name="acl.err.dupid" xml:space="preserve">
+    <value>规则 id 重复：{0}</value>
+  </data>
+  <data name="acl.err.effect" xml:space="preserve">
+    <value>规则 {0} 用了告警页不允许的效果：{1}</value>
+  </data>
+  <data name="acl.err.nosys" xml:space="preserve">
+    <value>规则 {0} 的系统不存在：{1}</value>
+  </data>
+  <data name="acl.err.nocond" xml:space="preserve">
+    <value>规则 {0} 没有条件</value>
+  </data>
+  <data name="acl.err.prio" xml:space="preserve">
+    <value>系统 {0} 里优先级 {1} 重复（规则 {2}）</value>
+  </data>
+  <data name="common.envsep" xml:space="preserve">
+    <value>，</value>
+  </data>
+  <data name="audit.a5.nolit" xml:space="preserve">
+    <value>「{0}」没有绑定灯位，这个系统的 {1} 条规则不会亮。到灯位设置里给它挑一颗灯。</value>
+  </data>
+  <data name="audit.a3.unknownvar" xml:space="preserve">
+    <value>条件里引用了未知变量「{0}」，这条永远取不到值。</value>
+  </data>
+  <data name="audit.a1.never" xml:space="preserve">
+    <value>条件自相矛盾，任何飞行状态都不成立，这条永远不会触发。</value>
+  </data>
+  <data name="audit.a2.always" xml:space="preserve">
+    <value>条件在任何飞行状态下都成立，会永久占住这颗灯，同系统其它规则都显示不出来。</value>
+  </data>
+  <data name="audit.a4.sameprio" xml:space="preserve">
+    <value>与「{0}」优先级都是 {1}，同灯同优先级时由遍历顺序决定显示哪条，结果不稳定。</value>
+  </data>
+  <data name="audit.f.gap" xml:space="preserve">
+    <value>「{0}」({1}) 与「{2}」({3}) 优先级挨着，这两条之间插不进新规则。</value>
+  </data>
+  <data name="audit.e.same" xml:space="preserve">
+    <value>与「{0}」条件完全等价、输出也一样，删掉任一条行为不变。</value>
+  </data>
+  <data name="audit.c.diff" xml:space="preserve">
+    <value>与「{0}」条件完全等价，但输出不同（{1} 对 {2}），同一种状态被解释成两种结果。</value>
+  </data>
+  <data name="audit.b.shadowed" xml:space="preserve">
+    <value>条件比「{0}」严格，但它的优先级更高、颜色更轻（{1} 压 {2}），所以这条永远不会显示。</value>
+  </data>
+  <data name="audit.c.overlap" xml:space="preserve">
+    <value>与「{0}」有重叠区，重叠时显示的是优先级更高的这条，但它的颜色更轻（{1} 压 {2}）。</value>
+  </data>
+  <data name="audit.d.overlap" xml:space="preserve">
+    <value>与「{0}」有重叠区，颜色相同但效果更缓（{1} 压 {2}），重叠时看到的是优先级更高的这条。</value>
+  </data>
+  <data name="raf.title" xml:space="preserve">
+    <value>规则体检</value>
+  </data>
+  <data name="raf.tip.body" xml:space="preserve">
+    <value>检查同一个系统内，你的规则和内置规则放一起会不会互相压住。&#xD;&#xA;只看两件事：条件能不能同时成立、同时成立时两条规则的输出是否一致。不亮本身不是问题。&#xD;&#xA;每条结论都附一个具体数值，可以复制到条件编辑器的「手动试算」里原样复现。</value>
+  </data>
+  <data name="raf.col.level" xml:space="preserve">
+    <value>级别</value>
+  </data>
+  <data name="raf.col.sys" xml:space="preserve">
+    <value>系统</value>
+  </data>
+  <data name="raf.col.rule" xml:space="preserve">
+    <value>规则</value>
+  </data>
+  <data name="raf.col.text" xml:space="preserve">
+    <value>结论</value>
+  </data>
+  <data name="raf.count.none" xml:space="preserve">
+    <value>没有发现问题。同一颗灯上各条规则的条件互不重叠，或者重叠处输出一致。</value>
+  </data>
+  <data name="raf.count.some" xml:space="preserve">
+    <value>共 {0} 条：需要处理 {1} 条，其余为冗余与提示。悬停看见证点。</value>
+  </data>
+  <data name="raf.tip.evidence" xml:space="preserve">
+    <value>&#xD;&#xA;&#xD;&#xA;见证点：{0}</value>
+  </data>
+  <data name="raf.tip.code" xml:space="preserve">
+    <value>&#xD;&#xA;&#xD;&#xA;代码：{0}</value>
+  </data>
+  <data name="sl.log.xboxgames" xml:space="preserve">
+    <value>· XboxGames：{0}</value>
+  </data>
+  <data name="sl.log.winapps2024" xml:space="preserve">
+    <value>· WindowsApps(MSFS2024)：{0}</value>
+  </data>
+  <data name="sl.log.winapps2020" xml:space="preserve">
+    <value>· WindowsApps(MSFS2020)：{0}</value>
+  </data>
+  <data name="sl.log.steam" xml:space="preserve">
+    <value>· Steam：{0}</value>
+  </data>
+  <data name="scs.err.exception" xml:space="preserve">
+    <value>{0}：{1}</value>
+  </data>
+  <data name="cfg.note.migrated" xml:space="preserve">
+    <value>相机状态表已升级为 CameraStates，旧的 ExtraMenuCameraStates（{0} 项）已并入</value>
+  </data>
+  <data name="cfg.note.dropped" xml:space="preserve">
+    <value>{0} 项相机状态配置无效（值须为 0～255 的整数，分类须为 Menu / Skip / Flight），已忽略</value>
+  </data>
+  <data name="main.audit.title" xml:space="preserve">
+    <value>规则体检</value>
+  </data>
+  <data name="main.justlit.head" xml:space="preserve">
+    <value>刚绑上灯的 {0} 个系统里，查出 {1} 处需要看一眼：&#xD;&#xA;&#xD;&#xA;</value>
+  </data>
+  <data name="main.justlit.more" xml:space="preserve">
+    <value>……还有 {0} 条&#xD;&#xA;</value>
+  </data>
+  <data name="main.justlit.foot" xml:space="preserve">
+    <value>&#xD;&#xA;要看全部规则关系，右键告警表 →「检查我的规则」。</value>
+  </data>
+  <data name="main.btn.defaultname" xml:space="preserve">
+    <value>按钮#{0}</value>
+  </data>
+  <data name="main.sdk.title" xml:space="preserve">
+    <value>SimConnect 诊断</value>
+  </data>
+  <data name="main.sdk.found" xml:space="preserve">
+    <value>✓ 找到 x64 SimConnect（{0}）</value>
+  </data>
+  <data name="main.sdk.notfound" xml:space="preserve">
+    <value>✗ 未找到 x64 SimConnect.dll / SimConnect_internal.dll</value>
+  </data>
+  <data name="main.sdk.path" xml:space="preserve">
+    <value>路径：{0}</value>
+  </data>
+  <data name="main.sdk.version" xml:space="preserve">
+    <value>版本：{0}</value>
+  </data>
+  <data name="main.sdk.internal" xml:space="preserve">
+    <value>说明：这是 MSFS2024 自带的 SimConnect_internal.dll，与 SDK 的 SimConnect.dll 等价，可直接使用。</value>
+  </data>
+  <data name="main.sdk.conn" xml:space="preserve">
+    <value>连接状态：{0}</value>
+  </data>
+  <data name="main.sdk.conn.pending" xml:space="preserve">
+    <value>（尚未尝试）</value>
+  </data>
+  <data name="main.sdk.simver" xml:space="preserve">
+    <value>模拟器版本：{0}</value>
+  </data>
+  <data name="main.sdk.vars" xml:space="preserve">
+    <value>变量应答：{0} / {1}（每秒刷新一次）</value>
+  </data>
+  <data name="main.sdk.missing" xml:space="preserve">
+    <value>未应答（该机型不支持或拼写不同）：</value>
+  </data>
+  <data name="main.sdk.lasterr" xml:space="preserve">
+    <value>最近错误：{0}</value>
+  </data>
+  <data name="main.sdk.logtitle" xml:space="preserve">
+    <value>自动查找日志：</value>
+  </data>
+  <data name="main.sdk.chip.dll" xml:space="preserve">
+    <value>dll：{0}</value>
+  </data>
+  <data name="main.sdk.chip.nodll" xml:space="preserve">
+    <value>未找到 SimConnect.dll / SimConnect_internal.dll</value>
+  </data>
+  <data name="main.sdk.chip.vars" xml:space="preserve">
+    <value> · 变量 {0}/{1}</value>
+  </data>
+  <data name="app.title" xml:space="preserve">
+    <value>G940LED面板</value>
+    <comment>窗口标题与托盘提示里的产品名，后面由 AppInfo 拼 " v" + 版本号。日志里仍用 AppInfo.Name 常量，不随语言变。</comment>
+  </data>
+  <!-- 1.3.66：全局异常弹窗（Program.cs）。启动早期 MainForm 还没跑、语言未从
+       config.json 读出，这时 L.Lang 是默认中文；崩溃当场能看懂比语言对不对重要，
+       而且 L.T 自身不抛异常，不会为取一条文案再崩一次。 -->
+  <data name="prog.ex.unknown" xml:space="preserve">
+    <value>未知异常</value>
+  </data>
+  <data name="prog.ex.type" xml:space="preserve">
+    <value>类型:</value>
+  </data>
+  <data name="prog.ex.message" xml:space="preserve">
+    <value>消息:</value>
+  </data>
+  <data name="prog.ex.inner" xml:space="preserve">
+    <value>内部异常:</value>
+  </data>
+  <data name="prog.ex.stack" xml:space="preserve">
+    <value>堆栈(前12帧):</value>
+  </data>
+  <data name="prog.ex.recovered" xml:space="preserve">
+    <value>程序遇到一个可恢复的异常：</value>
+  </data>
+  <data name="prog.ex.recovered.tail" xml:space="preserve">
+    <value>程序将继续运行；若反复出现，请把本窗口内容发给作者。</value>
+  </data>
+  <data name="prog.ex.fatal" xml:space="preserve">
+    <value>程序发生未处理异常：</value>
+  </data>
+  <data name="prog.ex.title.notice" xml:space="preserve">
+    <value>提示</value>
+  </data>
+  <data name="prog.ex.title.error" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <!-- 1.3.66：设备列表项后缀（DeviceInfo.ToString，PickDeviceForm 的 ListBox 直接显示它） -->
+  <data name="dev.btncount" xml:space="preserve">
+    <value>[按钮×{0}]</value>
+    <comment>设备名后面的按钮数。前面两个空格由代码补，不写进值里，免得被工具 Trim。</comment>
+  </data>
+  <!-- 1.3.66：SimConnect.dll 加载失败原因。这些是给人看的整句，不是接口标识——
+       原来白名单的理由写错了，把这组整句一起放过了。 -->
+  <data name="api.err.nofile" xml:space="preserve">
+    <value>文件不存在：{0}</value>
+  </data>
+  <data name="api.err.bits32" xml:space="preserve">
+    <value>该 SimConnect.dll 是 32 位版本，本程序为 64 位，无法加载：{0}</value>
+  </data>
+  <data name="api.err.loadlib" xml:space="preserve">
+    <value>LoadLibrary 失败（错误码 {0}）</value>
+  </data>
+  <data name="api.err.loadlib.193" xml:space="preserve">
+    <value>：位数不匹配（需要 x64 版本）</value>
+  </data>
+  <data name="api.err.path" xml:space="preserve">
+    <value>：{0}</value>
+  </data>
+  <data name="api.err.export" xml:space="preserve">
+    <value>SimConnect.dll 缺少导出函数：{0}</value>
+  </data>
+  <data name="api.err.exception" xml:space="preserve">
+    <value>{0}：{1}</value>
+  </data>
+  <data name="api.err.unknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <!-- 语言名一律用它自己那种语言写，两份包的值相同，不翻（见 Core/L.cs NativeName）。 -->
+  <data name="lang.zh-CN" xml:space="preserve">
+    <value>中文</value>
+  </data>
+  <data name="lang.en-US" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="dev.status.detecting" xml:space="preserve">
+    <value>● 正在检测…</value>
+    <comment>状态行。圆点是颜色指示，别换成英文句点。</comment>
+  </data>
+  <data name="sim.data.idle" xml:space="preserve">
+    <value>连接后显示空速/高度/发动机等状态。</value>
+  </data>
+  <data name="main.pressed.none" xml:space="preserve">
+    <value>当前按下: -</value>
+    <comment>底部状态行的常态。冒号后用半角，接按钮号。</comment>
+  </data>
+  <data name="audit.g.toocomplex.one" xml:space="preserve">
+    <value>「{0}」的条件变量组合太多，超过体检上限，没有判断它是否恒真 / 恒假。</value>
+  </data>
+  <data name="audit.g.toocomplex.pair" xml:space="preserve">
+    <value>「{0}」与「{1}」的变量合计太多，超过体检上限，没有检查这两条是否重叠。</value>
+  </data>
+  <data name="ap.note.orphanrule" xml:space="preserve">
+    <value>有 {0} 条设置指向的规则在新版里已不存在，已一并清除：{1}</value>
+  </data>
+</root>

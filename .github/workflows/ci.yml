@@ -1,0 +1,32 @@
+name: CI
+
+# 每次推送与 PR 都编一遍，用来证明「这份源码在别人的机器上也能编出来」。
+# 仓库不含断言与体检脚本，所以这里只做编译验证，不跑逻辑测试。
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# 同一分支连续推送时取消上一次，避免排队
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: 编译（net48 / Windows）
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      # net48 的目标引用包由 csproj 里的 Microsoft.NETFramework.ReferenceAssemblies 提供，
+      # 所以不需要装 Visual Studio，dotnet CLI 足够。
+      - name: 编译解决方案
+        run: dotnet build G940LedPanel.sln -c Release

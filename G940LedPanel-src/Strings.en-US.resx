@@ -1,0 +1,2379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    English (en-US). key 集合必须与 Strings.resx 完全一致，
+    缺一条会在断言 [L1] 里红（比对两份 key 集合）。
+    术语约定写在 Strings.resx 的 <comment> 里，翻译时对照。
+  -->
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="main.tab.buttons" xml:space="preserve">
+    <value>Button mode (press → LEDs)</value>
+  </data>
+  <data name="main.tab.alert" xml:space="preserve">
+    <value>Alert mode ({0} systems → LEDs)</value>
+  </data>
+  <data name="bind.foot.capture" xml:space="preserve">
+    <value>Select a row to edit; the “Throttle button #” column takes 0-based numbers.</value>
+  </data>
+  <data name="bind.foot.bg" xml:space="preserve">
+    <value>On while idle · button mode only · profile load sets it too</value>
+  </data>
+  <data name="main.btn.diag" xml:space="preserve">
+    <value>Diagnostics</value>
+  </data>
+  <data name="main.btn.simdata" xml:space="preserve">
+    <value>Live data…</value>
+  </data>
+  <data name="bind.header.btn" xml:space="preserve">
+    <value>Throttle#</value>
+  </data>
+  <data name="bind.header.name" xml:space="preserve">
+    <value>Button name</value>
+  </data>
+  <data name="bind.header.trigger" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="main.chk.master" xml:space="preserve">
+    <value>Master effect switch</value>
+  </data>
+  <data name="main.chk.sim" xml:space="preserve">
+    <value>Enable SimConnect link</value>
+  </data>
+  <data name="tray.menu.show" xml:space="preserve">
+    <value>Show window</value>
+  </data>
+  <data name="tray.menu.exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="main.lbl.language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="effect.off" xml:space="preserve">
+    <value>Off</value>
+    <comment>效果名。下面 20 条的顺序必须与 EffectFactory.Ids 完全一致——表格、下拉、右键菜单都靠下标对位。</comment>
+  </data>
+  <data name="effect.solid" xml:space="preserve">
+    <value>Steady</value>
+  </data>
+  <data name="effect.blink" xml:space="preserve">
+    <value>Slow blink</value>
+  </data>
+  <data name="effect.double" xml:space="preserve">
+    <value>Double blink</value>
+  </data>
+  <data name="effect.longshort" xml:space="preserve">
+    <value>Long-short</value>
+  </data>
+  <data name="effect.flash" xml:space="preserve">
+    <value>Fast blink</value>
+  </data>
+  <data name="effect.heartbeat" xml:space="preserve">
+    <value>Heartbeat</value>
+  </data>
+  <data name="effect.ring_fwd" xml:space="preserve">
+    <value>Ring CW</value>
+    <comment>CW / CCW 是航电与机械面板的通用缩写，比 clockwise 更省位置。</comment>
+  </data>
+  <data name="effect.ring_rev" xml:space="preserve">
+    <value>Ring CCW</value>
+  </data>
+  <data name="effect.chase2" xml:space="preserve">
+    <value>2-LED chase</value>
+  </data>
+  <data name="effect.chase3" xml:space="preserve">
+    <value>3-LED chase</value>
+  </data>
+  <data name="effect.expand" xml:space="preserve">
+    <value>Center out</value>
+  </data>
+  <data name="effect.collapse" xml:space="preserve">
+    <value>Edge in</value>
+  </data>
+  <data name="effect.sweep" xml:space="preserve">
+    <value>Two-point sweep</value>
+  </data>
+  <data name="effect.twin" xml:space="preserve">
+    <value>Twin symmetric</value>
+  </data>
+  <data name="effect.cycle" xml:space="preserve">
+    <value>Color cycle</value>
+  </data>
+  <data name="effect.random" xml:space="preserve">
+    <value>Random colors</value>
+  </data>
+  <data name="effect.binary" xml:space="preserve">
+    <value>Binary count</value>
+  </data>
+  <data name="effect.fill" xml:space="preserve">
+    <value>Ring fill</value>
+  </data>
+  <data name="effect.alternate" xml:space="preserve">
+    <value>Odd-even</value>
+  </data>
+  <data name="effect.suffix.default" xml:space="preserve">
+    <value> (default)</value>
+    <comment>底灯下拉第 0 项的尾巴。英文带前导空格，直接接在效果名后面；中文用全角括号不需要空格。</comment>
+  </data>
+  <data name="effect.suffix.decor" xml:space="preserve">
+    <value> (decor)</value>
+    <comment>「装饰」= 底灯层，区别于按键触发的那一层。</comment>
+  </data>
+  <data name="color.0" xml:space="preserve">
+    <value>Off</value>
+    <comment>颜色名，下标 = 规则里的 Color 值。</comment>
+  </data>
+  <data name="color.1" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="color.2" xml:space="preserve">
+    <value>Amber</value>
+    <comment>航电里 amber 就是「注意」这一档，不要翻成 yellow。</comment>
+  </data>
+  <data name="color.3" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="bind.trigger.hold" xml:space="preserve">
+    <value>Hold</value>
+    <comment>hold = 按住期间生效，松手就停。</comment>
+  </data>
+  <data name="bind.trigger.toggle" xml:space="preserve">
+    <value>Toggle</value>
+    <comment>toggle = 按一下开、再按一下关。</comment>
+  </data>
+  <data name="bind.target.all" xml:space="preserve">
+    <value>All</value>
+    <comment>目标灯下拉的第 0 项。后面 P1..P8 不译：那是面板丝印，翻了和实物对不上。</comment>
+  </data>
+  <data name="main.card.led" xml:space="preserve">
+    <value>LED panel preview (2 rows of 4)</value>
+  </data>
+  <data name="main.card.settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="common.profile" xml:space="preserve">
+    <value>Profile</value>
+    <comment>两页各有一个「配置」小标题，共用一条。</comment>
+  </data>
+  <data name="common.manage" xml:space="preserve">
+    <value>Manage ▾</value>
+    <comment>尾部三角是下拉指示，保留。</comment>
+  </data>
+  <data name="header.color" xml:space="preserve">
+    <value>Color</value>
+    <comment>颜色 / 效果 / 速度 / 启用 四个列头两页共用，所以不带 bind/alert 前缀。</comment>
+  </data>
+  <data name="header.speed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="header.enabled" xml:space="preserve">
+    <value>On</value>
+    <comment>列头。On 比 Enabled 短，列宽紧。</comment>
+  </data>
+  <data name="header.effect" xml:space="preserve">
+    <value>Effect</value>
+  </data>
+  <data name="bind.lbl.bg" xml:space="preserve">
+    <value>Backlight:</value>
+    <comment>冒号随语言走：中文用全角，英文用半角。</comment>
+  </data>
+  <data name="bind.foot.hint" xml:space="preserve">
+    <value>Right-click for actions · double-click to edit</value>
+  </data>
+  <data name="bind.menu.capture" xml:space="preserve">
+    <value>Capture throttle button</value>
+  </data>
+  <data name="bind.menu.add" xml:space="preserve">
+    <value>Add binding</value>
+  </data>
+  <data name="bind.menu.del" xml:space="preserve">
+    <value>Delete binding</value>
+  </data>
+  <data name="bind.header.target" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="main.chk.ledlabel" xml:space="preserve">
+    <value>Show LED labels</value>
+  </data>
+  <data name="main.chk.ledlabel.tip" xml:space="preserve">
+    <value>Works in both modes: P1..P8 in button mode, system names in alert mode</value>
+    <comment>复选框的悬停说明。</comment>
+  </data>
+  <data name="main.chk.tray" xml:space="preserve">
+    <value>Minimize to tray</value>
+  </data>
+  <data name="main.chk.tray.tip" xml:space="preserve">
+    <value>Keeps running in the system tray when closed or minimized; uncheck to exit on close</value>
+    <comment>复选框的悬停说明。</comment>
+  </data>
+  <data name="main.chk.scenelog" xml:space="preserve">
+    <value>Log scene state (to the diag folder)</value>
+    <comment>diag 是目录名，不译。</comment>
+  </data>
+  <data name="dev.name.g940" xml:space="preserve">
+    <value>G940 Throttle</value>
+    <comment>G940 是罗技的产品名，不译。</comment>
+  </data>
+  <data name="dev.btn.disconnect" xml:space="preserve">
+    <value>Disconnect</value>
+    <comment>按钮文字随连接状态在「连接 / 断开」之间切，两条 key 分开。</comment>
+  </data>
+  <data name="dev.hint.saved" xml:space="preserve">
+    <value>Changes saved automatically</value>
+  </data>
+  <data name="main.btn.simapply" xml:space="preserve">
+    <value>Apply &amp; connect</value>
+  </data>
+  <data name="main.btn.simcheck" xml:space="preserve">
+    <value>SDK check</value>
+    <comment>SDK 是 SimConnect SDK，不译。</comment>
+  </data>
+  <data name="alert.foot.hint" xml:space="preserve">
+    <value>Takes effect when checked · double-click “Trigger” to edit the condition</value>
+    <comment>引号内容对应列头 alert.header.cond。</comment>
+  </data>
+  <data name="alert.menu.audit" xml:space="preserve">
+    <value>Check list rules…</value>
+  </data>
+  <data name="alert.menu.editcond" xml:space="preserve">
+    <value>Edit this rule's condition…</value>
+  </data>
+  <data name="alert.menu.add" xml:space="preserve">
+    <value>Add rule…</value>
+  </data>
+  <data name="alert.menu.del" xml:space="preserve">
+    <value>Delete this rule</value>
+  </data>
+  <data name="alert.header.led" xml:space="preserve">
+    <value>LED</value>
+  </data>
+  <data name="alert.header.rule" xml:space="preserve">
+    <value>System · Rule</value>
+  </data>
+  <data name="alert.header.cond" xml:space="preserve">
+    <value>Trigger</value>
+    <comment>列头，短。双击这一列改条件。</comment>
+  </data>
+  <data name="alert.header.raw" xml:space="preserve">
+    <value>Raw</value>
+  </data>
+  <data name="alert.legend" xml:space="preserve">
+    <value>Color  Green=normal  Amber=attention  Red=act now  |  Effect  Steady=happened  Blink=in progress  Double / long-short=reminder  |  Only the top-priority rule shows per LED</value>
+    <comment>全角空格分隔的图例。英文最长的一条，宽度核算会盯它。</comment>
+  </data>
+  <data name="alert.legend.ok" xml:space="preserve">
+    <value>● Normal</value>
+  </data>
+  <data name="alert.legend.warn" xml:space="preserve">
+    <value>● Attention</value>
+  </data>
+  <data name="alert.legend.err" xml:space="preserve">
+    <value>● Act now</value>
+  </data>
+  <data name="main.lbl.mode" xml:space="preserve">
+    <value>Mode: {0}</value>
+    <comment>{0} 是页签文案（按键模式 / 告警模式），复用 main.tab.*。</comment>
+  </data>
+  <data name="main.master.running" xml:space="preserve">
+    <value>Running</value>
+    <comment>总开关旁的状态字。Designer 里曾经写「灯光引擎：运行中」，但运行时一直只写「运行中」，预览值和实际不一致，这里对齐成短的。</comment>
+  </data>
+  <data name="main.master.off" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="dev.btn.connect" xml:space="preserve">
+    <value>Connect</value>
+    <comment>和 dev.btn.disconnect 成对，由连接状态切换。</comment>
+  </data>
+  <data name="dev.hint.unsaved" xml:space="preserve">
+    <value>⚠ Settings won't save; lost on exit</value>
+    <comment>感叹号图标是文字的一部分，别去掉。</comment>
+  </data>
+  <data name="main.pressed.detached" xml:space="preserve">
+    <value>Pressed: - (device unplugged)</value>
+  </data>
+  <data name="main.pressed.disconnected" xml:space="preserve">
+    <value>Pressed: - (device disconnected)</value>
+  </data>
+  <data name="main.pressed.btn" xml:space="preserve">
+    <value>Pressed: button #{0} ({1})</value>
+    <comment>{0} 是 0 起的按钮编号，{1} 是原始输入通道名。</comment>
+  </data>
+  <data name="main.pressed.sim" xml:space="preserve">
+    <value>Pressed: button #{0} (simulated)</value>
+  </data>
+  <data name="main.pressed.channel" xml:space="preserve">
+    <value>Pressed: - ({0})</value>
+  </data>
+  <data name="main.pressed.pollerr" xml:space="preserve">
+    <value>Polling error: {0}</value>
+  </data>
+  <data name="main.pressed.readerr" xml:space="preserve">
+    <value>Read error: {0}</value>
+  </data>
+  <data name="sim.idle.hint" xml:space="preserve">
+    <value>Link is off.
+Check “{0}”
+to see airspeed, altitude and engine data.</value>
+    <comment>{0} 是复选框自己的文字（main.chk.sim），不另写一份，否则改一处忘一处。</comment>
+  </data>
+  <data name="dev.channel.raw" xml:space="preserve">
+    <value>Raw input</value>
+    <comment>读按钮的两条通道之一，另一个是 DirectInput（API 名，不译）。这个字符串会进状态行，必须跟着语言走。</comment>
+  </data>
+
+  <!-- 1.3.57 system and rule names; keys mirror sys.<SystemKey> / rule.<id>. -->
+  <data name="sys.Power" xml:space="preserve">
+    <value>Power</value>
+  </data>
+  <data name="sys.Engine" xml:space="preserve">
+    <value>Engine</value>
+  </data>
+  <data name="sys.Gear" xml:space="preserve">
+    <value>Gear</value>
+  </data>
+  <data name="sys.Flaps" xml:space="preserve">
+    <value>Flaps</value>
+  </data>
+  <data name="sys.Lights" xml:space="preserve">
+    <value>Exterior Lights</value>
+  </data>
+  <data name="sys.Autopilot" xml:space="preserve">
+    <value>Autopilot</value>
+  </data>
+  <data name="sys.MasterCaution" xml:space="preserve">
+    <value>Master Caution</value>
+  </data>
+  <data name="sys.Fuel" xml:space="preserve">
+    <value>Fuel</value>
+  </data>
+  <data name="sys.Special" xml:space="preserve">
+    <value>Special Equipment</value>
+  </data>
+  <data name="sys.Custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="rule.pwr_bat_only" xml:space="preserve">
+    <value>Battery on, avionics off</value>
+  </data>
+  <data name="rule.pwr_avionics_on" xml:space="preserve">
+    <value>Avionics on</value>
+  </data>
+  <data name="rule.pwr_avionics_no_bat" xml:space="preserve">
+    <value>Avionics on, battery off</value>
+  </data>
+  <data name="rule.eng_all_off" xml:space="preserve">
+    <value>All engines off</value>
+  </data>
+  <data name="rule.eng_all_run" xml:space="preserve">
+    <value>All engines running</value>
+  </data>
+  <data name="rule.eng_partial" xml:space="preserve">
+    <value>Engine failure</value>
+  </data>
+  <data name="rule.eng_fire" xml:space="preserve">
+    <value>Engine fire</value>
+  </data>
+  <data name="rule.gear_up_locked" xml:space="preserve">
+    <value>Gear up and locked</value>
+  </data>
+  <data name="rule.gear_transit" xml:space="preserve">
+    <value>Gear in transit</value>
+  </data>
+  <data name="rule.gear_down_locked" xml:space="preserve">
+    <value>Gear down and locked</value>
+  </data>
+  <data name="rule.gear_disagree" xml:space="preserve">
+    <value>Gear disagree</value>
+  </data>
+  <data name="rule.adv_gear_retract" xml:space="preserve">
+    <value>Gear still down after takeoff</value>
+  </data>
+  <data name="rule.gear_overspeed" xml:space="preserve">
+    <value>Gear overspeed</value>
+  </data>
+  <data name="rule.adv_approach_cfg" xml:space="preserve">
+    <value>Approach config warning</value>
+  </data>
+  <data name="rule.gear_low_alt" xml:space="preserve">
+    <value>Gear up at low altitude</value>
+  </data>
+  <data name="rule.gear_damaged" xml:space="preserve">
+    <value>Gear damaged by overspeed</value>
+  </data>
+  <data name="rule.flap_up" xml:space="preserve">
+    <value>Flaps up</value>
+  </data>
+  <data name="rule.flap_deployed" xml:space="preserve">
+    <value>Flaps extended</value>
+  </data>
+  <data name="rule.flap_full" xml:space="preserve">
+    <value>Flaps full</value>
+  </data>
+  <data name="rule.spoiler_armed" xml:space="preserve">
+    <value>Spoilers armed</value>
+  </data>
+  <data name="rule.spoiler_deployed" xml:space="preserve">
+    <value>Spoilers deployed in flight</value>
+  </data>
+  <data name="rule.to_config_warn" xml:space="preserve">
+    <value>Takeoff config warning</value>
+  </data>
+  <data name="rule.flap_overspeed" xml:space="preserve">
+    <value>Flap overspeed</value>
+  </data>
+  <data name="rule.flap_damaged" xml:space="preserve">
+    <value>Flaps damaged by overspeed</value>
+  </data>
+  <data name="rule.lights_all_off" xml:space="preserve">
+    <value>All exterior lights off</value>
+  </data>
+  <data name="rule.lights_complete" xml:space="preserve">
+    <value>Exterior lights complete</value>
+  </data>
+  <data name="rule.lights_land_taxi" xml:space="preserve">
+    <value>Landing / taxi lights on</value>
+  </data>
+  <data name="rule.lights_incomplete" xml:space="preserve">
+    <value>Exterior lights incomplete</value>
+  </data>
+  <data name="rule.ap_off" xml:space="preserve">
+    <value>Autopilot off</value>
+  </data>
+  <data name="rule.ap_on" xml:space="preserve">
+    <value>Autopilot engaged</value>
+  </data>
+  <data name="rule.ap_approach" xml:space="preserve">
+    <value>Approach / back course</value>
+  </data>
+  <data name="rule.ap_no_mode" xml:space="preserve">
+    <value>Engaged, no mode</value>
+  </data>
+  <data name="rule.adv_wind" xml:space="preserve">
+    <value>High wind</value>
+  </data>
+  <data name="rule.adv_ice_risk" xml:space="preserve">
+    <value>Icing risk</value>
+  </data>
+  <data name="rule.ice_structural" xml:space="preserve">
+    <value>Airframe icing</value>
+  </data>
+  <data name="rule.ice_no_deice" xml:space="preserve">
+    <value>Icing, de-ice off</value>
+  </data>
+  <data name="rule.ice_pitot" xml:space="preserve">
+    <value>Pitot iced, heat off</value>
+  </data>
+  <data name="rule.ice_pitot_fail" xml:space="preserve">
+    <value>Pitot iced despite heat</value>
+  </data>
+  <data name="rule.canopy_open" xml:space="preserve">
+    <value>Canopy open in flight</value>
+  </data>
+  <data name="rule.brake_park_to" xml:space="preserve">
+    <value>Parking brake on at takeoff</value>
+  </data>
+  <data name="rule.stall" xml:space="preserve">
+    <value>Stall warning</value>
+  </data>
+  <data name="rule.overspeed" xml:space="preserve">
+    <value>Overspeed warning</value>
+  </data>
+  <data name="rule.mc_clear" xml:space="preserve">
+    <value>No warnings</value>
+  </data>
+  <data name="rule.fuel_na" xml:space="preserve">
+    <value>Fuel data unavailable</value>
+  </data>
+  <data name="rule.fuel_ok" xml:space="preserve">
+    <value>Fuel OK</value>
+  </data>
+  <data name="rule.fuel_low" xml:space="preserve">
+    <value>Fuel low</value>
+  </data>
+  <data name="rule.fuel_critical" xml:space="preserve">
+    <value>Fuel critical</value>
+  </data>
+  <data name="rule.fuel_min" xml:space="preserve">
+    <value>Fuel minimum</value>
+  </data>
+  <data name="rule.sp_parking" xml:space="preserve">
+    <value>Parked at stand</value>
+  </data>
+  <data name="rule.sp_hook" xml:space="preserve">
+    <value>Tail hook down</value>
+  </data>
+  <data name="rule.sp_tailwheel" xml:space="preserve">
+    <value>Tailwheel down</value>
+  </data>
+  <data name="rule.sp_tail_lock" xml:space="preserve">
+    <value>Tailwheel unlocked at takeoff</value>
+  </data>
+  <data name="rule.sp_tow" xml:space="preserve">
+    <value>Tow attached</value>
+  </data>
+  <data name="rule.sp_slew" xml:space="preserve">
+    <value>Slew mode</value>
+  </data>
+  <data name="rule.sp_redline" xml:space="preserve">
+    <value>Above redline speed</value>
+  </data>
+  <data name="bind.led.noalert" xml:space="preserve">
+    <value>No active alert</value>
+    <comment>灯气泡：这颗灯当前没有命中的规则。</comment>
+  </data>
+  <data name="bind.led.hit" xml:space="preserve">
+    <value>Hit: {0}</value>
+  </data>
+  <data name="bind.led.hitrow" xml:space="preserve">
+    <value>Row {0} · {1}</value>
+  </data>
+  <data name="alert.rule.sample" xml:space="preserve">
+    <value> · Sample</value>
+    <comment>样板规则后缀，接在规则名后面。英文带前导空格。</comment>
+  </data>
+  <data name="alert.rule.added" xml:space="preserve">
+    <value>Rule added: {0}</value>
+  </data>
+  <data name="alert.rule.deleted" xml:space="preserve">
+    <value>Rule deleted: {0}</value>
+  </data>
+  <data name="alert.rule.builtin.title" xml:space="preserve">
+    <value>Built-in rule</value>
+  </data>
+  <data name="alert.rule.builtin" xml:space="preserve">
+    <value>“{0}” is a built-in rule and cannot be deleted.
+
+If you don't want its light, clear the check box on that row to disable it — you will still get condition fixes in later versions.</value>
+  </data>
+  <data name="alert.rule.del.title" xml:space="preserve">
+    <value>Delete rule</value>
+  </data>
+  <data name="alert.rule.del.select" xml:space="preserve">
+    <value>Select the rule you want to delete first.</value>
+  </data>
+  <data name="alert.rule.del.confirm" xml:space="preserve">
+    <value>Delete the rule “{0}”?
+
+Its condition and light settings will be deleted as well.</value>
+  </data>
+
+  <!-- 1.3.57 runtime sentences: the sim data card. -->
+  <data name="main.sim.nodata" xml:space="preserve">
+    <value>No data · see “Variable replies” below and the status bar for the reason
+Click “Live data…” to inspect each variable and its change count.</value>
+    <comment>模拟数据卡的占位文字。两行是分开的信息：结论 + 下一步怎么做。</comment>
+  </data>
+  <data name="main.sim.line1" xml:space="preserve">
+    <value>IAS {0} kn · Alt {1} ft · VS {2}{3} fpm · {4} · G {5}</value>
+    <comment>{2} 是升降符号（+ 或空），{3} 是数值。英文用 IAS/Altitude/VS 这三个航空缩写，不写全称——放不下。</comment>
+  </data>
+  <data name="main.sim.line2" xml:space="preserve">
+    <value>{0} engine(s) ({1} running) · Throttle {2}% · RPM {3}</value>
+  </data>
+  <data name="main.sim.line3" xml:space="preserve">
+    <value> · Flaps {0}% · Fuel {1}% · AP {2}</value>
+    <comment>整句带前导空格：它接在起落架那段后面，同一行。</comment>
+  </data>
+  <data name="main.sim.gear.fixed" xml:space="preserve">
+    <value>Gear fixed (down)</value>
+    <comment>固定式起落架没有收放状态，只说这一句。</comment>
+  </data>
+  <data name="main.sim.gear" xml:space="preserve">
+    <value>Gear {0} ({1}%)</value>
+    <comment>{0} 是「放下 / 收起」。</comment>
+  </data>
+  <data name="main.sim.geardown" xml:space="preserve">
+    <value>down</value>
+  </data>
+  <data name="main.sim.gearup" xml:space="preserve">
+    <value>up</value>
+  </data>
+  <data name="main.sim.ground" xml:space="preserve">
+    <value>On ground</value>
+  </data>
+  <data name="main.sim.air" xml:space="preserve">
+    <value>In flight</value>
+  </data>
+  <data name="main.sim.on" xml:space="preserve">
+    <value>On</value>
+    <comment>开关类状态词，接在设备名后面。</comment>
+  </data>
+  <data name="main.sim.off" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="main.sim.stall" xml:space="preserve">
+    <value> · Stall warning</value>
+    <comment>只有真出现时才接在行尾，所以带前导空格。</comment>
+  </data>
+  <data name="main.sim.overspeed" xml:space="preserve">
+    <value> · Overspeed warning</value>
+  </data>
+  <data name="main.sim.replies" xml:space="preserve">
+    <value>Replied {0} / {1} (see “Live data…”)</value>
+  </data>
+
+  <!-- 1.3.57 device status words and tips. -->
+  <data name="dev.st.detecting" xml:space="preserve">
+    <value>● Detecting…</value>
+  </data>
+  <data name="dev.st.connected" xml:space="preserve">
+    <value>● Connected</value>
+  </data>
+  <data name="dev.st.connected.nobtn" xml:space="preserve">
+    <value>● Connected · no buttons</value>
+  </data>
+  <data name="dev.st.initfail" xml:space="preserve">
+    <value>● Init failed</value>
+  </data>
+  <data name="dev.st.notfound" xml:space="preserve">
+    <value>● Not connected</value>
+  </data>
+  <data name="dev.st.unplugged" xml:space="preserve">
+    <value>● Device unplugged</value>
+  </data>
+  <data name="dev.st.disconnected" xml:space="preserve">
+    <value>● Disconnected</value>
+    <comment>设备状态词（1.3.57 起由 DevState 枚举生成，不靠中文反查）。前导的圆点是状态色块的定位标记，别删。</comment>
+  </data>
+  <data name="dev.tip.failtail" xml:space="preserve">
+    <value>For the full reason and steps, open “Device diagnostics” below.</value>
+  </data>
+  <data name="dev.tip.nobtn" xml:space="preserve">
+    <value>Device recognised but no buttons can be read — button mode will not respond.
+Open “Device diagnostics” to check the button offsets and the raw input channel; if both are empty the button data is not being reported — unplug and replug the G940 USB cable once.</value>
+  </data>
+  <data name="dev.tip.connected" xml:space="preserve">
+    <value>Connected, {0} button(s) detected.</value>
+  </data>
+  <data name="dev.tip.rawinput" xml:space="preserve">
+    <value>The raw input channel has not bound the device; buttons are read from DirectInput only.</value>
+  </data>
+  <data name="dev.tip.detecting" xml:space="preserve">
+    <value>Enumerating USB devices and trying to connect to the G940 throttle.</value>
+  </data>
+  <data name="dev.tip.unplugged" xml:space="preserve">
+    <value>The USB cable is disconnected; lights are no longer written to the hardware.
+Plug it back in to reconnect automatically, or click “Connect” to connect manually.</value>
+  </data>
+  <data name="dev.tip.disconnected" xml:space="preserve">
+    <value>Lights are no longer written to the hardware; preview and tables still work.
+Click “Connect” to reconnect.</value>
+  </data>
+  <data name="dev.fail.none" xml:space="preserve">
+    <value>No game controllers found</value>
+  </data>
+  <data name="dev.fail.none.detail" xml:space="preserve">
+    <value>Please check:
+1) the G940 is plugged in and powered;
+2) Device Manager lists the G940 (not as an unknown device with a warning icon);
+3) the G940 USB cable is connected.</value>
+  </data>
+  <data name="dev.fail.nomatch" xml:space="preserve">
+    <value>G940 throttle not recognised ({0} device(s) found)</value>
+  </data>
+  <data name="dev.fail.nomatch.detail" xml:space="preserve">
+    <value>Click “Connect” to pick one from the list manually.
+Devices found:
+</value>
+    <comment>结尾的换行不能删：后面直接接设备清单。</comment>
+  </data>
+  <data name="dev.fail.nopick" xml:space="preserve">
+    <value>No device selected yet</value>
+  </data>
+  <data name="dev.fail.nopick.detail" xml:space="preserve">
+    <value>Click “Connect” to pick one from the list again.</value>
+  </data>
+  <data name="dev.fail.enum" xml:space="preserve">
+    <value>Device enumeration failed</value>
+  </data>
+  <data name="dev.fail.init" xml:space="preserve">
+    <value>Device initialisation failed</value>
+  </data>
+  <data name="dev.fail.connect" xml:space="preserve">
+    <value>Error while connecting</value>
+  </data>
+  <data name="dev.devicelist.unnamed" xml:space="preserve">
+    <value>(unnamed device)</value>
+  </data>
+
+  <!-- 1.3.57 save state, button capture, built-in profile hints. -->
+  <data name="main.save.tip" xml:space="preserve">
+    <value>Checking a box, editing a value or a condition writes to disk immediately — there is no “Save” button.
+Config file:
+{0}</value>
+  </data>
+  <data name="main.save.errtip" xml:space="preserve">
+    <value>The config could not be written to disk ({0}).
+
+Location:
+{1}
+
+Common cause: the program sits in Program Files or on a read-only USB drive. Move the whole program folder somewhere writable (for example under Documents).
+Note: failures to write the alert/button profiles are reported here too.</value>
+  </data>
+  <data name="main.cap.noconnect" xml:space="preserve">
+    <value>Connect the device before capturing throttle buttons.</value>
+  </data>
+  <data name="main.cap.norow" xml:space="preserve">
+    <value>Add a binding row before capturing throttle buttons.</value>
+  </data>
+  <data name="main.cap.waiting" xml:space="preserve">
+    <value>Waiting for a throttle button… hold one within 10 seconds.</value>
+  </data>
+  <data name="main.cap.timeout" xml:space="preserve">
+    <value>Capture timed out; no button was detected.</value>
+  </data>
+  <data name="common.tip.title" xml:space="preserve">
+    <value>Notice</value>
+  </data>
+  <data name="main.bind.hint.normal" xml:space="preserve">
+    <value>Right-click the table for actions · double-click to edit</value>
+  </data>
+  <data name="main.alert.hint.normal" xml:space="preserve">
+    <value>Checked = active · double-click “Condition” to edit it</value>
+  </data>
+  <data name="common.builtin.only" xml:space="preserve">
+    <value>(built-in)</value>
+  </data>
+  <data name="common.builtin.tag" xml:space="preserve">
+    <value>(built-in) {0}</value>
+  </data>
+  <data name="main.builtin.touched" xml:space="preserve">
+    <value>Changes not saved · {0} cannot be overwritten; use Manage → Save as</value>
+  </data>
+  <data name="main.builtin.readonly" xml:space="preserve">
+    <value>{0} · read-only; use Manage → Save as to keep changes</value>
+  </data>
+
+  <!-- 1.3.57 profile management: menu, save as, rename, delete, import/export. -->
+  <data name="main.prof.head" xml:space="preserve">
+    <value>Current: {0}</value>
+    <comment>管理菜单不可点的第一行，{0} 已含「（内置）」前缀。</comment>
+  </data>
+  <data name="main.prof.new" xml:space="preserve">
+    <value>New (factory default)…</value>
+  </data>
+  <data name="main.prof.saveas" xml:space="preserve">
+    <value>Save as…</value>
+  </data>
+  <data name="main.prof.rename" xml:space="preserve">
+    <value>Rename…</value>
+  </data>
+  <data name="main.prof.del" xml:space="preserve">
+    <value>Delete this profile…</value>
+  </data>
+  <data name="main.prof.import" xml:space="preserve">
+    <value>Import…</value>
+  </data>
+  <data name="main.prof.export" xml:space="preserve">
+    <value>Export…</value>
+    <comment>也是导出相关弹框的标题。</comment>
+  </data>
+  <data name="main.prof.openfolder" xml:space="preserve">
+    <value>Open profile folder</value>
+  </data>
+  <data name="main.prof.dup" xml:space="preserve">
+    <value>A profile named “{0}” already exists — pick another name.</value>
+  </data>
+  <data name="main.prof.new.title.a" xml:space="preserve">
+    <value>New alert profile</value>
+  </data>
+  <data name="main.prof.new.title.b" xml:space="preserve">
+    <value>New button profile</value>
+  </data>
+  <data name="main.prof.new.prompt" xml:space="preserve">
+    <value>Name for the new profile (contents are the factory default; edit freely afterwards):</value>
+  </data>
+  <data name="main.prof.new.def.a" xml:space="preserve">
+    <value>My alert profile</value>
+  </data>
+  <data name="main.prof.new.def.b" xml:space="preserve">
+    <value>My button profile</value>
+  </data>
+  <data name="main.prof.newfail" xml:space="preserve">
+    <value>Create failed</value>
+  </data>
+  <data name="main.prof.created" xml:space="preserve">
+    <value>Created profile “{0}” (factory default).</value>
+  </data>
+  <data name="main.prof.saveas.title" xml:space="preserve">
+    <value>Save as</value>
+  </data>
+  <data name="main.prof.saveas.prompt" xml:space="preserve">
+    <value>Save the current profile under a new name (contents copied as they are):</value>
+  </data>
+  <data name="main.prof.saveas.def" xml:space="preserve">
+    <value>{0} copy</value>
+  </data>
+  <data name="main.prof.saveas.defempty" xml:space="preserve">
+    <value>Profile</value>
+    <comment>默认名在「当前配置名」为空时的占位。</comment>
+  </data>
+  <data name="main.prof.saveasfail" xml:space="preserve">
+    <value>Save as failed</value>
+  </data>
+  <data name="main.prof.savedas" xml:space="preserve">
+    <value>Saved as “{0}” and switched to it.</value>
+  </data>
+  <data name="main.prof.rename.title" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="main.prof.rename.prompt" xml:space="preserve">
+    <value>Rename “{0}” to:</value>
+  </data>
+  <data name="main.prof.renamefail" xml:space="preserve">
+    <value>Rename failed</value>
+  </data>
+  <data name="main.prof.renamed" xml:space="preserve">
+    <value>Renamed to “{0}”.</value>
+  </data>
+  <data name="main.prof.del.confirm" xml:space="preserve">
+    <value>Delete the profile “{0}”?
+
+Its file will be deleted (along with the .bak in the same folder). This cannot be undone.</value>
+  </data>
+  <data name="main.prof.del.title" xml:space="preserve">
+    <value>Delete profile</value>
+  </data>
+  <data name="main.prof.del.notfound" xml:space="preserve">
+    <value>No file found for “{0}” — it may already have been deleted.</value>
+  </data>
+  <data name="main.prof.delfail" xml:space="preserve">
+    <value>Delete failed</value>
+  </data>
+  <data name="main.prof.deleted" xml:space="preserve">
+    <value>Deleted “{0}”; switched back to the built-in profile.</value>
+  </data>
+  <data name="main.prof.openfail" xml:space="preserve">
+    <value>Cannot open the folder: {0}</value>
+  </data>
+  <data name="main.prof.openfail.title" xml:space="preserve">
+    <value>Open folder</value>
+  </data>
+  <data name="main.prof.export.title.a" xml:space="preserve">
+    <value>Export alert profile</value>
+  </data>
+  <data name="main.prof.export.title.b" xml:space="preserve">
+    <value>Export button profile</value>
+  </data>
+  <data name="main.prof.filter.a" xml:space="preserve">
+    <value>Alert profile (*.json)|*.json|All files (*.*)|*.*</value>
+    <comment>文件对话框过滤器，竖线分隔，别改格式。</comment>
+  </data>
+  <data name="main.prof.filter.b" xml:space="preserve">
+    <value>Button profile (*.json)|*.json|All files (*.*)|*.*</value>
+  </data>
+  <data name="main.prof.export.err" xml:space="preserve">
+    <value>Export failed: {0}</value>
+  </data>
+  <data name="main.prof.export.ok" xml:space="preserve">
+    <value>Exported to:
+{0}</value>
+  </data>
+  <data name="main.prof.import.title.a" xml:space="preserve">
+    <value>Import alert profile</value>
+  </data>
+  <data name="main.prof.import.title.b" xml:space="preserve">
+    <value>Import button profile</value>
+  </data>
+  <data name="main.prof.importfail" xml:space="preserve">
+    <value>Import failed</value>
+  </data>
+  <data name="main.prof.import.bad" xml:space="preserve">
+    <value>This file cannot be imported:
+{0}</value>
+  </data>
+  <data name="main.prof.import.builtin.title" xml:space="preserve">
+    <value>Built-in profile</value>
+  </data>
+  <data name="main.prof.import.builtin" xml:space="preserve">
+    <value>“{0}” is a built-in profile and cannot be overwritten.
+It will be imported as “{1}”.</value>
+  </data>
+  <data name="main.prof.import.dup.title" xml:space="preserve">
+    <value>Same name</value>
+  </data>
+  <data name="main.prof.import.dup" xml:space="preserve">
+    <value>A profile named “{0}” already exists.
+
+Yes: overwrite it
+No: import under a new name
+Cancel: do nothing</value>
+    <comment>三个按钮的文字写进正文里，因为标准 MessageBox 的 Yes/No/Cancel 按钮文字跟着系统语言，改不了。</comment>
+  </data>
+  <data name="main.prof.import.ok" xml:space="preserve">
+    <value>Imported profile “{0}”.
+Select it in the profile list to switch to it.</value>
+  </data>
+  <data name="main.prof.import.ok.title" xml:space="preserve">
+    <value>Import complete</value>
+  </data>
+
+  <!-- 1.3.57 context menus, footers, grid tips, profile switch feedback. -->
+  <data name="alert.menu.delrow" xml:space="preserve">
+    <value>Delete this rule (row {0})</value>
+  </data>
+  <data name="alert.menu.delrow.plain" xml:space="preserve">
+    <value>Delete this rule</value>
+  </data>
+  <data name="alert.menu.editcond.row" xml:space="preserve">
+    <value>Edit this rule's condition… (row {0})</value>
+  </data>
+  <data name="alert.menu.editcond.plain" xml:space="preserve">
+    <value>Edit this rule's condition…</value>
+  </data>
+  <data name="bind.menu.delrow" xml:space="preserve">
+    <value>Delete this binding (row {0})</value>
+  </data>
+  <data name="bind.menu.delrow.plain" xml:space="preserve">
+    <value>Delete this binding</value>
+  </data>
+  <data name="alert.foot.profile" xml:space="preserve">
+    <value>Profile: {0} ({1} enabled) · checked = active · double-click a condition to edit</value>
+  </data>
+  <data name="common.none" xml:space="preserve">
+    <value>(none)</value>
+  </data>
+  <data name="common.trunc" xml:space="preserve">
+    <value>… ({0} more lines not shown)</value>
+  </data>
+  <data name="main.dup.tail" xml:space="preserve">
+    <value>Duplicate bindings do not stack.</value>
+  </data>
+  <data name="main.tip.confignotes" xml:space="preserve">
+    <value>Config notice: {0}</value>
+  </data>
+  <data name="main.tip.confignotes.more" xml:space="preserve">
+    <value> ({0} more — see the alert page and the settings card)</value>
+  </data>
+  <data name="main.prof.notfound" xml:space="preserve">
+    <value>Profile “{0}” not found</value>
+  </data>
+  <data name="main.prof.loadfail" xml:space="preserve">
+    <value>Failed to read the alert profile ({0}); using the built-in “{1}”</value>
+  </data>
+  <data name="main.prof.loadfail.none" xml:space="preserve">
+    <value>Failed to read the alert profile ({0}), and no built-in profile is available.</value>
+  </data>
+  <data name="main.prof.loadfail.b" xml:space="preserve">
+    <value>Failed to read the button profile ({0}); using the built-in “{1}”</value>
+  </data>
+  <data name="main.prof.loadfail.b.none" xml:space="preserve">
+    <value>Failed to read the button profile ({0}), and no built-in profile is available.</value>
+  </data>
+  <data name="main.prof.noalert" xml:space="preserve">
+    <value>No alert profile.</value>
+  </data>
+  <data name="main.prof.nobutton" xml:space="preserve">
+    <value>No button profile.</value>
+  </data>
+  <data name="bind.led.nobind" xml:space="preserve">
+    <value>No binding</value>
+  </data>
+  <data name="bind.led.bindrow" xml:space="preserve">
+    <value>Hit: row {0} · #{1}</value>
+    <comment>后面还会接按钮名、触发、效果等，所以不带结尾标点。</comment>
+  </data>
+  <data name="bind.cap.done" xml:space="preserve">
+    <value>Captured: throttle button #{0} → row {1}.</value>
+  </data>
+  <data name="main.preset.switched.btn" xml:space="preserve">
+    <value>Switched to “{0}” ({1} bindings).</value>
+  </data>
+  <data name="main.preset.switched.alert" xml:space="preserve">
+    <value>Switched to alert profile “{0}” ({1} rules enabled).</value>
+  </data>
+  <data name="main.preset.chip" xml:space="preserve">
+    <value>Mine {0} | Built-in {1}</value>
+  </data>
+  <data name="main.bind.added" xml:space="preserve">
+    <value>Binding added and saved (right-click to capture, or type the number).</value>
+  </data>
+  <data name="main.bind.removed" xml:space="preserve">
+    <value>Deleted the binding on row {0} and saved.</value>
+  </data>
+  <data name="main.bind.removedlast" xml:space="preserve">
+    <value>Deleted the last binding and saved.</value>
+  </data>
+  <data name="alert.grid.dropped" xml:space="preserve">
+    <value>(the condition you edited is invalid; the built-in condition was restored)</value>
+  </data>
+  <data name="alert.grid.customized" xml:space="preserve">
+    <value>This rule's condition has been edited (the profile only stores the difference)</value>
+  </data>
+  <data name="alert.grid.userrule" xml:space="preserve">
+    <value>User-added rule (can be deleted or edited)</value>
+  </data>
+  <data name="alert.grid.sample" xml:space="preserve">
+    <value>Sample rule (disabled by default): its condition is computed by the program — it is neither an MSFS verdict nor a real cockpit light.
+Use it as a template for your own condition.</value>
+  </data>
+
+  <!-- 1.3.57 duplicate marks, scene log, tray, condition validation. -->
+  <data name="main.dup.rowgroup" xml:space="preserve">
+    <value>row {0}</value>
+  </data>
+  <data name="main.dup.found" xml:space="preserve">
+    <value>⚠ {0} duplicate rows detected (same colour = same group): {1}, {2}</value>
+    <comment>{1} 是「第1/2行、第5行」这类列表，{2} 是尾巴那句说明。</comment>
+  </data>
+  <data name="alert.rule.nopos" xml:space="preserve">
+    <value>Could not work out where to insert (this system has no rule to sort against).
+
+Pick another system, or add a rule to that system first.</value>
+  </data>
+  <data name="alert.rule.nopos.title" xml:space="preserve">
+    <value>Cannot insert</value>
+  </data>
+  <data name="main.scene.on" xml:space="preserve">
+    <value>● Recording: diag\g940-simstate.txt</value>
+  </data>
+  <data name="main.scene.off" xml:space="preserve">
+    <value>Record scene state (written to the diag folder)</value>
+  </data>
+  <data name="main.raw.nodata" xml:space="preserve">
+    <value> = no data (not reported by this aircraft)</value>
+  </data>
+  <data name="main.tray.on" xml:space="preserve">
+    <value>Closing the window minimises it to the tray; lights keep running</value>
+  </data>
+  <data name="main.tray.off" xml:space="preserve">
+    <value>Closing the window exits the program</value>
+  </data>
+  <data name="main.tray.balloon" xml:space="preserve">
+    <value>The program is minimised to the tray (lights keep running).
+Double-click the icon to restore the window; right-click it to exit.</value>
+  </data>
+  <data name="alert.audit.title.all" xml:space="preserve">
+    <value>Check my rules (all systems)</value>
+  </data>
+  <data name="alert.audit.title.sys" xml:space="preserve">
+    <value>Check my rules · {0}</value>
+  </data>
+  <data name="main.ver.unknown" xml:space="preserve">
+    <value>unknown</value>
+  </data>
+  <data name="main.cond.invalid" xml:space="preserve">
+    <value>Condition not saved:
+· {0}</value>
+    <comment>{0} 是若干条校验失败原因，用「
+· 」分隔。</comment>
+  </data>
+  <data name="main.cond.invalid.title" xml:space="preserve">
+    <value>Invalid condition</value>
+  </data>
+  <data name="main.btn.tip.edit" xml:space="preserve">
+    <value>Type the button number, or right-click → Capture throttle button.</value>
+  </data>
+
+  <!-- 1.3.58 dialogs: name, pick device, light assignment, live data, built-in profile names. -->
+  <data name="common.ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="common.cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="common.close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="name.form" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="name.prompt" xml:space="preserve">
+    <value>Profile name</value>
+  </data>
+  <data name="name.hint" xml:space="preserve">
+    <value>Used as the file name — pick something recognisable.</value>
+  </data>
+  <data name="pick.form" xml:space="preserve">
+    <value>Select the G940 throttle</value>
+  </data>
+  <data name="pick.prompt" xml:space="preserve">
+    <value>G940 throttle not recognised. Controllers found here —
+pick the one whose name contains “Throttle”:</value>
+    <comment>两行：第一行说结论，第二行说怎么做。</comment>
+  </data>
+  <data name="pick.hint" xml:space="preserve">
+    <value>This choice is remembered; you will not be asked again on start-up.</value>
+  </data>
+  <data name="led.form" xml:space="preserve">
+    <value>Light assignment</value>
+  </data>
+  <data name="led.title" xml:space="preserve">
+    <value>{0} · Current: {1}</value>
+    <comment>{0} 是灯位名（P1…P8），{1} 是系统名或「（空）」。</comment>
+  </data>
+  <data name="led.hint" xml:space="preserve">
+    <value>A system marked “on Pn” comes from that light;
+“(empty)” leaves this light unused.</value>
+  </data>
+  <data name="led.opt.empty" xml:space="preserve">
+    <value>(empty)</value>
+  </data>
+  <data name="led.opt.sysn" xml:space="preserve">
+    <value>System {0}</value>
+    <comment>系统表里没有的 key 才会走到这里，正常见不到。</comment>
+  </data>
+  <data name="led.tag.current" xml:space="preserve">
+    <value>current</value>
+  </data>
+  <data name="led.tag.noled" xml:space="preserve">
+    <value>not assigned</value>
+  </data>
+  <data name="led.tag.other" xml:space="preserve">
+    <value>on {0}</value>
+    <comment>{0} 是灯位名（P1…P8）。</comment>
+  </data>
+  <data name="sim.title" xml:space="preserve">
+    <value>Live data — MSFS2024 (SimConnect)</value>
+    <comment>整句当标题用：界面上是窗体标题，导出的 txt 第一行也是它。</comment>
+  </data>
+  <data name="sim.onlyanswered" xml:space="preserve">
+    <value>Replied only</value>
+  </data>
+  <data name="sim.onlychanged" xml:space="preserve">
+    <value>Changed only</value>
+  </data>
+  <data name="sim.ontop" xml:space="preserve">
+    <value>Always on top</value>
+  </data>
+  <data name="sim.col.group" xml:space="preserve">
+    <value>Group</value>
+    <comment>变量分组名本身不翻（属数据），只有列头翻。</comment>
+  </data>
+  <data name="sim.col.var" xml:space="preserve">
+    <value>Variable</value>
+  </data>
+  <data name="sim.col.unit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="sim.col.value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="sim.col.answered" xml:space="preserve">
+    <value>Reply</value>
+  </data>
+  <data name="sim.col.changes" xml:space="preserve">
+    <value>Diff</value>
+  </data>
+  <data name="sim.col.age" xml:space="preserve">
+    <value>Updated</value>
+  </data>
+  <data name="sim.copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="sim.export" xml:space="preserve">
+    <value>Export txt</value>
+  </data>
+  <data name="sim.nodata" xml:space="preserve">
+    <value>No data yet</value>
+  </data>
+  <data name="sim.noanswer" xml:space="preserve">
+    <value>✗ no reply</value>
+  </data>
+  <data name="sim.stat" xml:space="preserve">
+    <value>{0}/{1} replied · {2} never replied</value>
+  </data>
+  <data name="sim.stat.noframe" xml:space="preserve">
+    <value> · no data frame</value>
+    <comment>带前导空格：接在上一条后面，同一行。</comment>
+  </data>
+  <data name="sim.time" xml:space="preserve">
+    <value>Time: {0}</value>
+    <comment>只用于导出的 txt。</comment>
+  </data>
+  <data name="sim.copyfail" xml:space="preserve">
+    <value>Copy failed: {0}</value>
+  </data>
+  <data name="sim.export.title" xml:space="preserve">
+    <value>Export live data</value>
+  </data>
+  <data name="sim.export.filter" xml:space="preserve">
+    <value>Text file|*.txt</value>
+    <comment>文件对话框过滤器，竖线分隔，别改格式。</comment>
+  </data>
+  <data name="sim.export.filename" xml:space="preserve">
+    <value>G940-live-data_{0}.txt</value>
+    <comment>{0} 是 yyyyMMdd_HHmmss。</comment>
+  </data>
+  <data name="sim.export.ok" xml:space="preserve">
+    <value>Exported: {0}</value>
+  </data>
+  <data name="sim.export.err" xml:space="preserve">
+    <value>Export failed: {0}</value>
+  </data>
+  <data name="profile.twin_piston" xml:space="preserve">
+    <value>Generic twin piston</value>
+    <comment>key = profile.&lt;配置文件名&gt;，见 Core/AlertNames.cs。</comment>
+  </data>
+  <data name="profile.single_piston" xml:space="preserve">
+    <value>Single piston</value>
+  </data>
+  <data name="profile.jet_regional" xml:space="preserve">
+    <value>Regional jet</value>
+  </data>
+  <data name="profile.demo_rhythm" xml:space="preserve">
+    <value>Rhythm</value>
+  </data>
+  <data name="profile.demo_ring" xml:space="preserve">
+    <value>Ring animation</value>
+  </data>
+  <data name="profile.demo_decor" xml:space="preserve">
+    <value>Decor</value>
+  </data>
+  <data name="cond.err.empty" xml:space="preserve">
+    <value>The condition is empty</value>
+  </data>
+  <data name="cond.err.depth" xml:space="preserve">
+    <value>Condition nesting exceeds {0} levels</value>
+  </data>
+  <data name="cond.err.emptygroup" xml:space="preserve">
+    <value>This group contains no conditions</value>
+  </data>
+  <data name="cond.err.notcount" xml:space="preserve">
+    <value>NOT must contain exactly one condition</value>
+  </data>
+  <data name="cond.err.opmissing" xml:space="preserve">
+    <value>Condition type is missing (expected and / or / not / cmp)</value>
+  </data>
+  <data name="cond.err.opunknown" xml:space="preserve">
+    <value>Unknown condition type: {0}</value>
+  </data>
+  <data name="cond.err.varmissing" xml:space="preserve">
+    <value>The comparison has no variable</value>
+  </data>
+  <data name="cond.err.varunknown" xml:space="preserve">
+    <value>Unknown variable: {0}</value>
+  </data>
+  <data name="cond.err.cmpunknown" xml:space="preserve">
+    <value>Unknown comparator: {0}</value>
+  </data>
+  <data name="cond.err.cmpempty" xml:space="preserve">
+    <value>(none)</value>
+  </data>
+  <data name="cond.err.threshold" xml:space="preserve">
+    <value>Thresholds were removed in 1.3.44: replace “{0}” with a number</value>
+  </data>
+  <data name="cond.right.threshold" xml:space="preserve">
+    <value>Threshold removed ({0})</value>
+  </data>
+  <data name="cmp.bool" xml:space="preserve">
+    <value>is true</value>
+  </data>
+  <data name="cmp.nbool" xml:space="preserve">
+    <value>is false</value>
+  </data>
+  <data name="cmp.gt" xml:space="preserve">
+    <value>greater than</value>
+  </data>
+  <data name="cmp.ge" xml:space="preserve">
+    <value>at least</value>
+  </data>
+  <data name="cmp.lt" xml:space="preserve">
+    <value>less than</value>
+  </data>
+  <data name="cmp.le" xml:space="preserve">
+    <value>at most</value>
+  </data>
+  <data name="cmp.eq" xml:space="preserve">
+    <value>equals</value>
+  </data>
+  <data name="cmp.ne" xml:space="preserve">
+    <value>does not equal</value>
+  </data>
+  <data name="cmp.between" xml:space="preserve">
+    <value>is between</value>
+  </data>
+  <data name="cond.describe.empty" xml:space="preserve">
+    <value>(empty)</value>
+  </data>
+  <data name="cond.describe.emptygroup" xml:space="preserve">
+    <value>(empty group)</value>
+  </data>
+  <data name="cond.describe.unknown" xml:space="preserve">
+    <value>(unknown condition)</value>
+  </data>
+  <data name="cond.describe.and" xml:space="preserve">
+    <value> and </value>
+  </data>
+  <data name="cond.describe.or" xml:space="preserve">
+    <value> or </value>
+  </data>
+  <data name="cond.describe.not" xml:space="preserve">
+    <value>not </value>
+  </data>
+  <data name="tri.true" xml:space="preserve">
+    <value>holds</value>
+  </data>
+  <data name="tri.false" xml:space="preserve">
+    <value>does not hold</value>
+  </data>
+  <data name="common.nodata" xml:space="preserve">
+    <value>no data</value>
+  </data>
+  <data name="derived.gearTotal" xml:space="preserve">
+    <value>Gear extension (%)</value>
+  </data>
+  <data name="derived.gearSpread" xml:space="preserve">
+    <value>Max gear spread (%)</value>
+  </data>
+  <data name="derived.maxThrottle" xml:space="preserve">
+    <value>Max throttle (%)</value>
+  </data>
+  <data name="derived.engCount" xml:space="preserve">
+    <value>Engine count</value>
+  </data>
+  <data name="derived.engBurning" xml:space="preserve">
+    <value>Engines burning</value>
+  </data>
+  <data name="derived.fuelRatio" xml:space="preserve">
+    <value>Fuel ratio</value>
+  </data>
+  <data name="audit.level.error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="audit.level.conflict" xml:space="preserve">
+    <value>Conflict</value>
+  </data>
+  <data name="audit.level.redundant" xml:space="preserve">
+    <value>Redundant</value>
+  </data>
+  <data name="audit.level.tip" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="probe.col.cond" xml:space="preserve">
+    <value>Condition</value>
+  </data>
+  <data name="probe.col.left" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="probe.col.cmp" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="probe.col.right" xml:space="preserve">
+    <value>Limit</value>
+  </data>
+  <data name="probe.col.result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="probe.head.nodata" xml:space="preserve">
+    <value>Probe: with no data connected, everything reads “no data”.</value>
+  </data>
+  <data name="probe.empty.nocond" xml:space="preserve">
+    <value>Probe: this rule has no condition.</value>
+  </data>
+  <data name="probe.rows" xml:space="preserve">
+    <value>Probe{0}: results by condition.</value>
+  </data>
+  <data name="probe.nodata" xml:space="preserve">
+    <value>Probe{0}: this data set has none of the variables used, so every condition reads “no data” and the light stays off.</value>
+  </data>
+  <data name="probe.note" xml:space="preserve">
+    <value> ({0})</value>
+  </data>
+  <data name="probe.total" xml:space="preserve">
+    <value>&#xD;&#xA;Overall: {0}.</value>
+  </data>
+  <data name="probe.empty.noselect" xml:space="preserve">
+    <value>Probe: select a condition on the left first.</value>
+  </data>
+  <data name="newrule.title" xml:space="preserve">
+    <value>New alert rule</value>
+  </data>
+  <data name="newrule.sys" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="newrule.name" xml:space="preserve">
+    <value>Rule name</value>
+  </data>
+  <data name="newrule.pos" xml:space="preserve">
+    <value>Insert after</value>
+  </data>
+  <data name="newrule.color" xml:space="preserve">
+    <value>Light color</value>
+  </data>
+  <data name="newrule.effect" xml:space="preserve">
+    <value>Effect</value>
+  </data>
+  <data name="newrule.speed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="newrule.condtitle" xml:space="preserve">
+    <value>Trigger condition (required)</value>
+  </data>
+  <data name="newrule.editcond" xml:space="preserve">
+    <value>Edit condition…</value>
+  </data>
+  <data name="newrule.defaultname" xml:space="preserve">
+    <value>New rule</value>
+  </data>
+  <data name="newrule.pos.first" xml:space="preserve">
+    <value>(First — lowest priority, least likely to light)</value>
+  </data>
+  <data name="newrule.pos.after" xml:space="preserve">
+    <value>After “{0}”</value>
+  </data>
+  <data name="newrule.cond.none" xml:space="preserve">
+    <value>No condition yet — use “Edit condition…” (required).</value>
+  </data>
+  <data name="newrule.cond.prefix" xml:space="preserve">
+    <value>Condition: {0}</value>
+  </data>
+  <data name="newrule.err.noname" xml:space="preserve">
+    <value>Please enter a rule name.</value>
+  </data>
+  <data name="newrule.err.dupname" xml:space="preserve">
+    <value>There is already a rule named “{1}” in “{0}”. Pick another name.</value>
+  </data>
+  <data name="newrule.err.nocond" xml:space="preserve">
+    <value>Set a trigger condition first: a rule without one never lights.</value>
+  </data>
+  <data name="common.official" xml:space="preserve">
+    <value> ·official</value>
+  </data>
+  <data name="common.paren" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="cond.form" xml:space="preserve">
+    <value>Condition editor</value>
+  </data>
+  <data name="cond.form.rule" xml:space="preserve">
+    <value>Condition editor — {0}</value>
+  </data>
+  <data name="cond.title" xml:space="preserve">
+    <value>Trigger condition</value>
+  </data>
+  <data name="cond.title.rule" xml:space="preserve">
+    <value>{0} · Trigger condition</value>
+  </data>
+  <data name="cond.tree.hint" xml:space="preserve">
+    <value>Condition tree (select one, edit on the right)</value>
+  </data>
+  <data name="cond.btn.addleaf" xml:space="preserve">
+    <value>+ Cond</value>
+  </data>
+  <data name="cond.btn.addand" xml:space="preserve">
+    <value>+ AND</value>
+  </data>
+  <data name="cond.btn.addor" xml:space="preserve">
+    <value>+ OR</value>
+  </data>
+  <data name="cond.btn.addnot" xml:space="preserve">
+    <value>+ NOT</value>
+  </data>
+  <data name="cond.btn.del" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="cond.btn.toggle" xml:space="preserve">
+    <value>AND/OR</value>
+  </data>
+  <data name="cond.manual.group" xml:space="preserve">
+    <value>Probe data source (no simulator needed)</value>
+  </data>
+  <data name="cond.src.sim" xml:space="preserve">
+    <value>Live simulator</value>
+  </data>
+  <data name="cond.src.manual" xml:space="preserve">
+    <value>Manual values</value>
+  </data>
+  <data name="cond.btn.fill" xml:space="preserve">
+    <value>Fill from snapshot</value>
+  </data>
+  <data name="cond.btn.zero" xml:space="preserve">
+    <value>Zero all</value>
+  </data>
+  <data name="cond.btn.clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="cond.manual.hint" xml:space="preserve">
+    <value>Unfilled variables count as “no data”, not 0 — same three-state result as real machine.</value>
+  </data>
+  <data name="cond.manual.hint2" xml:space="preserve">
+    <value>Unfilled variables count as “no data”, not 0. Double-click Manual to type.</value>
+  </data>
+  <data name="cond.manual.offline" xml:space="preserve">
+    <value>Simulator offline: availability unknown (“—”). Manual probe still works.</value>
+  </data>
+  <data name="cond.col.var" xml:space="preserve">
+    <value>Variable</value>
+  </data>
+  <data name="cond.col.unit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="cond.col.sim" xml:space="preserve">
+    <value>Simulator</value>
+  </data>
+  <data name="cond.col.manual" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="cond.col.avail" xml:space="preserve">
+    <value>Avail</value>
+  </data>
+  <data name="cond.leaf.group" xml:space="preserve">
+    <value>Selection</value>
+  </data>
+  <data name="cond.leaf.var" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="cond.leaf.cmp" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="cond.leaf.right" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="cond.leaf.to" xml:space="preserve">
+    <value>to</value>
+  </data>
+  <data name="cond.leaf.varcmp" xml:space="preserve">
+    <value>Compared with another variable: both sides need data before it can be judged.</value>
+  </data>
+  <data name="cond.leaf.cur" xml:space="preserve">
+    <value>Current: {0}</value>
+  </data>
+  <data name="cond.btn.default" xml:space="preserve">
+    <value>Restore default</value>
+  </data>
+  <data name="cond.default.ask" xml:space="preserve">
+    <value>This rule's trigger condition will be reset to the original.
+(Built-in rule = built-in default; custom rule = the condition you entered when creating it)
+(Your edits will not be saved)</value>
+  </data>
+  <data name="cond.node.empty" xml:space="preserve">
+    <value>(empty)</value>
+  </data>
+  <data name="cond.node.and" xml:space="preserve">
+    <value>AND </value>
+  </data>
+  <data name="cond.node.or" xml:space="preserve">
+    <value>OR </value>
+  </data>
+  <data name="cond.node.not" xml:space="preserve">
+    <value>NOT</value>
+  </data>
+  <data name="cond.node.unknown" xml:space="preserve">
+    <value>(unknown)</value>
+  </data>
+  <data name="cond.node.count" xml:space="preserve">
+    <value>({0})</value>
+  </data>
+  <data name="cond.sel.leaf" xml:space="preserve">
+    <value>This comparison</value>
+  </data>
+  <data name="cond.sel.none" xml:space="preserve">
+    <value>Nothing selected</value>
+  </data>
+  <data name="cond.sel.group" xml:space="preserve">
+    <value>This group</value>
+  </data>
+  <data name="cond.rightkind.value" xml:space="preserve">
+    <value>Fixed value</value>
+  </data>
+  <data name="cond.rightkind.var" xml:space="preserve">
+    <value>Another variable</value>
+  </data>
+  <data name="cond.var.item" xml:space="preserve">
+    <value>[{0}] {1}{3}</value>
+  </data>
+  <data name="cond.derived.item" xml:space="preserve">
+    <value>[derived] {0} ({1})</value>
+  </data>
+  <data name="cond.avail.noconn" xml:space="preserve">
+    <value>offline</value>
+  </data>
+  <data name="cond.avail.yes" xml:space="preserve">
+    <value>✓ ok</value>
+  </data>
+  <data name="cond.avail.no" xml:space="preserve">
+    <value>✗ no data</value>
+  </data>
+  <data name="cond.err.summary" xml:space="preserve">
+    <value>⚠ {0} issue(s): {1}</value>
+  </data>
+  <data name="cond.fill.empty" xml:space="preserve">
+    <value>No simulator data to copy right now.
+Switch to “Manual values” and fill it in yourself, or use “Set all to 0”.</value>
+  </data>
+  <data name="cond.err.cannot" xml:space="preserve">
+    <value>This condition cannot be saved yet:
+· {0}</value>
+  </data>
+  <data name="cond.err.title" xml:space="preserve">
+    <value>Condition problems</value>
+  </data>
+  <data name="grp.flight" xml:space="preserve">
+    <value>Flight</value>
+  </data>
+  <data name="grp.engine" xml:space="preserve">
+    <value>Engine</value>
+  </data>
+  <data name="grp.system" xml:space="preserve">
+    <value>Systems</value>
+  </data>
+  <data name="grp.gear" xml:space="preserve">
+    <value>Gear</value>
+  </data>
+  <data name="grp.flap" xml:space="preserve">
+    <value>Flaps</value>
+  </data>
+  <data name="grp.light" xml:space="preserve">
+    <value>Lights</value>
+  </data>
+  <data name="grp.ap" xml:space="preserve">
+    <value>Autopilot</value>
+  </data>
+  <data name="grp.warn" xml:space="preserve">
+    <value>Alerts</value>
+  </data>
+  <data name="grp.fuel" xml:space="preserve">
+    <value>Fuel</value>
+  </data>
+  <data name="grp.internal" xml:space="preserve">
+    <value>Internal</value>
+  </data>
+  <data name="common.namecode" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="cond.src.simoff" xml:space="preserve">
+    <value>Live (offline)</value>
+  </data>
+  <data name="tri.none" xml:space="preserve">
+    <value>undetermined</value>
+  </data>
+  <data name="cond.err.needboolcmp" xml:space="preserve">
+    <value>“{0}” is a switch (true/false) — “{1}” does not apply; use is true / is false</value>
+  </data>
+  <data name="cond.err.neednumcmp" xml:space="preserve">
+    <value>“{0}” is a numeric value — “{1}” does not apply; use greater/less than</value>
+  </data>
+  <data name="run.sim.generic" xml:space="preserve">
+    <value>the simulator</value>
+  </data>
+  <data name="run.card.generic" xml:space="preserve">
+    <value>Data source</value>
+  </data>
+  <data name="run.toggle.generic" xml:space="preserve">
+    <value>Link switch</value>
+  </data>
+  <data name="run.off.text" xml:space="preserve">
+    <value>● Data source: link off</value>
+  </data>
+  <data name="run.off.tip" xml:space="preserve">
+    <value>The link is off, so alert mode receives no data.&#xD;&#xA;Tick “{1}” in the “{0}” panel and the lamps will light by state.</value>
+  </data>
+  <data name="run.off.card" xml:space="preserve">
+    <value>○ Off</value>
+  </data>
+  <data name="run.off.issue" xml:space="preserve">
+    <value>Link is off: alert mode receives no data, lamps keep looping</value>
+  </data>
+  <data name="run.standby.text" xml:space="preserve">
+    <value>● {0} connected · not in flight</value>
+  </data>
+  <data name="run.standby.tip" xml:space="preserve">
+    <value>The simulator is in a menu / loading screen / paused right now (judged by its own ready signal).&#xD;&#xA;It still pushes values, but they are not trustworthy, so lighting is paused.&#xD;&#xA;Green reverse three-lamp chase on the lamps = working normally, waiting to enter flight.</value>
+  </data>
+  <data name="run.standby.card" xml:space="preserve">
+    <value>● Connected · waiting for flight</value>
+  </data>
+  <data name="run.ok.text" xml:space="preserve">
+    <value>● {0} connected · data OK</value>
+  </data>
+  <data name="run.ok.tip" xml:space="preserve">
+    <value>Connected to {0}; data received within the last 3.5 s.</value>
+  </data>
+  <data name="run.ok.card" xml:space="preserve">
+    <value>● Connected · data OK</value>
+  </data>
+  <data name="run.noframe.text" xml:space="preserve">
+    <value>● {0} connected · no data</value>
+  </data>
+  <data name="run.noframe.tip" xml:space="preserve">
+    <value>Connected to {0}, but no data in the last 3.5 s.&#xD;&#xA;Most likely it is still on the simulator settings screen, or the data stream is paused.</value>
+  </data>
+  <data name="run.noframe.card" xml:space="preserve">
+    <value>● Connected · no data</value>
+  </data>
+  <data name="run.noframe.issue" xml:space="preserve">
+    <value>{0} is connected but sending no data (not in flight / stream paused), lamps waiting</value>
+  </data>
+  <data name="run.search.text" xml:space="preserve">
+    <value>● Looking for {0}…</value>
+  </data>
+  <data name="run.search.tip" xml:space="preserve">
+    <value>The collector is running but has not connected to {0} yet.</value>
+  </data>
+  <data name="run.search.tip.err" xml:space="preserve">
+    <value>&#xD;&#xA;Last reason: {0}</value>
+  </data>
+  <data name="run.search.card" xml:space="preserve">
+    <value>● Enabled · searching</value>
+  </data>
+  <data name="run.search.issue" xml:space="preserve">
+    <value>Not connected to {0}; lamps waiting</value>
+  </data>
+  <data name="run.search.issue.err" xml:space="preserve">
+    <value>Not connected to {0} ({1}); lamps waiting</value>
+  </data>
+  <data name="run.notstart.text" xml:space="preserve">
+    <value>● Collector not running</value>
+  </data>
+  <data name="run.notstart.tip" xml:space="preserve">
+    <value>The link is on, but the data collector thread is not running.</value>
+  </data>
+  <data name="run.notstart.tip.hint" xml:space="preserve">
+    <value>&#xD;&#xA;Usually SimConnect.dll is missing (open “SDK check” for the log).</value>
+  </data>
+  <data name="run.notstart.tip.err" xml:space="preserve">
+    <value>&#xD;&#xA;Reason: {0}</value>
+  </data>
+  <data name="run.notstart.card" xml:space="preserve">
+    <value>● Enabled · not started</value>
+  </data>
+  <data name="run.notstart.issue" xml:space="preserve">
+    <value>The data collector is not running</value>
+  </data>
+  <data name="run.notstart.issue.err" xml:space="preserve">
+    <value>The data collector is not running: {0}</value>
+  </data>
+  <data name="run.suffix.loop" xml:space="preserve">
+    <value> · lamps looping</value>
+  </data>
+  <data name="run.suffix.loop.tip" xml:space="preserve">
+    <value>&#xD;&#xA;The alert lamps are looping as a warning (they keep looping while anything is abnormal).</value>
+  </data>
+  <data name="run.suffix.masteroff" xml:space="preserve">
+    <value> (master switch off)</value>
+  </data>
+  <data name="run.suffix.masteroff.tip" xml:space="preserve">
+    <value>&#xD;&#xA;Note: the master effects switch is off, so the lamps output nothing — that does not mean the state is normal.</value>
+  </data>
+  <data name="dev.fmt.unset" xml:space="preserve">
+    <value>not set</value>
+  </data>
+  <data name="dev.fmt.standard" xml:space="preserve">
+    <value>standard</value>
+  </data>
+  <data name="dev.fmt.fallback" xml:space="preserve">
+    <value>fallback buttons</value>
+  </data>
+  <data name="dev.acq.got" xml:space="preserve">
+    <value>acquired</value>
+  </data>
+  <data name="dev.acq.notconnected" xml:space="preserve">
+    <value>not connected</value>
+  </data>
+  <data name="dev.acq.notgot" xml:space="preserve">
+    <value>not acquired ({0})</value>
+  </data>
+  <data name="dev.coop.bg.nonexcl" xml:space="preserve">
+    <value>background, non-exclusive</value>
+  </data>
+  <data name="dev.coop.fg.nonexcl" xml:space="preserve">
+    <value>foreground, non-exclusive</value>
+  </data>
+  <data name="dev.coop.fg.excl" xml:space="preserve">
+    <value>foreground, exclusive</value>
+  </data>
+  <data name="dev.err.info.null" xml:space="preserve">
+    <value>Device information is empty.</value>
+  </data>
+  <data name="dev.err.di.create" xml:space="preserve">
+    <value>Failed to create the DirectInput object ({0}).</value>
+  </data>
+  <data name="dev.err.dev.create" xml:space="preserve">
+    <value>CreateDevice failed ({0}). The device may have been unplugged, or its GUID changed after re-enumeration — scan for devices again.</value>
+  </data>
+  <data name="dev.err.fmt.build" xml:space="preserve">
+    <value>Cannot build a DirectInput data format.</value>
+  </data>
+  <data name="dev.err.fmt.set" xml:space="preserve">
+    <value>SetDataFormat failed ({0}).</value>
+  </data>
+  <data name="dev.err.connect" xml:space="preserve">
+    <value>Connection error: {0}</value>
+  </data>
+  <data name="dev.warn.fallback" xml:space="preserve">
+    <value> (note: switched to the fallback button data format)</value>
+  </data>
+  <data name="dev.warn.coop.item" xml:space="preserve">
+    <value> (SetCooperativeLevel[{0}]={1})</value>
+  </data>
+  <data name="dev.warn.coop.fail" xml:space="preserve">
+    <value> (note: SetCooperativeLevel did not succeed; reading may be affected)</value>
+  </data>
+  <data name="dev.warn.acquire" xml:space="preserve">
+    <value> (note: Acquire failed with {0}; buttons may not read. The lamps use a separate channel and are unaffected.)</value>
+  </data>
+  <data name="dev.caps.ok" xml:space="preserve">
+    <value>OK (dwSize={0})  device type=0x{1:X}  axes={2}  buttons={3}  POVs={4}</value>
+  </data>
+  <data name="dev.caps.fail" xml:space="preserve">
+    <value>failed (dwSize=44, {0})</value>
+  </data>
+  <data name="dev.diag.notconn.dev" xml:space="preserve">
+    <value>No device connected.</value>
+  </data>
+  <data name="dev.diag.caps" xml:space="preserve">
+    <value>GetCapabilities: {0}</value>
+  </data>
+  <data name="dev.diag.format" xml:space="preserve">
+    <value>Active data format: {0} (state buffer {1} bytes)</value>
+  </data>
+  <data name="dev.diag.stdhead" xml:space="preserve">
+    <value>Standard layout reading (button area from 48, bit 0x80 = pressed):</value>
+  </data>
+  <data name="dev.diag.axes" xml:space="preserve">
+    <value>  axes X/Y/Z/Rx/Ry/Rz = {0}/{1}/{2}/{3}/{4}/{5}</value>
+  </data>
+  <data name="dev.diag.sliders" xml:space="preserve">
+    <value>  sliders @24/28 = {0}/{1}</value>
+  </data>
+  <data name="dev.diag.pov" xml:space="preserve">
+    <value>  POV0-3 = {0} {1} {2} {3}</value>
+  </data>
+  <data name="dev.diag.stdbtn" xml:space="preserve">
+    <value>  standard buttons ({0}): {1}</value>
+  </data>
+  <data name="dev.diag.objlist" xml:space="preserve">
+    <value>Native device objects (offset = offset reported by the device, reference only):</value>
+  </data>
+  <data name="dev.diag.objitem" xml:space="preserve">
+    <value>  {0} @{1}{2}</value>
+  </data>
+  <data name="dev.diag.tab.button" xml:space="preserve">
+    <value> (button)</value>
+  </data>
+  <data name="dev.diag.tab.axis" xml:space="preserve">
+    <value> (axis)</value>
+  </data>
+  <data name="dev.diag.tab.pov" xml:space="preserve">
+    <value> (POV)</value>
+  </data>
+  <data name="dev.diag.raw" xml:space="preserve">
+    <value>Raw bytes (first 64):</value>
+  </data>
+  <data name="dev.diag.readfail" xml:space="preserve">
+    <value>State read failed: {0}  {1}</value>
+  </data>
+  <data name="dev.diag.poll" xml:space="preserve">
+    <value>Last Poll={0}  GetDeviceState={1}  read error: {2}</value>
+  </data>
+  <data name="dev.diag.none" xml:space="preserve">
+    <value>none</value>
+  </data>
+  <data name="dev.diag.acq" xml:space="preserve">
+    <value>Acquire state: {0}  cooperative level: {1} (SetCooperativeLevel={2})</value>
+  </data>
+  <data name="dev.diag.events" xml:space="preserve">
+    <value>Event queue (GetDeviceData): {0}</value>
+  </data>
+  <data name="dev.diag.ex" xml:space="preserve">
+    <value>Diagnostics error: {0}</value>
+  </data>
+  <data name="dev.evt.item" xml:space="preserve">
+    <value>offset {0}={1}; </value>
+  </data>
+  <data name="dev.evt.count" xml:space="preserve">
+    <value> ({0} events)</value>
+  </data>
+  <data name="dev.evt.none" xml:space="preserve">
+    <value>no events</value>
+  </data>
+  <data name="dev.evt.hr" xml:space="preserve">
+    <value>GetDeviceData={0}</value>
+  </data>
+  <data name="dev.evt.ex" xml:space="preserve">
+    <value>error: {0}</value>
+  </data>
+  <data name="dev.st.prio" xml:space="preserve">
+    <value>Device is held exclusively by another program (close the game / FreePIE and reconnect)</value>
+  </data>
+  <data name="dev.st.lost" xml:space="preserve">
+    <value>Device state lost (re-acquiring automatically)</value>
+  </data>
+  <data name="dev.st.notacq" xml:space="preserve">
+    <value>Device not acquired (acquiring automatically)</value>
+  </data>
+  <data name="dev.st.fail" xml:space="preserve">
+    <value>State read failed ({0})</value>
+  </data>
+  <data name="pf.err.nopath" xml:space="preserve">
+    <value>No profile file specified.</value>
+  </data>
+  <data name="pf.err.read" xml:space="preserve">
+    <value>Cannot read the file: {0}</value>
+  </data>
+  <data name="pf.err.empty" xml:space="preserve">
+    <value>The file is empty.</value>
+  </data>
+  <data name="pf.err.blank" xml:space="preserve">
+    <value>The text is empty.</value>
+  </data>
+  <data name="pf.err.kind.button" xml:space="preserve">
+    <value>This is not a button profile (kind = {0}).</value>
+  </data>
+  <data name="pf.err.kind.alert" xml:space="preserve">
+    <value>This is not an alert profile (kind = {0}).</value>
+  </data>
+  <data name="pf.err.version" xml:space="preserve">
+    <value>The profile version {0} is newer than this program — upgrade the program before opening it.</value>
+  </data>
+  <data name="pf.err.json" xml:space="preserve">
+    <value>Not a valid profile file ({0}).</value>
+  </data>
+  <data name="pf.err.save.nothing" xml:space="preserve">
+    <value>There is no profile to save.</value>
+  </data>
+  <data name="pf.err.save.builtin" xml:space="preserve">
+    <value>A built-in profile cannot be overwritten — use “Save as” and pick another name.</value>
+  </data>
+  <data name="pf.err.save.noname" xml:space="preserve">
+    <value>The profile name cannot be empty.</value>
+  </data>
+  <data name="pf.err.save.badchar" xml:space="preserve">
+    <value>The name cannot contain “{0}” — Windows file names don’t allow \ / : * ? " &lt; &gt; |. Please pick another name.</value>
+  </data>
+  <data name="pf.err.save.badedge" xml:space="preserve">
+    <value>The name cannot start or end with a space, or end with a dot.</value>
+  </data>
+  <data name="pf.err.write" xml:space="preserve">
+    <value>Save failed: {0}: {1}</value>
+  </data>
+  <data name="pf.err.del.nothing" xml:space="preserve">
+    <value>No profile selected.</value>
+  </data>
+  <data name="pf.err.del.builtin" xml:space="preserve">
+    <value>A built-in profile cannot be deleted.</value>
+  </data>
+  <data name="pf.err.del.nofile" xml:space="preserve">
+    <value>This profile has no file behind it.</value>
+  </data>
+  <data name="pf.err.del" xml:space="preserve">
+    <value>Delete failed: {0}</value>
+  </data>
+  <data name="pf.unnamed" xml:space="preserve">
+    <value>Untitled</value>
+  </data>
+  <data name="pf.err.readonly" xml:space="preserve">
+    <value>The program folder is not writable ({0}), so profiles cannot be saved. Extract the program to a writable folder (for example D:\G940LedPanel) and run it again.</value>
+  </data>
+  <data name="gh.err.noiface" xml:space="preserve">
+    <value>No HID interface was enumerated on this system.&#xD;&#xA;1) Check that the G940 USB cable is plugged in;&#xD;&#xA;2) The device should appear in Device Manager without a warning mark.</value>
+  </data>
+  <data name="gh.err.nog940" xml:space="preserve">
+    <value>Found {0} HID interfaces, but none of them is the G940 lamp interface (VID {1} / PID {2}).&#xD;&#xA;1) Check that the G940 USB cable is plugged in and Device Manager shows no warning marks;&#xD;&#xA;2) If the name in Device Manager looks right, the PID may differ from the expected one — confirm with the HID probe in “Device diagnostics”.</value>
+  </data>
+  <data name="gh.err.write" xml:space="preserve">
+    <value>Found {0} G940 interfaces, but writing feature report {1} failed on all of them{2}.</value>
+  </data>
+  <data name="gh.err.write.lasterr" xml:space="preserve">
+    <value> (last error {0}: {1})</value>
+  </data>
+  <data name="gh.err.write.path" xml:space="preserve">
+    <value>Interface: {0}&#xD;&#xA;</value>
+  </data>
+  <data name="gh.err.write.hint" xml:space="preserve">
+    <value>&#xD;&#xA;{0}1) Error 5 (access denied) usually means a standard user was refused — try running as administrator;&#xD;&#xA;2) Error 1 (invalid function) means the report ID or length is wrong — check the feature report list with the “HID probe” first;&#xD;&#xA;3) For other errors, unplug and replug the USB cable once to rule out a driver glitch.</value>
+  </data>
+  <data name="gh.err.c0" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="gh.err.c1" xml:space="preserve">
+    <value>invalid function (report ID or length is wrong)</value>
+  </data>
+  <data name="gh.err.c2" xml:space="preserve">
+    <value>device not found (may be unplugged)</value>
+  </data>
+  <data name="gh.err.c5" xml:space="preserve">
+    <value>access denied (insufficient rights)</value>
+  </data>
+  <data name="gh.err.c6" xml:space="preserve">
+    <value>invalid handle</value>
+  </data>
+  <data name="gh.err.c87" xml:space="preserve">
+    <value>invalid parameter (report length does not match the device)</value>
+  </data>
+  <data name="gh.err.c1167" xml:space="preserve">
+    <value>device not connected</value>
+  </data>
+  <data name="gh.err.c32" xml:space="preserve">
+    <value>in use (another program holds the interface exclusively)</value>
+  </data>
+  <data name="gh.err.unknown" xml:space="preserve">
+    <value>unknown error</value>
+  </data>
+  <data name="common.listsep" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="scs.headline.off" xml:space="preserve">
+    <value>● Not connected</value>
+  </data>
+  <data name="scs.headline.ok" xml:space="preserve">
+    <value>● Connected · {0}/{1} vars · 1s</value>
+  </data>
+  <data name="scs.headline.err" xml:space="preserve">
+    <value>● Not connected: {0}</value>
+  </data>
+  <data name="scs.headline.connecting" xml:space="preserve">
+    <value>● Connecting…</value>
+  </data>
+  <data name="scs.err.nodll" xml:space="preserve">
+    <value>SimConnect.dll / SimConnect_internal.dll not found</value>
+  </data>
+  <data name="scs.err.open.ex" xml:space="preserve">
+    <value>SimConnect_Open threw: {0}</value>
+  </data>
+  <data name="scs.err.open.hr" xml:space="preserve">
+    <value>SimConnect_Open returned 0x{0} (the simulator is not running, or a flight has not finished loading)</value>
+  </data>
+  <data name="scs.err.dispatch" xml:space="preserve">
+    <value>CallDispatch threw: {0}</value>
+  </data>
+  <data name="scs.err.code" xml:space="preserve">
+    <value>SimConnect error code {0}</value>
+  </data>
+  <data name="scs.err.disconnected" xml:space="preserve">
+    <value>The simulator exited or the connection dropped</value>
+  </data>
+  <data name="scs.phase.flying" xml:space="preserve">
+    <value>in flight</value>
+  </data>
+  <data name="scs.phase.waiting" xml:space="preserve">
+    <value>waiting</value>
+  </data>
+  <data name="scs.log.connected" xml:space="preserve">
+    <value>Connected; waiting for the first data frame to decide whether we are in flight (reading {0})</value>
+  </data>
+  <data name="scs.log.effective" xml:space="preserve">
+    <value> | effective={0}</value>
+  </data>
+  <data name="scs.log.settling" xml:space="preserve">
+    <value> (settling, next frame will confirm)</value>
+  </data>
+  <data name="scs.log.version" xml:space="preserve">
+    <value>Simulator version {0}</value>
+  </data>
+  <data name="sl.log.adopt" xml:space="preserve">
+    <value>✓ Using: {0} (x64)</value>
+  </data>
+  <data name="sl.log.internal" xml:space="preserve">
+    <value>  Note: MSFS2024 ships SimConnect renamed to SimConnect_internal.dll; it is identical to the SDK SimConnect.dll and can be used directly.</value>
+  </data>
+  <data name="sl.log.wrongarch" xml:space="preserve">
+    <value>✗ Only a 32-bit SimConnect.dll was found: {0} (this program is 64-bit and cannot use it)</value>
+  </data>
+  <data name="sl.log.notfound" xml:space="preserve">
+    <value>✗ No usable x64 SimConnect.dll / SimConnect_internal.dll was found.</value>
+  </data>
+  <data name="sl.log.notfound.hint" xml:space="preserve">
+    <value>  The MSFS2024 install folder usually contains only SimConnect_internal.dll — that is normal, it is the one.</value>
+  </data>
+  <data name="sl.log.notfound.env" xml:space="preserve">
+    <value>  Copy it into the program folder, or set the environment variable MSFS2024_PATH to the MSFS2024 install folder (the level that contains FlightSimulator2024.exe).</value>
+  </data>
+  <data name="sl.log.appdir" xml:space="preserve">
+    <value>· Program folder: {0}</value>
+  </data>
+  <data name="sl.log.env" xml:space="preserve">
+    <value>· Environment variable {0} = {1}</value>
+  </data>
+  <data name="sl.log.fixed" xml:space="preserve">
+    <value>· Fixed path: {0}</value>
+  </data>
+  <data name="sl.log.registry" xml:space="preserve">
+    <value>· Registry: {0} → {1}</value>
+  </data>
+  <data name="sl.log.is32" xml:space="preserve">
+    <value>  × 32-bit: {0}</value>
+  </data>
+  <data name="ap.custom.defaultname" xml:space="preserve">
+    <value>Custom alert</value>
+  </data>
+  <data name="ap.note.ledmap" xml:space="preserve">
+    <value>The lamp mapping was invalid and has been reset to default (P1…P8 map to the first 8 systems in order; special devices / custom are off by default)</value>
+  </data>
+  <data name="ap.note.badcond" xml:space="preserve">
+    <value>{0} custom condition(s) were invalid and fell back to the built-in conditions ({1})</value>
+  </data>
+  <data name="ap.note.badrule" xml:space="preserve">
+    <value>{0} custom rule(s) were invalid and have been dropped ({1})</value>
+  </data>
+  <data name="ap.note.duppri" xml:space="preserve">
+    <value>{0} custom rule(s) had priorities duplicating other rules and were reassigned</value>
+  </data>
+  <data name="ap.note.renumber" xml:space="preserve">
+    <value>Two rules in system “{0}” share a priority; they were renumbered in their original order</value>
+  </data>
+  <data name="ap.empty" xml:space="preserve">
+    <value>(empty)</value>
+  </data>
+  <data name="acl.err.dupid" xml:space="preserve">
+    <value>Duplicate rule id: {0}</value>
+  </data>
+  <data name="acl.err.effect" xml:space="preserve">
+    <value>Rule {0} uses an effect the alert page does not allow: {1}</value>
+  </data>
+  <data name="acl.err.nosys" xml:space="preserve">
+    <value>Rule {0} refers to a system that does not exist: {1}</value>
+  </data>
+  <data name="acl.err.nocond" xml:space="preserve">
+    <value>Rule {0} has no condition</value>
+  </data>
+  <data name="acl.err.prio" xml:space="preserve">
+    <value>Priority {1} is duplicated inside system {0} (rule {2})</value>
+  </data>
+  <data name="common.envsep" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="audit.a5.nolit" xml:space="preserve">
+    <value>“{0}” is not mapped to a lamp, so the {1} rule(s) in this system will never light up. Pick a lamp for it under LED assignment.</value>
+  </data>
+  <data name="audit.a3.unknownvar" xml:space="preserve">
+    <value>The condition refers to an unknown variable “{0}”, so it can never produce a value.</value>
+  </data>
+  <data name="audit.a1.never" xml:space="preserve">
+    <value>The condition contradicts itself — no flight state satisfies it, so this rule never fires.</value>
+  </data>
+  <data name="audit.a2.always" xml:space="preserve">
+    <value>The condition holds in every flight state, so it permanently occupies this lamp and every other rule in the same system stays hidden.</value>
+  </data>
+  <data name="audit.a4.sameprio" xml:space="preserve">
+    <value>Shares priority {1} with “{0}”; on the same lamp, which one shows depends on traversal order, so the result is unstable.</value>
+  </data>
+  <data name="audit.f.gap" xml:space="preserve">
+    <value>“{0}” ({1}) and “{2}” ({3}) sit next to each other, leaving no room to insert a new rule between them.</value>
+  </data>
+  <data name="audit.e.same" xml:space="preserve">
+    <value>Conditions are exactly equivalent to “{0}” and the output matches too — deleting either one changes nothing.</value>
+  </data>
+  <data name="audit.c.diff" xml:space="preserve">
+    <value>Conditions are exactly equivalent to “{0}”, but the output differs ({1} vs {2}), so the same state gets two different readings.</value>
+  </data>
+  <data name="audit.b.shadowed" xml:space="preserve">
+    <value>Its condition is stricter than “{0}”, yet that rule has higher priority and a lighter colour ({1} over {2}), so this one is never shown.</value>
+  </data>
+  <data name="audit.c.overlap" xml:space="preserve">
+    <value>Overlaps “{0}”. Where they overlap the higher-priority rule wins, but its colour is lighter ({1} over {2}).</value>
+  </data>
+  <data name="audit.d.overlap" xml:space="preserve">
+    <value>Overlaps “{0}”. Same colour but a gentler effect ({1} over {2}); where they overlap you see the higher-priority rule.</value>
+  </data>
+  <data name="raf.title" xml:space="preserve">
+    <value>Rule check</value>
+  </data>
+  <data name="raf.tip.body" xml:space="preserve">
+    <value>Checks whether your rules and the built-in ones clash inside the same system.&#xD;&#xA;Only two things are looked at: can the conditions hold at the same time, and if they can, do the two rules output the same thing. Not lighting up is not a problem by itself.&#xD;&#xA;Every finding comes with concrete values that you can paste into the condition editor's manual probe and reproduce as-is.</value>
+  </data>
+  <data name="raf.col.level" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="raf.col.sys" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="raf.col.rule" xml:space="preserve">
+    <value>Rule</value>
+  </data>
+  <data name="raf.col.text" xml:space="preserve">
+    <value>Finding</value>
+  </data>
+  <data name="raf.count.none" xml:space="preserve">
+    <value>Nothing found. Within the same lamp the rule conditions do not overlap, or they agree where they do.</value>
+  </data>
+  <data name="raf.count.some" xml:space="preserve">
+    <value>{0} finding(s): {1} need action, the rest are redundancy and tips. Hover to see the witness.</value>
+  </data>
+  <data name="raf.tip.evidence" xml:space="preserve">
+    <value>&#xD;&#xA;&#xD;&#xA;Witness: {0}</value>
+  </data>
+  <data name="raf.tip.code" xml:space="preserve">
+    <value>&#xD;&#xA;&#xD;&#xA;Code: {0}</value>
+  </data>
+  <data name="sl.log.xboxgames" xml:space="preserve">
+    <value>· XboxGames: {0}</value>
+  </data>
+  <data name="sl.log.winapps2024" xml:space="preserve">
+    <value>· WindowsApps(MSFS2024): {0}</value>
+  </data>
+  <data name="sl.log.winapps2020" xml:space="preserve">
+    <value>· WindowsApps(MSFS2020): {0}</value>
+  </data>
+  <data name="sl.log.steam" xml:space="preserve">
+    <value>· Steam: {0}</value>
+  </data>
+  <data name="scs.err.exception" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="cfg.note.migrated" xml:space="preserve">
+    <value>Camera state table upgraded to CameraStates; the old ExtraMenuCameraStates ({0} entry/entries) has been merged in</value>
+  </data>
+  <data name="cfg.note.dropped" xml:space="preserve">
+    <value>{0} camera state entry/entries were invalid (the value must be an integer from 0 to 255 and the class must be Menu / Skip / Flight) and were ignored</value>
+  </data>
+  <data name="main.audit.title" xml:space="preserve">
+    <value>Rule check</value>
+  </data>
+  <data name="main.justlit.head" xml:space="preserve">
+    <value>Checked the {0} system(s) that just got a lamp — {1} item(s) worth a look:&#xD;&#xA;&#xD;&#xA;</value>
+  </data>
+  <data name="main.justlit.more" xml:space="preserve">
+    <value>…and {0} more&#xD;&#xA;</value>
+  </data>
+  <data name="main.justlit.foot" xml:space="preserve">
+    <value>&#xD;&#xA;To review every rule relationship, right-click the alert table → “Check my rules”.</value>
+  </data>
+  <data name="main.btn.defaultname" xml:space="preserve">
+    <value>Button #{0}</value>
+  </data>
+  <data name="main.sdk.title" xml:space="preserve">
+    <value>SimConnect diagnostics</value>
+  </data>
+  <data name="main.sdk.found" xml:space="preserve">
+    <value>✓ Found x64 SimConnect ({0})</value>
+  </data>
+  <data name="main.sdk.notfound" xml:space="preserve">
+    <value>✗ No usable x64 SimConnect.dll / SimConnect_internal.dll found</value>
+  </data>
+  <data name="main.sdk.path" xml:space="preserve">
+    <value>Path: {0}</value>
+  </data>
+  <data name="main.sdk.version" xml:space="preserve">
+    <value>Version: {0}</value>
+  </data>
+  <data name="main.sdk.internal" xml:space="preserve">
+    <value>Note: this is the SimConnect_internal.dll that ships with MSFS2024. It is identical to the SDK's SimConnect.dll and can be used directly.</value>
+  </data>
+  <data name="main.sdk.conn" xml:space="preserve">
+    <value>Connection: {0}</value>
+  </data>
+  <data name="main.sdk.conn.pending" xml:space="preserve">
+    <value>(not attempted yet)</value>
+  </data>
+  <data name="main.sdk.simver" xml:space="preserve">
+    <value>Simulator version: {0}</value>
+  </data>
+  <data name="main.sdk.vars" xml:space="preserve">
+    <value>Variables answered: {0} / {1} (refreshed once per second)</value>
+  </data>
+  <data name="main.sdk.missing" xml:space="preserve">
+    <value>Not answered (unsupported by this aircraft, or spelled differently):</value>
+  </data>
+  <data name="main.sdk.lasterr" xml:space="preserve">
+    <value>Last error: {0}</value>
+  </data>
+  <data name="main.sdk.logtitle" xml:space="preserve">
+    <value>Automatic search log:</value>
+  </data>
+  <data name="main.sdk.chip.dll" xml:space="preserve">
+    <value>dll: {0}</value>
+  </data>
+  <data name="main.sdk.chip.nodll" xml:space="preserve">
+    <value>SimConnect.dll / SimConnect_internal.dll not found</value>
+  </data>
+  <data name="main.sdk.chip.vars" xml:space="preserve">
+    <value> · vars {0}/{1}</value>
+  </data>
+  <data name="app.title" xml:space="preserve">
+    <value>G940 LED Panel</value>
+    <comment>Product name in the window title and tray tooltip; AppInfo appends " v" + version.</comment>
+  </data>
+  <!-- 1.3.66：global exception dialogs (Program.cs) -->
+  <data name="prog.ex.unknown" xml:space="preserve">
+    <value>Unknown exception</value>
+  </data>
+  <data name="prog.ex.type" xml:space="preserve">
+    <value>Type:</value>
+  </data>
+  <data name="prog.ex.message" xml:space="preserve">
+    <value>Message:</value>
+  </data>
+  <data name="prog.ex.inner" xml:space="preserve">
+    <value>Inner exception:</value>
+  </data>
+  <data name="prog.ex.stack" xml:space="preserve">
+    <value>Stack (first 12 frames):</value>
+  </data>
+  <data name="prog.ex.recovered" xml:space="preserve">
+    <value>The program hit a recoverable exception:</value>
+  </data>
+  <data name="prog.ex.recovered.tail" xml:space="preserve">
+    <value>The program will keep running. If this keeps happening, please send this text to the author.</value>
+  </data>
+  <data name="prog.ex.fatal" xml:space="preserve">
+    <value>The program hit an unhandled exception:</value>
+  </data>
+  <data name="prog.ex.title.notice" xml:space="preserve">
+    <value>Notice</value>
+  </data>
+  <data name="prog.ex.title.error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <!-- 1.3.66：device list row suffix (DeviceInfo.ToString, shown by PickDeviceForm's ListBox) -->
+  <data name="dev.btncount" xml:space="preserve">
+    <value>[{0} buttons]</value>
+    <comment>Button count after the device name; the two leading spaces are added by code.</comment>
+  </data>
+  <!-- 1.3.66：SimConnect.dll load failures, shown in the main window status line -->
+  <data name="api.err.nofile" xml:space="preserve">
+    <value>File not found: {0}</value>
+  </data>
+  <data name="api.err.bits32" xml:space="preserve">
+    <value>This SimConnect.dll is 32-bit; the program is 64-bit and cannot load it: {0}</value>
+  </data>
+  <data name="api.err.loadlib" xml:space="preserve">
+    <value>LoadLibrary failed (error {0})</value>
+  </data>
+  <data name="api.err.loadlib.193" xml:space="preserve">
+    <value>: bitness mismatch (x64 required)</value>
+  </data>
+  <data name="api.err.path" xml:space="preserve">
+    <value>: {0}</value>
+  </data>
+  <data name="api.err.export" xml:space="preserve">
+    <value>SimConnect.dll is missing exported functions: {0}</value>
+  </data>
+  <data name="api.err.exception" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="api.err.unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <!-- 与中文包同值：语言名用它自己那种语言写，「中文」在英文界面里也叫「中文」。 -->
+  <data name="lang.zh-CN" xml:space="preserve">
+    <value>中文</value>
+  </data>
+  <data name="lang.en-US" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="dev.status.detecting" xml:space="preserve">
+    <value>● Detecting…</value>
+    <comment>状态行。圆点是颜色指示，别换成英文句点。</comment>
+  </data>
+  <data name="sim.data.idle" xml:space="preserve">
+    <value>Airspeed, altitude and engine status appear here once connected.</value>
+  </data>
+  <data name="main.pressed.none" xml:space="preserve">
+    <value>Pressed: -</value>
+    <comment>底部状态行的常态。冒号后用半角，接按钮号。</comment>
+  </data>
+  <data name="audit.g.toocomplex.one" xml:space="preserve">
+    <value>"{0}" has too many condition variables to enumerate; whether it is always true or always false was not checked.</value>
+  </data>
+  <data name="audit.g.toocomplex.pair" xml:space="preserve">
+    <value>"{0}" and "{1}" together have too many variables to enumerate; whether they overlap was not checked.</value>
+  </data>
+  <data name="ap.note.orphanrule" xml:space="preserve">
+    <value>{0} saved override(s) pointed at rules that no longer exist and were removed: {1}</value>
+  </data>
+</root>

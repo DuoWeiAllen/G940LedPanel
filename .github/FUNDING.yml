@@ -1,0 +1,12 @@
+# GitHub 仓库右上角「Sponsor」按钮的配置。
+#
+# 现在全是注释：没开通之前 GitHub 不显示按钮，开通后取消对应行即可。
+#
+# 1) 爱发电 —— 国内打赏主渠道，支付宝 / 微信直接收。
+#    开通后填自己的主页地址（形如 https://afdian.com/a/xxxx）。
+# custom: ["https://afdian.com/a/你的ID"]
+
+# 2) GitHub Sponsors —— 只作为海外用户入口。
+#    注意：GitHub Sponsors 的受支持地区不含中国大陆（含香港、澳门），
+#    大陆个人账户目前无法通过它收款，开通了也收不到钱。
+# github: [你的GitHub用户名]

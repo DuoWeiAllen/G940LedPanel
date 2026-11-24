@@ -1,0 +1,36 @@
+{
+  "kind": "g940.alert",
+  "version": 1,
+  "name": "Jet Regional",
+  "app": "",
+  "ledMap": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    -1,
+    -1
+  ],
+  "ruleOverrides": {
+    "adv_gear_retract": {
+      "enabled": true
+    },
+    "adv_approach_cfg": {
+      "enabled": true
+    },
+    "gear_low_alt": {
+      "enabled": true
+    },
+    "adv_wind": {
+      "enabled": true
+    },
+    "adv_ice_risk": {
+      "enabled": true
+    }
+  },
+  "customRules": []
+}

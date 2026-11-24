@@ -1,0 +1,28 @@
+{
+  "kind": "g940.alert",
+  "version": 1,
+  "name": "Single Piston",
+  "app": "",
+  "ledMap": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    -1,
+    -1
+  ],
+  "ruleOverrides": {
+    "eng_fire": {
+      "cond": {
+        "op": "cmp",
+        "var": "ENG ON FIRE:1",
+        "cmp": "bool"
+      }
+    }
+  },
+  "customRules": []
+}

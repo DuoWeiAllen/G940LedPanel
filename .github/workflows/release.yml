@@ -1,0 +1,81 @@
+name: Release
+
+# 打 tag（v1.3.73 这种）时自动：编译 → 组装运行包 → 建 Release 挂附件。
+#
+# 这里出的是**运行包**（exe + 依赖 + 预置配置 + 语言包），给用户下载即用。
+# 含源码与测试结果的**完整交付包**仍用本地 package.sh 出，两者用途不同、互不替代。
+
+# 只由 tag 触发。刻意不加 workflow_dispatch：手动跑时 github.ref_name 是分支名，
+# 会建出一个叫 main 的 Release，属于误操作而不是功能。
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: 构建并发布
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      # 预置配置由 csproj 的 <Content Include> 带进输出目录，这里不用手动复制
+      - name: 编译
+        run: dotnet publish G940LedPanel-src/G940LedPanel.csproj -c Release -o publish
+
+      - name: 组装运行包
+        shell: pwsh
+        run: |
+          $tag  = "${{ github.ref_name }}"
+          $ver  = $tag -replace '^v', ''
+          $name = "G940LedPanel-$ver-win-x64"
+
+          New-Item -ItemType Directory -Path "stage/$name" -Force | Out-Null
+          Copy-Item "publish/*" "stage/$name" -Recurse -Force
+
+          # 调试符号不带：只有开发机调崩溃时用得上，带上是白给用户几 MB
+          Get-ChildItem "stage/$name" -Filter *.pdb -Recurse | Remove-Item -Force
+
+          Copy-Item README.md, LICENSE "stage/$name" -Force
+
+          $notes = "release-notes/notes-$ver.txt"
+          if (Test-Path $notes) { Copy-Item $notes "stage/$name/" -Force }
+
+          Compress-Archive -Path "stage/$name" -DestinationPath "$name.zip" -CompressionLevel Optimal
+
+          Write-Host "== 包内文件 =="
+          Get-ChildItem "stage/$name" | Select-Object Name, Length | Format-Table -AutoSize
+          Write-Host "打包完成：$name.zip"
+
+      - name: 发布到 Releases
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # gh 把中文标题传给 GitHub API 时走控制台编码，Windows 上默认不是 UTF-8，
+          # 不设这两行 Release 标题会变乱码
+          [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+          $OutputEncoding = [System.Text.Encoding]::UTF8
+
+          $tag  = "${{ github.ref_name }}"
+          $ver  = $tag -replace '^v', ''
+          $name = "G940LedPanel-$ver-win-x64"
+          $notes = "release-notes/notes-$ver.txt"
+
+          # 重跑时 Release 可能已存在，那就覆盖附件，不要报错中断
+          gh release view $tag *> $null
+          if ($LASTEXITCODE -eq 0) {
+            gh release upload $tag "$name.zip" --clobber
+          }
+          elseif (Test-Path $notes) {
+            gh release create $tag "$name.zip" --title "G940LED面板 $ver" --notes-file $notes
+          }
+          else {
+            gh release create $tag "$name.zip" --title "G940LED面板 $ver" --generate-notes
+          }
