@@ -67,8 +67,18 @@ jobs:
           $ver  = $tag -replace '^v', ''
           $name = "G940LedPanel-$ver-win-x64"
 
-          # 说明写在 tag 注释里，这里原样搬到 Release 页面；tag 没写注释才回落到自动生成
-          $body = ((git tag -l --format='%(contents)' $tag) -join "`n").Trim()
+          # 说明取自 tag 对象本身（annotated tag 的注释）。
+          # 不用 git tag --format='%(contents)'：checkout 出来的 tag 可能被折成轻量标签，
+          # 那样取到的是 commit 消息，会把提交标题当成发布说明。API 读的是服务端真实对象。
+          $body = ""
+          $ref = gh api "repos/$env:GITHUB_REPOSITORY/git/ref/tags/$tag" 2>$null
+          if ($LASTEXITCODE -eq 0) {
+            $info = $ref | ConvertFrom-Json
+            if ($info.object.type -eq 'tag') {
+              $body = ((gh api "repos/$env:GITHUB_REPOSITORY/git/tags/$($info.object.sha)") | ConvertFrom-Json).message.Trim()
+            }
+          }
+          Write-Host "说明来源: $(if ($body) { 'tag 注释' } else { '自动生成' })，长度 $($body.Length)"
 
           # 重跑时 Release 可能已存在，那就覆盖附件，不要报错中断
           gh release view $tag *> $null
